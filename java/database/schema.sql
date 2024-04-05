@@ -11,7 +11,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE brewery (
-    brewery_id INT PRIMARY KEY,
+    brewery_id serial PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     location VARCHAR(150) NOT NULL,
     established_year INT,
@@ -19,7 +19,7 @@ CREATE TABLE brewery (
 );
 
 CREATE TABLE beer (
-    beer_id INT PRIMARY KEY,
+    beer_id serial PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     brewery_id INT,
     style VARCHAR(100),
