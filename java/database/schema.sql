@@ -10,4 +10,23 @@ CREATE TABLE users (
 	CONSTRAINT PK_user PRIMARY KEY (user_id)
 );
 
+CREATE TABLE brewery (
+    brewery_id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(150) NOT NULL,
+    established_year INT,
+    description TEXT
+);
+
+CREATE TABLE beer (
+    beer_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    brewery_id INT,
+    style VARCHAR(100),
+    abv DECIMAL(4, 2),
+    ibu INT,
+    description TEXT,
+    FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
+);
+
 COMMIT TRANSACTION;
