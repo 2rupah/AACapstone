@@ -15,11 +15,18 @@
     components: {
       BreweryCard
     },
-    props: {
-      breweries: {
-        type: Array,
-        required: true
-      }
+    data() {
+        return {
+            breweries: []
+        }
+    },
+    created() {
+        const promise = BreweryService.getAllBreweries()
+        .then(response => {
+            this.breweries = response.data;
+        })
+        .catch(err => console.error(err));
+        
     }
   }
   </script>
