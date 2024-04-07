@@ -10,7 +10,7 @@ import java.util.List;
 
 public class JdbcBeerDao implements BeerDao {
 
-    private final JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     public JdbcBeerDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -40,19 +40,6 @@ public class JdbcBeerDao implements BeerDao {
             beers.add(mapRowToBeer(results));
         }
         return beers;
-    }
-
-    @Override
-    public Beer getBeerByBreweryId(int breweryId) {
-        Beer beer = null;
-        String sql = "SELECT brewery_id " +
-                "FROM beer " +
-                "WHERE beer_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
-        if(results.next()){
-            beer = mapRowToBeer(results);
-        }
-        return beer;
     }
 
     private Beer mapRowToBeer(SqlRowSet rowSet){
