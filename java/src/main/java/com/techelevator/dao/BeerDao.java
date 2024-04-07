@@ -9,7 +9,7 @@ public interface BeerDao {
     Beer getBeerById(int beerId);
 
     //Get a beer by a brewery's ID
-    Beer getBeerByBreweryId(int breweryId);
+//    Beer getBeerByBreweryId(int breweryId);
 
     //List of all the beers from a specific brewery
     List<Beer> getAllBeersFromBrewery(int breweryId);

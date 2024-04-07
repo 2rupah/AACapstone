@@ -1,11 +1,10 @@
 package com.techelevator.controller;
 
+import com.techelevator.dao.BeerDao;
 import com.techelevator.dao.BreweryDao;
+import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,13 +14,20 @@ import java.util.List;
 public class BreweryController {
 
     private BreweryDao breweryDao;
+    private BeerDao beerDao;
 
-    public BreweryController(BreweryDao breweryDao) {
+    public BreweryController(BreweryDao breweryDao, BeerDao beerDao) {
         this.breweryDao = breweryDao;
+        this.beerDao = beerDao;
     }
 
     @GetMapping
     public List<Brewery> listAll() {
         return breweryDao.listAllBreweries();
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    public List<Beer> list(@PathVariable int id) {
+        return beerDao.getAllBeersFromBrewery(id);
     }
 }
