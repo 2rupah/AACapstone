@@ -23,9 +23,4 @@ public class BeerController {
         return beerDao.getBeerById(id);
     }
 
-    @RequestMapping(path = "brewery/{id}", method = RequestMethod.GET)
-    public List<Beer> list(@PathVariable int id) {
-        return beerDao.getAllBeersFromBrewery(id);
-    }
-
 }
