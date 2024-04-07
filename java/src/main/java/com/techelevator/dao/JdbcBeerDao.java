@@ -38,6 +38,15 @@ public class JdbcBeerDao implements BeerDao {
 
     private Beer mapRowToBeer(SqlRowSet rowSet){
         Beer beer = new Beer();
+
+        beer.setBeerId(rowSet.getInt("beer_id") );
+        beer.setName(rowSet.getString("name") );
+        beer.setBreweryId(rowSet.getInt("brewery_id") );
+        beer.setStyle(rowSet.getString("style") );
+        beer.setAbv(rowSet.getDouble("abv") );
+        beer.setIbu(rowSet.getInt("ibu") );
+        beer.setStyle(rowSet.getString("description") );
+
         return beer;
     }
 }
