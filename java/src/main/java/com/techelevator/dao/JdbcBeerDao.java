@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcBeerDao implements BeerDao {
@@ -16,12 +17,12 @@ public class JdbcBeerDao implements BeerDao {
     }
 
     @Override
-    public Beer getBeerById() {
+    public Beer getBeerById(int beerId) {
         Beer beer = null;
         String sql = "SELECT beer_id " +
                 "FROM beer " +
                 "WHERE beer_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, beerId);
         if(results.next()) {
             beer = mapRowToBeer(results);
         }
@@ -29,21 +30,29 @@ public class JdbcBeerDao implements BeerDao {
     }
 
     @Override
-    public int getBeerByBreweryId() {
+    public List<Beer> getAllBeersFromBrewery(int breweryId) {
+        List<Beer> beers = new ArrayList<>();
+        String sql = "SELECT beer_id, brewery_id " +
+                "FROM beer " +
+                "WHERE brewery_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
+        while(results.next()) {
+            beers.add(mapRowToBeer(results));
+        }
+        return beers;
+    }
+
+    @Override
+    public Beer getBeerByBreweryId(int breweryId) {
         Beer beer = null;
         String sql = "SELECT brewery_id " +
                 "FROM beer " +
                 "WHERE beer_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
         if(results.next()){
             beer = mapRowToBeer(results);
         }
-        return 0;
-    }
-
-    @Override
-    public List<Beer> getBeersByBrewery() {
-        return null;
+        return beer;
     }
 
     private Beer mapRowToBeer(SqlRowSet rowSet){

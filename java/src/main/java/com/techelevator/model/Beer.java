@@ -2,6 +2,8 @@ package com.techelevator.model;
 
 public class Beer {
 
+    //When adding beers we may find the @Min, @Max, and @NotBlank annotations useful
+    //Don't forget these!!
     private int beerId;
     private String name;
     private int breweryId;
