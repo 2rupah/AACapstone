@@ -3,14 +3,16 @@ package com.techelevator.dao;
 import com.techelevator.model.Beer;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class JdbcBeerDao implements BeerDao {
 
-    private final JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     public JdbcBeerDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -19,7 +21,7 @@ public class JdbcBeerDao implements BeerDao {
     @Override
     public Beer getBeerById(int beerId) {
         Beer beer = null;
-        String sql = "SELECT beer_id " +
+        String sql = "SELECT * " +
                 "FROM beer " +
                 "WHERE beer_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, beerId);
@@ -32,7 +34,7 @@ public class JdbcBeerDao implements BeerDao {
     @Override
     public List<Beer> getAllBeersFromBrewery(int breweryId) {
         List<Beer> beers = new ArrayList<>();
-        String sql = "SELECT beer_id, brewery_id " +
+        String sql = "SELECT * " +
                 "FROM beer " +
                 "WHERE brewery_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
@@ -40,19 +42,6 @@ public class JdbcBeerDao implements BeerDao {
             beers.add(mapRowToBeer(results));
         }
         return beers;
-    }
-
-    @Override
-    public Beer getBeerByBreweryId(int breweryId) {
-        Beer beer = null;
-        String sql = "SELECT brewery_id " +
-                "FROM beer " +
-                "WHERE beer_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
-        if(results.next()){
-            beer = mapRowToBeer(results);
-        }
-        return beer;
     }
 
     private Beer mapRowToBeer(SqlRowSet rowSet){
@@ -64,7 +53,7 @@ public class JdbcBeerDao implements BeerDao {
         beer.setStyle(rowSet.getString("style") );
         beer.setAbv(rowSet.getDouble("abv") );
         beer.setIbu(rowSet.getInt("ibu") );
-        beer.setStyle(rowSet.getString("description") );
+        beer.setDescription(rowSet.getString("description") );
 
         return beer;
     }
