@@ -11,15 +11,16 @@ export function createStore(currentToken, currentUser) {
     },
     actions: {
       getAllBreweries(context) {
-        BreweryService.getAllBreweries().then(response => {
-          context.commit('SET_BREWERYLIST', response)
+        BreweryService.listAllBreweries().then(response => {
+          context.commit('SET_BREWERYLIST', response.data)
         })
+        .catch(err => console.error(err));
       }
 
     },
     mutations: {
-      SET_BREWERYLIST(state, brewery){
-        state.breweryList = brewery
+      SET_BREWERYLIST(state, breweries){
+        state.breweryList = breweries
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
