@@ -1,9 +1,9 @@
 <template>
     <div class="brewery-list">
       <h1>Breweries</h1>
-      <div v-if="breweries.length === 0">No breweries found</div>
-      <div v-else>
-        <brewery-card v-for="brewery in breweries" :key="brewery.name" :brewery="brewery" />
+      <div id = 'breweries'>
+        <brewery-card v-for="brewery in breweries" 
+        v-bind:key="brewery.name" v-bind:brewery="brewery" />
       </div>
     </div>
   </template>
@@ -18,23 +18,31 @@
     },
     data() {
         return {
-            breweries: []
+            
         }
     },
+    computed: {
+      breweries(){
+        return this.$store.state.breweryList
+      }
+    },
     created() {
-        const promise = BreweryService.listAllBreweries()
-        .then(response => {
-            this.breweries = response.data;
-        })
-        .catch(err => console.error(err));
-        
-    }
+        // const promise = BreweryService.listAllBreweries()
+        // .then(response => {
+        //     this.breweries = response.data;
+        // })
+        // .catch(err => console.error(err));
+        this.$store.dispatch('getAllBreweries')
+    },
+    
   }
-  </script>
+</script>
   
-  <style scoped>
-  .brewery-list {
-    margin-top: 20px;
-  }
-  </style>
+<style scoped>
+div.breweries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+</style>
   
