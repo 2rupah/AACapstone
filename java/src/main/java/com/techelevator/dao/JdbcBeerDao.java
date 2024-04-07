@@ -18,7 +18,9 @@ public class JdbcBeerDao implements BeerDao {
     @Override
     public Beer getBeerById() {
         Beer beer = null;
-        String sql = "SELECT * " + "FROM beer " + "WHERE beer_id = ?;";
+        String sql = "SELECT beer_id " +
+                "FROM beer " +
+                "WHERE beer_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         if(results.next()) {
             beer = mapRowToBeer(results);
@@ -28,6 +30,14 @@ public class JdbcBeerDao implements BeerDao {
 
     @Override
     public int getBeerByBreweryId() {
+        Beer beer = null;
+        String sql = "SELECT brewery_id " +
+                "FROM beer " +
+                "WHERE beer_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+        if(results.next()){
+            beer = mapRowToBeer(results);
+        }
         return 0;
     }
 
