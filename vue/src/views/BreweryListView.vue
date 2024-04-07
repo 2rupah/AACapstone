@@ -1,7 +1,7 @@
 <template>
-    <div>
-      <BreweryList :breweries="breweries" />
-    </div>
+    
+      <BreweryList />
+    
   </template>
   
   <script>

@@ -10,6 +10,7 @@
   
   <script>
   import BreweryCard from './BreweryCard.vue';
+  import BreweryService from '../services/BreweryService'
   
   export default {
     components: {
@@ -21,7 +22,7 @@
         }
     },
     created() {
-        const promise = BreweryService.getAllBreweries()
+        const promise = BreweryService.listAllBreweries()
         .then(response => {
             this.breweries = response.data;
         })
