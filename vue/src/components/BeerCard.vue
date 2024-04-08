@@ -1,24 +1,27 @@
 <template>
-    <div class="beer-card">
+  <div class="beer-card">
     <h2>{{ beer.name }}</h2>
-    <p><strong>BreweryId:</strong> {{ brewery.id }}</p>
     <p><strong>Style:</strong> {{ beer.style }}</p>
-    <p><strong>Abv:</strong> {{ beer.abv }}</p>
-    <p><strong>Ibu:</strong> {{ beer.ibu }}</p>
+    <p><strong>ABV:</strong> {{ beer.abv }}%</p>
+    <p><strong>IBU:</strong> {{ beer.ibu }}</p>
     <p><strong>Description:</strong> {{ beer.description }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['beers']
+  props: {
+    beer: {
+      type: Object,
+      required: true
+    }
+  }
 }
-
 </script>
 
 <style scoped>
 .beer-card {
-  border: 1px solid #1f1919;
+  border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
 }
