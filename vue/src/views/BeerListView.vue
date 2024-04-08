@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h1>List of Beers</h1>
+    
+    <h2>List of Beers</h2>
     <BeerList :beers="beerList" />
   </div>
 </template>
-
+<!-- TODO : Display Brewery Name at the top of page -->
 <script>
 import BeerList from '../components/BeerList.vue';
 import BreweryService from '../services/BreweryService';
+
 
 export default {
   components: {
@@ -15,7 +17,8 @@ export default {
   },
   data() {
     return {
-      beerList: []
+      beerList: [],
+      breweryName: ''
     };
   },
   created() {
@@ -23,7 +26,9 @@ export default {
     BreweryService.getBeersByBreweryId(breweryIdFromUrlParams)
       .then(response => {
         this.beerList = response.data;
+        
       })
+      
       .catch(err => console.error(err));
   }
 };

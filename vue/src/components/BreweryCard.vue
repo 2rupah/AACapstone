@@ -2,11 +2,12 @@
   <div class="brewery-card" @click="isFlipped = !isFlipped" :class="{ 'flipped': isFlipped }">
     <div class="front">
       <h2>{{ brewery.name }}</h2>
-      <p><strong>Location:</strong> {{ brewery.location }}</p>
-      <p><strong>Established Year:</strong> {{ brewery.establishedYear }}</p>
+      
     </div>
     <div class="back">
       <p><strong>Description:</strong> {{ brewery.description }}</p>
+      <p><strong>Location:</strong> {{ brewery.location }}</p>
+      <p><strong>Established Year:</strong> {{ brewery.establishedYear }}</p>
     </div>
   </div>
 </template>
