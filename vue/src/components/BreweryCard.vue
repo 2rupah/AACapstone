@@ -9,12 +9,7 @@
 
 <script>
 export default {
-  props: {
-    brewery: {
-      type: Object,
-      required: true
-    }
-  }
+  props: ['brewery']
 }
 </script>
 
