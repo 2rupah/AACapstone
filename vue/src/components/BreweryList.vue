@@ -1,11 +1,8 @@
 <template>
-    <div class="brewery-list">
-      <h1>Breweries</h1>
-      <div id = 'breweries'>
-        <brewery-card v-for="brewery in breweries" 
+      <section id="brewerylisting"> 
+        <BreweryCard v-for="brewery in breweries" 
         v-bind:key="brewery.name" v-bind:brewery="brewery" />
-      </div>
-    </div>
+      </section>
   </template>
   
   <script>
@@ -14,7 +11,8 @@
   
   export default {
     components: {
-      BreweryCard
+      BreweryCard,
+     
     },
     data() {
         return {
@@ -34,6 +32,7 @@
         // .catch(err => console.error(err));
         this.$store.dispatch('getAllBreweries')
     },
+   
     
   }
 </script>

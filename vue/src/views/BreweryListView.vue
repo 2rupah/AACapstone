@@ -11,13 +11,7 @@
     components: {
       BreweryList
     },
-    data() {
-        
-    return {
-
-    };
-  },
-
+    
 };
   </script>
   
