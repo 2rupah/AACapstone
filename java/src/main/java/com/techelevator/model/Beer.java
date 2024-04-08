@@ -11,8 +11,9 @@ public class Beer {
     private double abv;
     private int ibu;
     private String description;
+    private String imageUrl;
 
-    public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description){
+    public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl){
         this.beerId = beerId;
         this.name = name;
         this.breweryId = breweryId;
@@ -20,6 +21,15 @@ public class Beer {
         this.abv = abv;
         this.ibu = ibu;
         this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Beer(){

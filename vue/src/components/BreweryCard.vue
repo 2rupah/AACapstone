@@ -2,7 +2,7 @@
   <div class="brewery-card" @click="isFlipped = !isFlipped" :class="{ 'flipped': isFlipped }">
     <div class="front">
       <h2>{{ brewery.name }}</h2>
-      
+      <img :src="brewery.imageUrl" alt="image">
     </div>
     <div class="back">
       <p><strong>Description:</strong> {{ brewery.description }}</p>
