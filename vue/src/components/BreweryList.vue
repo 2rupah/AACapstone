@@ -1,9 +1,11 @@
 <template>
-      <section id="brewerylisting"> 
-        <BreweryCard v-for="brewery in breweries" 
-        v-bind:key="brewery.name" v-bind:brewery="brewery" />
-      </section>
-  </template>
+  <section id="brewerylisting" class="row">
+    <div v-for="brewery in breweries" :key="brewery.name" class="col-lg-6 mb-4">
+      <BreweryCard :brewery="brewery" />
+    </div>
+  </section>
+</template>
+
   
   <script>
   import BreweryCard from './BreweryCard.vue';
@@ -25,11 +27,7 @@
       }
     },
     created() {
-        // const promise = BreweryService.listAllBreweries()
-        // .then(response => {
-        //     this.breweries = response.data;
-        // })
-        // .catch(err => console.error(err));
+
         this.$store.dispatch('getAllBreweries')
     },
    
