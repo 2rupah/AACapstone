@@ -17,8 +17,8 @@ export function createStore(currentToken, currentUser) {
         })
         .catch(err => console.error(err));
       },
-      getBeersByBreweryId(context) {
-        BreweryService.getBeersByBreweryId().then(response => {
+      getAllBeersByBreweryId(context, breweryId) {
+        BreweryService.getBeersByBreweryId(breweryId).then(response => {
           context.commit('SET_BEERLIST', response.data)
         })
         .catch(err => console.error(err));
@@ -30,8 +30,8 @@ export function createStore(currentToken, currentUser) {
       SET_BREWERYLIST(state, breweries){
         state.breweryList = breweries
       },
-      SET_BEERLIST(state, beers){
-        state.beerList = beers
+      SET_BEERLIST(state, beerList){
+        state.beerList = beerList
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
