@@ -11,4 +11,4 @@ export default {
     getBeersByBreweryId(breweryId) {
         return axios.get(`/brewery/${breweryId}`);
     }
-    }
+}
