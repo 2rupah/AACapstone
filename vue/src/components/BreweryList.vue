@@ -1,22 +1,18 @@
 <template>
-    <div class="brewery-list">
-      <h1>Breweries</h1>
-      <div id = 'breweries'>
+      <section id="brewerylisting"> 
         <BreweryCard v-for="brewery in breweries" 
         v-bind:key="brewery.name" v-bind:brewery="brewery" />
-      </div>
-    </div>
-      <h2><BreweryService />Test</h2>
+      </section>
   </template>
   
   <script>
   import BreweryCard from './BreweryCard.vue';
-  import BreweryService from '../services/BreweryService'
+  
   
   export default {
     components: {
       BreweryCard,
-      BreweryService
+     
     },
     data() {
         return {
@@ -36,7 +32,7 @@
         // .catch(err => console.error(err));
         this.$store.dispatch('getAllBreweries')
     },
-    method: BreweryService.listAllBreweries()
+   
     
   }
 </script>
