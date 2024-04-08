@@ -2,7 +2,7 @@
   <div class="brewery-card">
     <h2>{{ brewery.name }}</h2>
     <p><strong>Location:</strong> {{ brewery.location }}</p>
-    <p><strong>Established Year:</strong> {{ brewery.established_year }}</p>
+    <p><strong>Established Year:</strong> {{ brewery.establishedYear }}</p>
     <p><strong>Description:</strong> {{ brewery.description }}</p>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 .brewery-card {
-  border: 1px solid #2d2222;
+  border: 1px solid #1f1919;
   padding: 10px;
   margin-bottom: 10px;
 }
