@@ -7,7 +7,8 @@ export function createStore(currentToken, currentUser) {
     state: {
       token: currentToken || '',
       user: currentUser || {},
-      breweryList: []
+      breweryList: [],
+      beerList: []
     },
     actions: {
       getAllBreweries(context) {
@@ -15,12 +16,22 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_BREWERYLIST', response.data)
         })
         .catch(err => console.error(err));
+      },
+      getBeersByBreweryId(context) {
+        BreweryService.getBeersByBreweryId().then(response => {
+          context.commit('SET_BEERLIST', response.data)
+        })
+        .catch(err => console.error(err));
       }
+      
 
     },
     mutations: {
       SET_BREWERYLIST(state, breweries){
         state.breweryList = breweries
+      },
+      SET_BEERLIST(state, beers){
+        state.beerList = beers
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
