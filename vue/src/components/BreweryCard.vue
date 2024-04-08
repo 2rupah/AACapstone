@@ -4,6 +4,10 @@
       <h2>{{ brewery.name }}</h2>
       <img :src="brewery.imageUrl" alt="image">
     </div>
+    <!-- <div class="front" style="width: 18rem;">
+      <img :src="brewery.imageUrl" class="card-img-top" alt="image">
+    </div> -->
+
     <div class="back">
       <p><strong>Description:</strong> {{ brewery.description }}</p>
       <p><strong>Location:</strong> {{ brewery.location }}</p>
@@ -45,6 +49,7 @@ export default {
   position: absolute;
   transition: transform 0.6s;
   backface-visibility: hidden; /* Hide the back face of the card */
+  margin: 5px;
 }
 
 .front {
@@ -61,5 +66,9 @@ export default {
 
 .flipped .back {
   transform: rotateY(0deg);
+}
+.front img {
+width: 100%;
+
 }
 </style>
