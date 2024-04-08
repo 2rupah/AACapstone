@@ -15,7 +15,8 @@ CREATE TABLE brewery (
     name VARCHAR(100) NOT NULL,
     location VARCHAR(150) NOT NULL,
     established_year INT,
-    description TEXT
+    description TEXT,
+    imageURL VARCHAR(255) 
 );
 
 CREATE TABLE beer (
@@ -26,7 +27,8 @@ CREATE TABLE beer (
     abv DECIMAL(4, 2),
     ibu INT,
     description TEXT,
-    FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
+    FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
+    imageURL VARCHAR(255) 
 );
 
 COMMIT TRANSACTION;
