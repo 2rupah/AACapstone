@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .brewery-card {
-  border: 1px solid #ccc;
+  border: 1px solid #2d2222;
   padding: 10px;
   margin-bottom: 10px;
 }
