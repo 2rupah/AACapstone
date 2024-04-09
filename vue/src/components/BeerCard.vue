@@ -25,6 +25,7 @@ export default {
   border: 5px solid #020101;
   padding: 10px;
   margin-bottom: 10px;
+  
 }
 
 img {

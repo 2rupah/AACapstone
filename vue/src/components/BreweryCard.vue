@@ -55,6 +55,7 @@ export default {
   /* font-weight: bold; */
 }
 
+
 img {
   width: 150px;
   align-self: center;
