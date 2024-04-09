@@ -25,7 +25,7 @@
           <h5 class="card-title"><strong>Location: </strong>{{ brewery.location }}</h5>
           <p class="card-text">{{ brewery.description }}</p>
 
-          <router-link v-bind:to="{ name: 'home' }" class="btn btn-primary mr-2">See Our Beers!</router-link>
+          <router-link id="button" v-bind:to="{ name: 'home' }" class="btn btn-primary mr-2">See Our Beers!</router-link>
         </div>
         </div>
       </div>
@@ -60,6 +60,13 @@ export default {
   /* Set the width of the card */
   height: 200px;
   /* Set the height of the card */
+}
+
+#button {
+  background-color: #0A1823;
+  border: #0A1823;
+  /* color: #C4AD85; */
+  /* font-weight: bold; */
 }
 
 img {
