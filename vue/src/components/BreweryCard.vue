@@ -64,6 +64,7 @@ export default {
   
 }
 
+
 img {
   width: 150px;
   align-self: center;
