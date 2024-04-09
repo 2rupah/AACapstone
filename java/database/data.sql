@@ -13,17 +13,20 @@ INSERT INTO brewery (name, location, established_year, description, imageURL) VA
 
 -- INSERT beer
 INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALUES
-('Double IPA', 1, 'Double IPA', 8.0, 80, 'Intensely hoppy ale with a bold bitterness and tropical fruit flavors.', ''),
-('Berliner Weisse', 1, 'Berliner Weisse', 4.0, 5, 'Tart and refreshing wheat beer with a clean, crisp finish.', ''),
+('Double IPA', 1, 'Double IPA', 8.0, 80, 'Intensely hoppy ale with a bold bitterness and tropical fruit flavors.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679976/hoof_dipa_btjcru.jpg'),
+('Berliner Weisse', 1, 'Berliner Weisse', 4.0, 5, 'Tart and refreshing wheat beer with a clean, crisp finish.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679962/hoof_fake_beer_flsfg8.jpg'),
 
-('Porter', 2, 'Porter', 6.2, 35, 'Smooth and velvety ale with notes of roasted malt, dark chocolate, and a hint of smoke.', ''),
-('Belgian Tripel', 2, 'Belgian Tripel', 9.0, 30, 'Strong and complex ale with fruity esters, spicy phenols, and a dry finish.', ''),
+('Porter', 2, 'Porter', 6.2, 35, 'Smooth and velvety ale with notes of roasted malt, dark chocolate, and a hint of smoke.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679524/wolf_fake_porter_fxuodv.jpg'),
+('Belgian Tripel', 2, 'Belgian Tripel', 9.0, 30, 'Strong and complex ale with fruity esters, spicy phenols, and a dry finish.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679920/wolf_fake_belgian_pmavus.jpg'),
 
-('Blonde Ale', 3, 'Blonde Ale', 4.5, 20, 'Light and crisp ale with a subtle malt sweetness and a clean, refreshing finish.', ''),
-('Cream Ale', 3, 'Cream Ale', 5.0, 15, 'Smooth and easy-drinking ale with a hint of sweetness and a mild hop bitterness.', ''),
+('Blonde Ale', 3, 'Blonde Ale', 4.5, 20, 'Light and crisp ale with a subtle malt sweetness and a clean, refreshing finish.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679945/knotty-pine-amber-ale_jxcjfb.jpg'),
+('Cream Ale', 3, 'Cream Ale', 5.0, 15, 'Smooth and easy-drinking ale with a hint of sweetness and a mild hop bitterness.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679932/knotty-pine-pine-lite_mhncxx.jpg'),
 
-('Irish Red Ale', 4, 'Irish Red Ale', 5.0, 25, 'Smooth and malty ale with a rich caramel flavor and a dry, roasted finish.', ''),
-('Scottish Stout', 4, 'Stout', 6.0, 35, 'Dark and roasty ale with flavors of coffee, chocolate, and a hint of smoke.', '');
+('Irish Red Ale', 4, 'Irish Red Ale', 5.0, 25, 'Smooth and malty ale with a rich caramel flavor and a dry, roasted finish.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680005/barley_dark_beer_mpxpfa.jpg'),
+('Scottish Stout', 4, 'Stout', 6.0, 35, 'Dark and roasty ale with flavors of coffee, chocolate, and a hint of smoke.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680005/barley_dark_beer_mpxpfa.jpg');
+
+('Bodhi', 5, 'Double IPA', 8.5, 80, 'Bodhi is a classic double IPA from Columbus Brewing Company, known for its bold hop flavors and citrusy aroma.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680511/bodhi-440x716_mtz4nj.webp');
+('Creeper', 5, 'Imperial Stout', 10.2, 65, 'Creeper is a rich and robust imperial stout brewed by Columbus Brewing Company, featuring notes of chocolate, coffee, and caramel.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680567/creeper_dj9ctj.webp');
 
 
 

@@ -37,9 +37,10 @@
   
 <style scoped>
 div.breweries {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 </style>
   
