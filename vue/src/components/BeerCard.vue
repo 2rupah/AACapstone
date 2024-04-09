@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .beer-card {
-  border: 1px solid #ccc;
+  border: 5px solid #020101;
   padding: 10px;
   margin-bottom: 10px;
 }
