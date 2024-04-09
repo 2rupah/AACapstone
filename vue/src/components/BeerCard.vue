@@ -7,6 +7,7 @@
     <p class="beer-details"><strong>IBU:</strong> {{ beer.ibu }}</p>
     <p class="beer-description"><strong>Description:</strong> {{ beer.description }}</p>
   </div>
+
 </template>
 
 <script>
@@ -45,4 +46,5 @@ export default {
 .beer-description {
   margin-top: 10px; /* Add spacing above the description */
 }
+
 </style>
