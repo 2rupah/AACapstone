@@ -56,6 +56,7 @@ public class JdbcBeerDao implements BeerDao {
         beer.setDescription(rowSet.getString("description") );
         beer.setImageUrl(rowSet.getString("imageurl"));
 
+
         return beer;
     }
 }

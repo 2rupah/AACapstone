@@ -33,8 +33,8 @@ export default {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    border-bottom: 10px solid rgb(13, 21, 139);
-    background-color: cornflowerblue;
+    border-bottom: 8px solid #A78851;
+    background-color: #d2c1a2;
   }
   nav a {
     margin: 5px;

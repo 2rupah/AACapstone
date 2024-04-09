@@ -1,6 +1,7 @@
 <template>
   <div class="beer-card">
     <h2>{{ beer.name }}</h2>
+    <img :src="beer.imageUrl" class="card-img-top" alt="...">
     <p><strong>Style:</strong> {{ beer.style }}</p>
     <p><strong>ABV:</strong> {{ beer.abv }}%</p>
     <p><strong>IBU:</strong> {{ beer.ibu }}</p>
@@ -24,5 +25,9 @@ export default {
   border: 5px solid #020101;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+img {
+  width: 500px;
 }
 </style>
