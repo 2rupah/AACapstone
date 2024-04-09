@@ -23,9 +23,9 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('Cream Ale', 3, 'Cream Ale', 5.0, 15, 'Smooth and easy-drinking ale with a hint of sweetness and a mild hop bitterness.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712679932/knotty-pine-pine-lite_mhncxx.jpg'),
 
 ('Irish Red Ale', 4, 'Irish Red Ale', 5.0, 25, 'Smooth and malty ale with a rich caramel flavor and a dry, roasted finish.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680005/barley_dark_beer_mpxpfa.jpg'),
-('Scottish Stout', 4, 'Stout', 6.0, 35, 'Dark and roasty ale with flavors of coffee, chocolate, and a hint of smoke.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680005/barley_dark_beer_mpxpfa.jpg');
+('Scottish Stout', 4, 'Stout', 6.0, 35, 'Dark and roasty ale with flavors of coffee, chocolate, and a hint of smoke.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680005/barley_dark_beer_mpxpfa.jpg'),
 
-('Bodhi', 5, 'Double IPA', 8.5, 80, 'Bodhi is a classic double IPA from Columbus Brewing Company, known for its bold hop flavors and citrusy aroma.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680511/bodhi-440x716_mtz4nj.webp');
+('Bodhi', 5, 'Double IPA', 8.5, 80, 'Bodhi is a classic double IPA from Columbus Brewing Company, known for its bold hop flavors and citrusy aroma.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680511/bodhi-440x716_mtz4nj.webp'),
 ('Creeper', 5, 'Imperial Stout', 10.2, 65, 'Creeper is a rich and robust imperial stout brewed by Columbus Brewing Company, featuring notes of chocolate, coffee, and caramel.', 'https://res.cloudinary.com/dknqgztin/image/upload/v1712680567/creeper_dj9ctj.webp');
 
 
