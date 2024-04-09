@@ -1,7 +1,7 @@
 <template>
   <div class="brewery-card" @click="isFlipped = !isFlipped" :class="{ 'flipped': isFlipped }">
     <div class="front">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 25rem;">
         <img :src="brewery.imageUrl" class="card-img-top" alt="...">
 
         <div class="card-body">
@@ -10,15 +10,16 @@
       </div>
     </div>
     <div class="back">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 25rem;">
         <div class="card-body">
           <h5 class="card-title"><strong>Location: </strong>{{ brewery.location }}</h5>
           <p class="card-text">{{ brewery.description }}</p>
-          <router-link :to="{ name: 'brewery-detail', params: { id: brewery.breweryId } }" class="btn btn-primary mr-2">See Our Beers!</router-link>
+          <router-link :to="{ name: 'brewery-detail', params: { id: brewery.breweryId } }" id="button" class="btn btn-primary mr-2">See Our Beers!</router-link>
         </div>
       </div>
+      </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -55,7 +56,6 @@ export default {
   font-weight: bold;
 }
 
-
 img {
   width: 150px;
   align-self: center;
@@ -68,8 +68,8 @@ img:hover {
 
 .front,
 .back {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   position: absolute;
   transition: transform 0.6s;
   backface-visibility: hidden;
