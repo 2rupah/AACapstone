@@ -24,8 +24,9 @@
         <div class="card-body">
           <h5 class="card-title"><strong>Location: </strong>{{ brewery.location }}</h5>
           <p class="card-text">{{ brewery.description }}</p>
+          
+          <router-link :to="{ name: 'brewery-detail', params: { id: brewery.breweryId } }" class="btn btn-primary mr-2">See Our Beers!</router-link>
 
-          <router-link v-bind:to="{ name: 'home' }" class="btn btn-primary mr-2">See Our Beers!</router-link>
         </div>
         </div>
       </div>
