@@ -1,34 +1,26 @@
 <template>
-  
-  <div class="background"></div>  
   <div class="overlay"></div>
-    <h1>Home</h1>
-    <p>You must be authenticated to see this</p>
-
 </template>
-
 <script>
 export default {
 };
 </script>
-
 <style scoped>
-
-
-.background {
-  background-color: #0D1822;
-  height: 100vh;
-  width: 100vw;
- 
-}
 .overlay {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-size: contain;
-    background-position:center;
-    background-repeat: no-repeat;
-
-    background-image: url('../assets/Logo.jpg'); 
-  }
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Adjust this according to your needs */
+  background-color: #0A1823;
+}
+.overlay::before {
+  content: "";
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/Logo.jpg'); /* Path to your image */
+  background-size: contain;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  background-position: center;
+  background-repeat: no-repeat;
+}
 </style>
