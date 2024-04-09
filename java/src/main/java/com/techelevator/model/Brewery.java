@@ -7,16 +7,26 @@ public class Brewery {
     private String location;
     private int establishedYear;
     private String description;
+    private String imageUrl;
 
     public Brewery() {
     }
 
-    public Brewery(int breweryId, String name, String location, int establishedYear, String description) {
+    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl) {
         this.breweryId = breweryId;
         this.name = name;
         this.location = location;
         this.establishedYear = establishedYear;
         this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public int getBreweryId() {

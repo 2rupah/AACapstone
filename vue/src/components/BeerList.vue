@@ -1,41 +1,28 @@
 <template>
-    <h1>List of Beers</h1>
-    <section id="beerList">
-    <BeerCard v-for="beer in beerList"
-    v-bind:key="beer.name" v-bind:beer="beer"/>
-    </section>
-</template>
-
-<script>
-import BreweryService from '../services/BreweryService'
-import BeerCard from './BeerCard.vue'
-
-
-export default {
+    <div>
+      <section id="beerList">
+        <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" />
+      </section>
+    </div>
+  </template>
+  
+  <script>
+  import BeerCard from './BeerCard.vue';
+  
+  export default {
     components: {
-        BeerCard,
+      BeerCard
     },
-
-    data() {
-        return {
-            
-        }
-    },
-    computed: {
-      beerList(){
-        return this.$store.state.beerList
+    props: {
+      beers: {
+        type: Array,
+        required: true
       }
-    },
-    created() {
-        
-        this.$store.dispatch('getBeersByBreweryId')
-    },
-
-}
-</script>
-
-
-
-<style scoped>
-
-</style>
+    }
+  }
+  </script>
+  
+  <style scoped>
+  /* Add your styling here */
+  </style>
+  

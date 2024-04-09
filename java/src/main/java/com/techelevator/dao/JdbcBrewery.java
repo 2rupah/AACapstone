@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 public class JdbcBrewery implements BreweryDao{
 
-    private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description " +
+    private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description, imageurl " +
             "FROM brewery";
 
     private JdbcTemplate jdbcTemplate;
@@ -44,6 +44,7 @@ public class JdbcBrewery implements BreweryDao{
         brewery.setLocation( row.getString("location") );
         brewery.setEstablishedYear( row.getInt("established_year") );
         brewery.setDescription( row.getString("description") );
+        brewery.setImageUrl( row.getString("imageurl") );
 
         return brewery;
     }
