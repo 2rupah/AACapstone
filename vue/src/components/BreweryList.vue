@@ -9,7 +9,7 @@
   
   <script>
   import BreweryCard from './BreweryCard.vue';
-  
+
   
   export default {
     components: {
@@ -18,7 +18,7 @@
     },
     data() {
         return {
-            
+        
         }
     },
     computed: {
@@ -30,7 +30,7 @@
 
         this.$store.dispatch('getAllBreweries')
     },
-   
+
     
   }
 </script>
