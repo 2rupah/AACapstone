@@ -5,10 +5,8 @@
       </section>
     </div>
   </template>
-  
   <script>
   import BeerCard from './BeerCard.vue';
-  
   export default {
     components: {
       BeerCard
@@ -21,8 +19,10 @@
     }
   }
   </script>
-  
-  <style scoped>
-  /* Add your styling here */
-  </style>
-  
+<style scoped>
+.beer-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow beer cards to wrap to the next row */
+  justify-content: space-between; /* Distribute beer cards evenly along the row */
+}
+</style>
