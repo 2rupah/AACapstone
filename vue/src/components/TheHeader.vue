@@ -26,8 +26,11 @@ export default {
   img {
     width: 7%;
     height:auto;
+    /* Make logo a circle and add */
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px;
     margin-right: auto;
-    padding: 10px;
+    /* padding: 10px; */
   }
   #container {
     display: flex;
@@ -40,7 +43,7 @@ export default {
   nav a {
     margin: 5px;
     padding: 13px 25px;
-    background-color: rgb(13, 21, 139);
+    background-color: #0A1823;
     color: white;
     border-radius: 6px;
 }
