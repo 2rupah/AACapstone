@@ -4,8 +4,8 @@
         <!-- <h1 id="siteTitle">{{title}}</h1> -->
         <nav>
             <router-link v-bind:to="{ name: 'home' }">Home</router-link>
-            <router-link v-bind:to="{ name: 'login' }">Login</router-link>
             <router-link v-bind:to="{ name: 'brewery' }">Brewery</router-link>
+            <router-link v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
     </div>
 </template>
