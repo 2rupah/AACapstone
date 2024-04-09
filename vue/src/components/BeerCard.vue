@@ -7,6 +7,7 @@
     <p><strong>IBU:</strong> {{ beer.ibu }}</p>
     <p><strong>Description:</strong> {{ beer.description }}</p>
   </div>
+
 </template>
 
 <script>
@@ -31,4 +32,5 @@ export default {
 img {
   width: 500px;
 }
+
 </style>

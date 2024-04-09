@@ -6,11 +6,12 @@
     </div>
   </section>
 
-  <section id="brewerylisting" class="row">
+  <section id="brewerylisting" class="row" >
     <div v-for="brewery in breweries" :key="brewery.name" class="col-lg-6 mb-4">
       <BreweryCard :brewery="brewery" />
     </div>
   </section>
+
 </template>
 
   
