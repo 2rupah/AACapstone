@@ -13,7 +13,7 @@
 export default {
     data() {
         return {
-            title: 'Java BlueBirds Baseball'
+          title: 'Brewery'
         }
     }
 }
@@ -23,8 +23,10 @@ export default {
     text-align: center;
   }
   img {
-    width: 10%;
+    width: 7%;
     height:auto;
+    margin-right: auto;
+    padding: 10px;
   }
   #container {
     display: flex;
