@@ -4,8 +4,8 @@
         <!-- <h1 id="siteTitle">{{title}}</h1> -->
         <nav>
             <router-link v-bind:to="{ name: 'home' }">Home</router-link>
-            <router-link v-bind:to="{ name: 'login' }">Login</router-link>
             <router-link v-bind:to="{ name: 'brewery' }">Brewery</router-link>
+            <router-link v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
     </div>
 </template>
@@ -13,7 +13,7 @@
 export default {
     data() {
         return {
-            title: 'Java BlueBirds Baseball'
+          title: 'Brewery'
         }
     }
 }
@@ -23,21 +23,26 @@ export default {
     text-align: center;
   }
   img {
-    width: 10%;
+    width: 7%;
     height:auto;
+    /* Make logo a circle and add */
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px;
+    margin-right: auto;
+    /* padding: 10px; */
   }
   #container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    border-bottom: 10px solid rgb(13, 21, 139);
-    background-color: cornflowerblue;
+    border-bottom: 8px solid #A78851;
+    background-color: #d2c1a2;
   }
   nav a {
     margin: 5px;
     padding: 13px 25px;
-    background-color: rgb(13, 21, 139);
+    background-color: #0A1823;
     color: white;
     border-radius: 6px;
 }
