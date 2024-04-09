@@ -1,11 +1,11 @@
 <template>
+  
   <div class=brewery-card @click="isFlipped = !isFlipped" :class="{ 'flipped': isFlipped }">
-    
     <div class="front">
       <!-- <h2>{{ brewery.name }}</h2>
       <img :src="brewery.imageUrl" alt="image"> -->
 
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 23rem;">
         <img :src="brewery.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ brewery.name }}</h5>
@@ -20,12 +20,13 @@
       <p><strong>Location:</strong> {{ brewery.location }}</p>
       <p><strong>Established Year:</strong> {{ brewery.establishedYear }}</p> -->
 
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 23rem;">
         <div class="card-body">
           <h5 class="card-title"><strong>Location: </strong>{{ brewery.location }}</h5>
           <p class="card-text">{{ brewery.description }}</p>
+          
+          <router-link :to="{ name: 'brewery-detail', params: { id: brewery.breweryId } }" id= "button" class="btn btn-primary mr-2">See Our Beers!</router-link>
 
-          <router-link id="button" v-bind:to="{ name: 'home' }" class="btn btn-primary mr-2">See Our Beers!</router-link>
         </div>
         </div>
       </div>
