@@ -1,25 +1,16 @@
 <template>
-  
-
   <div class="overlay"></div>
-    
-
 </template>
-
 <script>
 export default {
 };
 </script>
-
 <style scoped>
-
-
 .overlay {
   position: relative;
   width: 100vw;
   height: 100vh; /* Adjust this according to your needs */
   background-color: #0A1823;
- 
 }
 .overlay::before {
   content: "";
@@ -31,7 +22,5 @@ export default {
   opacity: 0.5; /* Adjust the opacity as needed */
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 </style>
-
