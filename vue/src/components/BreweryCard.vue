@@ -61,6 +61,7 @@ export default {
   /* Set the width of the card */
   height: 200px;
   /* Set the height of the card */
+  
 }
 
 img {
