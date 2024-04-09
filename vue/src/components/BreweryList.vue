@@ -5,7 +5,10 @@
       <P>Select a Brewery to find out more!</P>
     </div>
   </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c45598ce12e043c89d87d353bbfb6d386dfae470
   <section id="brewerylisting" class="row" >
     <div v-for="brewery in breweries" :key="brewery.name" class="col-lg-6 mb-4">
       <BreweryCard :brewery="brewery" />
@@ -13,20 +16,14 @@
   </section>
 
 </template>
-
-  
 <script>
 import BreweryCard from './BreweryCard.vue';
-
-
 export default {
   components: {
     BreweryCard,
-
   },
   data() {
     return {
-
     }
   },
   computed: {
@@ -35,14 +32,10 @@ export default {
     }
   },
   created() {
-
     this.$store.dispatch('getAllBreweries')
   },
-
-
 }
 </script>
-  
 <style scoped>
 div.breweries {
   display: grid;
@@ -50,10 +43,14 @@ div.breweries {
   gap: 20px;
   justify-items: center;
 }
-
 #banner {
   text-align: center;
   padding-top: 15px;
 }
 </style>
-  
+
+
+
+
+
+
