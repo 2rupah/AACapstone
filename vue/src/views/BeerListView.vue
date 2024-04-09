@@ -2,7 +2,9 @@
   <div>
     
     <h2>List of Beers</h2>
+    <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
     <BeerList :beers="beerList" />
+    
   </div>
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
@@ -11,9 +13,13 @@ import BeerList from '../components/BeerList.vue';
 import BreweryService from '../services/BreweryService';
 
 
+
+
 export default {
   components: {
-    BeerList
+    BeerList,
+    
+    
   },
   data() {
     return {
@@ -36,4 +42,13 @@ export default {
 
 <style scoped>
 /* Add any necessary styles */
+.btn {
+  position: fixed;
+  top: 132px;
+  right: 20px;
+}
+
+h2 {
+  text-align: center;
+}
 </style>

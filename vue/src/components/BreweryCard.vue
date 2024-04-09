@@ -50,6 +50,11 @@ export default {
   /* color: #C4AD85; */
   /* font-weight: bold; */
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b8b4461a6a90af714a0ff08ffbbfd5b17ccf6532
 img {
   width: 150px;
   align-self: center;

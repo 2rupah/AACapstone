@@ -22,6 +22,7 @@ export default {
 
 <style scoped>
 .beer-card {
+<<<<<<< HEAD
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
@@ -29,6 +30,12 @@ export default {
   margin-bottom: 20px;
   background-color: #fff; /* Light background color */
   text-align: center;
+=======
+  border: 5px solid #020101;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+>>>>>>> b8b4461a6a90af714a0ff08ffbbfd5b17ccf6532
 }
 
 .card-img-top {

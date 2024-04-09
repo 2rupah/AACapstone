@@ -1,6 +1,7 @@
 <template>
     <div id="container">
         <img src="@/assets/logo.jpg" alt="">
+        
         <!-- <h1 id="siteTitle">{{title}}</h1> -->
         <nav>
             <router-link v-bind:to="{ name: 'home' }">Home</router-link>
