@@ -1,8 +1,9 @@
 <template>
     <div id="container">
         <!-- <img src="@/assets/logo.jpg" alt=""> -->
-        
+        <router-link :to="{ name: 'home' }">
         <h1 id="siteTitle">Ale Atlas</h1>
+        </router-link>
         <div class="search-bar">
               <input type="text" placeholder="Search Breweries here! ^_^" style="width: 600px;">
               <button>Search</button>
@@ -42,6 +43,9 @@ export default {
     margin-left:20px;
     font-weight: bold;
     font-family: Cinzel;
+    float: left;
+    text-decoration: none;
+    color:#0A1823;
   }
 
   img {
