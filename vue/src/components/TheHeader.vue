@@ -89,7 +89,8 @@ Search bar
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  
+  width: 50%;
   padding: 6px;
   background-color: #0A1823;
   color: white;
