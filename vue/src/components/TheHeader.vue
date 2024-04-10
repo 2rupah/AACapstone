@@ -97,7 +97,7 @@ nav a {
   margin-top: 1px;
   margin-bottom: 1px;
   font-size: 15px;
-  max-width: 50%;
+  
 }
 
 </style>

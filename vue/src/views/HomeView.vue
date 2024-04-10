@@ -1,11 +1,16 @@
 <template>
-  <div class="overlay"></div>
+  <div class="overlay">
+    <p id="tagline">"Beer lovers <br> helping you <br> find your next <br> favorite brewery"</p>
+    <p id="second">Find Breweries <br> Rate Beers <br> Find Friends </p>
+  </div>
+  
 </template>
 <script>
 export default {
 };
 </script>
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 .overlay {
   position: fixed;
   top: -10;
@@ -30,5 +35,27 @@ export default {
   opacity: 0.5;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#tagline{
+  margin-right: auto;
+  padding-left: 10%;
+  color: white;
+  font-size: 2.5em;
+}
+
+p#tagline {
+  font-family: Cinzel;
+  padding-bottom: 10%;
+}
+#second{
+  margin-left: auto;
+  color: white;
+  font-size: 2.5em;
+}
+p#second{
+  font-family: Cinzel;
+  padding-bottom: 10%;
+  padding-right: 10%;
 }
 </style>
