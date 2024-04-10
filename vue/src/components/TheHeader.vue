@@ -1,8 +1,9 @@
 <template>
     <div id="container">
         <!-- <img src="@/assets/logo.jpg" alt=""> -->
-        
+        <router-link :to="{ name: 'home' }">
         <h1 id="siteTitle">Ale Atlas</h1>
+        </router-link>
         <div class="search-bar">
               <input type="text" placeholder="Search Breweries here! ^_^" style="width: 600px;">
               <button>Search</button>
@@ -10,7 +11,7 @@
         <nav>  
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
-            <router-link v-bind:to="{ name: 'brewery' }">Breweries</router-link>
+            <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
             <router-link v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
     </div>
@@ -27,6 +28,10 @@ export default {
      
       return this.$route.name !== 'home'; 
     },
+    shouldDisplayBreweryButton() {
+     
+     return this.$route.name !== 'brewery'; 
+   },
   },
 }
 </script>
@@ -38,6 +43,9 @@ export default {
     margin-left:20px;
     font-weight: bold;
     font-family: Cinzel;
+    float: left;
+    text-decoration: none;
+    color:#0A1823;
   }
 
   img {
@@ -89,7 +97,8 @@ Search bar
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  
+  width: 50%;
   padding: 6px;
   background-color: #0A1823;
   color: white;
