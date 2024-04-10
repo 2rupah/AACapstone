@@ -93,7 +93,8 @@ Search bar
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  
+  width: 50%;
   padding: 6px;
   background-color: #0A1823;
   color: white;
@@ -118,7 +119,7 @@ Search bar
 .search-bar button {
   padding: 8px 15px;
   background-color: white;
-  color: 0A1823;
+  color: #0A1823;
   border: none;
   border-radius: 5px;
   cursor: pointer;
