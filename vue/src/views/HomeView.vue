@@ -30,7 +30,7 @@ export default {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url('../assets/Logo.jpg');
+  background-image: url('../assets/LogoHome.png');
   background-size: contain;
   opacity: 0.5;
   background-position: center;
