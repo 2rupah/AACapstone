@@ -1,15 +1,15 @@
 <template>
   <div class="brewery-card" @click="isFlipped = !isFlipped" :class="{ 'flipped': isFlipped }">
     <div class="front">
-      <div class="card" style="width: 25rem;">
+      <div class="card" style="width: 28rem;">
         <img :src="brewery.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{ brewery.name }}</h5>
+          <h5 id="name" class="card-title">{{ brewery.name }}</h5>
         </div>
       </div>
     </div>
     <div class="back">
-      <div class="card" style="width: 25rem;">
+      <div class="card" style="width: 28rem;">
         <div class="card-body">
           <h5 class="card-title"><strong>Location: </strong>{{ brewery.location }}</h5>
           <p class="card-text">{{ brewery.description }}</p>
@@ -36,14 +36,20 @@ export default {
 </script>
 <style scoped>
 .brewery-card {
-  border: 1px solid #FFFFFF;
+  
   padding: 10px;
   margin-bottom: 10px;
+  margin-left: 10px;
   position: relative;
   perspective: 1000px;
   width: 300px;
   height: 200px;
   box-sizing: content-box;
+  
+}
+
+#name {
+  text-align: center;
 }
 #button {
   background-color: #0A1823;
