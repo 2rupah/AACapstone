@@ -10,6 +10,7 @@
       <BreweryCard :brewery="brewery" />
     </div>
   </section>
+
 </template>
 <script>
 import BreweryCard from './BreweryCard.vue';

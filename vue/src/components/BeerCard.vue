@@ -7,6 +7,7 @@
     <p><strong>IBU:</strong> {{ beer.ibu }}</p>
     <p><strong>Description:</strong> {{ beer.description }}</p>
   </div>
+
 </template>
 
 <script>
@@ -22,13 +23,18 @@ export default {
 
 <style scoped>
 .beer-card {
-  border: 5px solid #020101;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff; /* Light background color */
+  text-align: center;
   
 }
 
 img {
   width: 500px;
 }
+
 </style>
