@@ -41,19 +41,16 @@ export default {
   margin-right: auto;
   padding-left: 10%;
   color: white;
-  font-size: 2.5em;
-}
-
-p#tagline {
+  font-size: 2vw;
   font-family: Cinzel;
   padding-bottom: 10%;
 }
+
+
 #second{
   margin-left: auto;
   color: white;
-  font-size: 2.5em;
-}
-p#second{
+  font-size: 2vw;
   font-family: Cinzel;
   padding-bottom: 10%;
   padding-right: 10%;
