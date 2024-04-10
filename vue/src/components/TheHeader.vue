@@ -3,6 +3,10 @@
         <!-- <img src="@/assets/logo.jpg" alt=""> -->
         
         <h1 id="siteTitle">Ale Atlas</h1>
+        <div class="search-bar">
+              <input type="text" placeholder="Search Breweries here! ^_^" style="width: 600px;">
+              <button>Search</button>
+          </div>
         <nav>  
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
@@ -75,4 +79,51 @@ nav a {
   background-color: #0A1823;
   color: white;
   border-radius: 6px;
-}</style>
+}
+
+/*
+Search bar
+*/
+.search-bar {
+ /* border: 1px solid #0A1823; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 6px;
+  background-color: #0A1823;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-left: 15px;
+  margin-right: 6px;
+}
+.search-bar input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 100%;
+  background-color: #F1F1F1;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: inherit;
+}
+.search-bar button {
+  padding: 8px 15px;
+  background-color: white;
+  color: 0A1823;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 300px;
+  margin-right: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+
+
+</style>
