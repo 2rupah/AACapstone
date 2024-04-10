@@ -43,6 +43,7 @@ export default {
   perspective: 1000px;
   width: 300px;
   height: 200px;
+  box-sizing: content-box;
 }
 #button {
   background-color: #0A1823;
@@ -51,8 +52,10 @@ export default {
   font-weight: bold;
 }
 img {
-  width: 150px;
+  /* width: 150px; */
   align-self: center;
+  height: 125px;
+  width: 140px;
 }
 img:hover {
   transform: scale(1.2); /* Scale the image on hover */

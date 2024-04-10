@@ -1,5 +1,6 @@
 <template>
   <div class="overlay"></div>
+  <img src="" alt="">
 </template>
 <script>
 export default {

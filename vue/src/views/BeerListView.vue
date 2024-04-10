@@ -1,8 +1,10 @@
 <template>
   <div>
     
-    <h2>List of Beers</h2>
-    <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
+    <h2>List of Beers
+      <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
+    </h2>
+    
     <BeerList :beers="beerList" />
     
   </div>
@@ -36,6 +38,7 @@ export default {
       })
       
       .catch(err => console.error(err));
+
   }
 };
 </script>
@@ -43,12 +46,12 @@ export default {
 <style scoped>
 /* Add any necessary styles */
 .btn {
-  position: fixed;
-  top: 132px;
-  right: 20px;
+  float: right;
+  background-color: #0A1823;
 }
 
 h2 {
   text-align: center;
+  margin: 10px;
 }
 </style>

@@ -30,6 +30,7 @@ export default {
   margin-bottom: 20px;
   background-color: #fff; /* Light background color */
   text-align: center;
+  
 }
 
 .card-img-top {

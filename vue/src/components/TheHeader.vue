@@ -31,6 +31,7 @@ export default {
     box-shadow: 3px 3px 3px;
     margin-right: auto;
     /* padding: 10px; */
+    margin-left: 10px;
   }
   #container {
     display: flex;

@@ -5,10 +5,6 @@
       <P>Select a Brewery to find out more!</P>
     </div>
   </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> c45598ce12e043c89d87d353bbfb6d386dfae470
   <section id="brewerylisting" class="row" >
     <div v-for="brewery in breweries" :key="brewery.name" class="col-lg-6 mb-4">
       <BreweryCard :brewery="brewery" />
