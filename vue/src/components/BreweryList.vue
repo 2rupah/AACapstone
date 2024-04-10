@@ -33,6 +33,7 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Cinzel:wght@400..900&display=swap');
 /* #brewerylisting {
   display: flex;
   grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
@@ -42,6 +43,7 @@ export default {
 #banner {
   text-align: center;
   padding-top: 15px;
+  font-family: Balthazar;
 }
 
 #brewerylisting {
