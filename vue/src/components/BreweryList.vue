@@ -43,6 +43,14 @@ export default {
   text-align: center;
   padding-top: 15px;
 }
+<<<<<<< HEAD
+=======
+
+#brewerylisting {
+  background-image: url('../assets/Home.png');
+}
+
+>>>>>>> f31e91324e8312daf72aedce6f01200cf4066dcb
 /* div.col-md-4 {
   width: 300px;
   height: 300px;

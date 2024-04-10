@@ -73,6 +73,7 @@ nav a {
 
 
 }
+<<<<<<< HEAD
 .search-bar input[type="text"] {
   padding: 8px;
   border-radius: 5px;
@@ -101,3 +102,13 @@ nav a {
 }
 
 </style>
+=======
+
+nav a {
+  margin: 5px;
+  padding: 13px 25px;
+  background-color: #0A1823;
+  color: white;
+  border-radius: 6px;
+}</style>
+>>>>>>> f31e91324e8312daf72aedce6f01200cf4066dcb

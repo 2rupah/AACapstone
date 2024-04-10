@@ -36,6 +36,10 @@ export default {
 </script>
 <style scoped>
 .brewery-card {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f31e91324e8312daf72aedce6f01200cf4066dcb
   padding: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -44,6 +48,11 @@ export default {
   width: 300px;
   height: 200px;
   box-sizing: content-box;
+  
+}
+
+#name {
+  text-align: center;
 }
 #name {
   text-align: center;
