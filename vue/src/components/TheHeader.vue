@@ -114,7 +114,7 @@ Search bar
 .search-bar button {
   padding: 8px 15px;
   background-color: white;
-  color: 0A1823;
+  color: #0A1823;
   border: none;
   border-radius: 5px;
   cursor: pointer;
