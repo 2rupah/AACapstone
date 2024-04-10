@@ -3,7 +3,8 @@
         <!-- <img src="@/assets/logo.jpg" alt=""> -->
         
         <h1 id="siteTitle">Ale Atlas</h1>
-        <div class="search-bar">
+       
+                     <div class="search-bar">
               <input type="text" placeholder="Search Breweries here! ^_^" style="width: 600px;">
               <button>Search</button>
           </div>
@@ -12,6 +13,7 @@
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
             <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
             <router-link v-bind:to="{ name: 'login' }">Login</router-link>
+
         </nav>
     </div>
 </template>
