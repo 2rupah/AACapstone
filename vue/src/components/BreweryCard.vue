@@ -43,6 +43,7 @@ export default {
   perspective: 1000px;
   width: 300px;
   height: 200px;
+  box-sizing: content-box;
 }
 #button {
   background-color: #0A1823;

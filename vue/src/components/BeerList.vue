@@ -5,10 +5,8 @@
       </section>
     </div>
   </template>
-  
   <script>
   import BeerCard from './BeerCard.vue';
-  
   export default {
     components: {
       BeerCard
@@ -21,8 +19,6 @@
     }
   }
   </script>
-  
   <style scoped>
   /* Add your styling here */
   </style>
-  
