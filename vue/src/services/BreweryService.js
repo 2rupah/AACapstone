@@ -12,14 +12,15 @@ export default {
     getBeersByBreweryId(breweryId) {
         return axios.get(`/brewery/${breweryId}`);
     },
+}
 
     //Dashboard
-    addBeer(beer) {
-        return axios.post('/brewery/beer', beer);
-    },
+//     addBeer(beer) {
+//         return axios.post('/brewery/beer', beer);
+//     },
 
-    deleteBeer(beerId){
-        return axios.delete(`/delete/${beerId}`);
-    }
+//     deleteBeer(beerId){
+//         return axios.delete(`/delete/${beerId}`);
+//     }
     
-}
+// }

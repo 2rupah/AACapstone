@@ -9,7 +9,8 @@ import RegisterView from '../views/RegisterView.vue';
 import BreweryListView from '../views/BreweryListView.vue';
 import BeerListView from '../views/BeerListView.vue';
 import DashboardView from '../views/DashboardView.vue';
-
+import DeleteBeerView from '../views/DeleteBeerView.vue';
+import UpdateBeerView from '../views/UpdateBeerView.vue'
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -72,13 +73,30 @@ const routes = [
 
     // Dashboard
     {
-    path: "/login/dashboard",
-    name: "login-dashboard",
+    path: "/login/add",
+    name: "add",
     component: DashboardView,
     meta: {
       requiresAuth: false
     }
-  }
+  },
+  {
+    path: "/login/delete",
+    name: "delete",
+    component: DeleteBeerView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/login/update",
+    name: "update",
+    component:UpdateBeerView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+
   
 ];
 
