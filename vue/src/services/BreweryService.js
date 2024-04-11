@@ -10,9 +10,9 @@ export default {
         },
 
     getBeersByBreweryId(breweryId) {
-        return axios.get(`/brewery/${breweryId}`);
-    },
-
+        return axios.get(`/brewery/${breweryId}/beer`);
+        },
+    
     // Dashboard
     addBeer(beer) {
         console.log("In add Beer of Brewery Service: ", beer)

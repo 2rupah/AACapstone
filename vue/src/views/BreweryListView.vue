@@ -1,5 +1,9 @@
 <template>
+  <section id="brewerypage">
+
   <BreweryList />
+
+  </section> 
 </template>
   
 <script>

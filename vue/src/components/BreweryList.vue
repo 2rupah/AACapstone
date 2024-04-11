@@ -1,73 +1,57 @@
 <template>
-  <section>
+  <div id="wholePage">
     <div id="banner">
       <h1>Brewery Results</h1>
-      <P>Select a Brewery to find out more!</P>
+      <p>Select a Brewery to find out more!</p>
     </div>
-  </section>
-  <section id="brewerylisting" class="row" >
-    <!-- class="col-lg-6 mb-4" -->
-    <div class="col-md-4" v-for="brewery in breweries" :key="brewery.name">
-      <BreweryCard :brewery="brewery"/>
-      
+    <div class="brewery-container">
+      <div class="brewery-item" v-for="brewery in breweries" :key="brewery.name">
+        <BreweryCard :brewery="brewery" />
+      </div>
     </div>
-  </section>
+  </div>
 </template>
+
 <script>
 import BreweryCard from './BreweryCard.vue';
 
 export default {
   components: {
     BreweryCard
-    
-  },
-  data() {
-    return {
-    }
   },
   computed: {
     breweries() {
-      return this.$store.state.breweryList
+      return this.$store.state.breweryList;
     }
   },
   created() {
-    this.$store.dispatch('getAllBreweries')
+    this.$store.dispatch('getAllBreweries');
   },
 }
 </script>
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Cinzel:wght@400..900&display=swap');
-/* #brewerylisting {
-  display: flex;
-  grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
-  gap: 10px;
-  justify-items: center;
-} */
 #banner {
   text-align: center;
-  padding-top: 15px;
-  font-family: Balthazar;
+  padding: 20px; /* Adjust the padding as needed */
 }
 
-#brewerylisting {
-  background-image: url('../assets/Home.png');
+#wholePage {
+  padding: 0; /* Remove padding to allow full width */
 }
 
-/* div.col-md-4 {
-  width: 300px;
-  height: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  background-color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;} */
+.brewery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Evenly distribute items with equal space around them */
+  max-width: 1200px; /* Set a max width to limit the container's width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.brewery-item {
+  flex: 0 1 calc(33.33% - 20px); /* Adjust the width of each card (in this case, 33.33% width for three cards per row) */
+  margin: 10px; /* Adjust margin as needed */
+}
 </style>
-
-
-
-
 
 

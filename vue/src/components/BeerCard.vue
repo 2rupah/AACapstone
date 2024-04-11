@@ -1,6 +1,7 @@
 <template>
   <div class="beer-card">
     <h2>{{ beer.name }}</h2>
+
     <img :src="beer.imageUrl" class="card-img-top" alt="...">
     <p class="beer-details"><strong>Style:</strong> {{ beer.style }}</p>
     <p class="beer-details"><strong>ABV:</strong> {{ beer.abv }}%</p>
@@ -15,9 +16,13 @@ export default {
     beer: {
       type: Object,
       required: true
+    },
+    breweryName: {
+      type: String,
+      required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -35,8 +40,8 @@ export default {
 }
 
 .card-img-top {
-  width: 100%;
-  max-width: 300px;
+  width: 50%;
+  height: 10%;
   /* Limit image width */
   border-radius: 8px;
   /* Add rounded corners to the image */
