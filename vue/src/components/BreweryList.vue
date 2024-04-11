@@ -9,14 +9,17 @@
     <!-- class="col-lg-6 mb-4" -->
     <div class="col-md-4" v-for="brewery in breweries" :key="brewery.name" >
       <BreweryCard :brewery="brewery" />
+      
     </div>
   </section>
 </template>
 <script>
 import BreweryCard from './BreweryCard.vue';
+
 export default {
   components: {
-    BreweryCard,
+    BreweryCard
+    
   },
   data() {
     return {

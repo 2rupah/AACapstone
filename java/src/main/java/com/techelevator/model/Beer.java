@@ -13,6 +13,8 @@ public class Beer {
     private String description;
     private String imageUrl;
 
+
+
     public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl){
         this.beerId = beerId;
         this.name = name;

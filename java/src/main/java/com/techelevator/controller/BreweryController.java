@@ -57,4 +57,17 @@ public class BreweryController {
 //        breweryDao.updateBrewery(brewery);
 //        return brewery;
 //    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @RequestMapping(path = "/beer", method = RequestMethod.POST)
+    public Beer addBeer(@RequestBody Beer beer) {
+        return beerDao.createBeer(beer);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @RequestMapping(path="/delete/{id}", method = RequestMethod.DELETE)
+    public void deleteProduct(@PathVariable int id) {
+
+        beerDao.deleteBeerById(id);
+    }
 }
