@@ -7,9 +7,11 @@
   </template>
   <script>
   import BeerCard from './BeerCard.vue';
+
   export default {
     components: {
       BeerCard
+    
     },
     props: {
       beers: {

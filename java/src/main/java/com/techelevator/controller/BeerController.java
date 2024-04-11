@@ -23,4 +23,5 @@ public class BeerController {
         return beerDao.getBeerById(id);
     }
 
+
 }
