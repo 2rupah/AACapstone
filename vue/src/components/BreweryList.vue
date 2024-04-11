@@ -1,5 +1,5 @@
 <template>
-  <section id="wholePage">
+  <div id="wholePage">
     <div id="banner">
       <h1>Brewery Results</h1>
       <p>Select a Brewery to find out more!</p>
@@ -9,7 +9,7 @@
         <BreweryCard :brewery="brewery" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -33,7 +33,7 @@ export default {
 <style scoped>
 #banner {
   text-align: center;
-  padding: 10px;
+  padding: 20px; /* Adjust the padding as needed */
 }
 
 #wholePage {
@@ -42,7 +42,16 @@ export default {
 
 .brewery-container {
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
   flex-wrap: wrap;
+  justify-content: space-around; /* Evenly distribute items with equal space around them */
+  max-width: 1200px; /* Set a max width to limit the container's width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.brewery-item {
+  flex: 0 1 calc(33.33% - 20px); /* Adjust the width of each card (in this case, 33.33% width for three cards per row) */
+  margin: 10px; /* Adjust margin as needed */
 }
 </style>
+
+

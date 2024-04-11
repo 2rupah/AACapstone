@@ -107,16 +107,6 @@ export default {
   text-align: center; /* Center the content horizontally */
 }
 
-/* .card-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-} */
-
-/* .card-text {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  /*center text*/
-  
 
 .btn {
   padding: 8px 16px;
