@@ -1,26 +1,30 @@
 <template>
-    <div>
-      <section id="beerList">
-        <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" />
-      </section>
-    </div>
-  </template>
-  <script>
-  import BeerCard from './BeerCard.vue';
+  <div>
+    <section id="beerList">
+      <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" :breweryName="breweryName" />
+    </section>
+  </div>
+</template>
 
-  export default {
-    components: {
-      BeerCard
-    
+<script>
+import BeerCard from './BeerCard.vue';
+
+export default {
+  components: {
+    BeerCard
+  },
+  props: {
+    beers: {
+      type: Array,
+      required: true
     },
-    props: {
-      beers: {
-        type: Array,
-        required: true
-      }
+    breweryName: {
+      type: String,
+      required: true
     }
   }
-  </script>
+};
+</script>
   <style scoped>
   /* Add your styling here */
   </style>

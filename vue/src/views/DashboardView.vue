@@ -1,6 +1,18 @@
 <template>
-  <h1></h1>
-  <AddBeer />
+  <h1>Welcome Back Traveler!</h1>
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Add A Beer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="delete">Delete A Beer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="update">Update Your Brewery</a>
+  </li>
+</ul>
+<AddBeer/>
+
 </template>
 
 <script>
