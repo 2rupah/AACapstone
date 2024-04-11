@@ -11,4 +11,9 @@ public interface BeerDao {
     //List of all the beers from a specific brewery
     List<Beer> getAllBeersFromBrewery(int breweryId);
 
+    // Create new Beer
+    Beer createBeer(Beer beer);
+
+    // Delete Beer by name
+    public int deleteBeerByName(int id);
 }

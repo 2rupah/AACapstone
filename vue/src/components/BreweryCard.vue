@@ -56,6 +56,7 @@ export default {
 #button {
   background-color: #0A1823;
   border: #0A1823;
+  /* color: #C4AD85; */
   font-weight: bold;
 }
 img {
