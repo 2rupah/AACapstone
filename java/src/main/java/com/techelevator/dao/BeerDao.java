@@ -15,5 +15,5 @@ public interface BeerDao {
     Beer createBeer(Beer beer);
 
     // Delete Beer by name
-    public int deleteBeerByName(int id);
+    public int deleteBeerById(int id);
 }

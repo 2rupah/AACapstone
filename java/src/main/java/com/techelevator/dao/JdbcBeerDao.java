@@ -65,7 +65,7 @@ public class JdbcBeerDao implements BeerDao {
     }
 
     @Override
-    public int deleteBeerByName(int id) {
+    public int deleteBeerById(int id) {
         String sqlToDeleteBeer = "DELETE FROM beer WHERE beer_id = ?";
         int countOfBeerDeleted = 0;
 
