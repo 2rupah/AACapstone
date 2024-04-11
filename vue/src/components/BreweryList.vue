@@ -9,14 +9,17 @@
     <!-- class="col-lg-6 mb-4" -->
     <div class="col-md-4" v-for="brewery in breweries" :key="brewery.name" >
       <BreweryCard :brewery="brewery" />
+      
     </div>
   </section>
 </template>
 <script>
 import BreweryCard from './BreweryCard.vue';
+
 export default {
   components: {
-    BreweryCard,
+    BreweryCard
+    
   },
   data() {
     return {
@@ -33,6 +36,7 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Cinzel:wght@400..900&display=swap');
 /* #brewerylisting {
   display: flex;
   grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
@@ -42,6 +46,7 @@ export default {
 #banner {
   text-align: center;
   padding-top: 15px;
+  font-family: Balthazar;
 }
 
 #brewerylisting {

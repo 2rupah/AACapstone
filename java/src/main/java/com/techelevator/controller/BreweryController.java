@@ -4,6 +4,7 @@ import com.techelevator.dao.BeerDao;
 import com.techelevator.dao.BreweryDao;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,5 +30,17 @@ public class BreweryController {
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public List<Beer> list(@PathVariable int id) {
         return beerDao.getAllBeersFromBrewery(id);
+    }
+    @ResponseStatus(HttpStatus.CREATED)
+    @RequestMapping(path = "/beer", method = RequestMethod.POST)
+    public Beer addBeer(@RequestBody Beer beer) {
+        return beerDao.createBeer(beer);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @RequestMapping(path="/delete/{id}", method = RequestMethod.DELETE)
+    public void deleteProduct(@PathVariable int id) {
+
+        beerDao.deleteBeerById(id);
     }
 }
