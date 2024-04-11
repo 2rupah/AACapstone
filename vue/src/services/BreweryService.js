@@ -13,11 +13,14 @@ export default {
         return axios.get(`/brewery/${breweryId}/beer`);
         },
     
+    // Dashboard
     addBeer(beer) {
-        return axios.post('/brewery/beer', beer);
+        console.log("In add Beer of Brewery Service: ", beer)
+        return axios.post('/login/add', beer);
     },
 
     deleteBeer(beerId){
         return axios.delete(`/delete/${beerId}`);
-    },
+    }
+
 }

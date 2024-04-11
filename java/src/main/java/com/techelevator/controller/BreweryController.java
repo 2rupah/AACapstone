@@ -14,7 +14,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/brewery")
+//@RequestMapping("/brewery")
 public class BreweryController {
 
     private BreweryDao breweryDao;
@@ -25,25 +25,25 @@ public class BreweryController {
         this.beerDao = beerDao;
     }
 
-    @GetMapping
+    @RequestMapping(path = "/brewery", method = RequestMethod.GET)
     public List<Brewery> listAll() {
         return breweryDao.listAllBreweries();
     }
 
      /*4.10.2024 - Reconsidering our endpoints we should rename it something like /brewery/{id}/beer to gather our list
      of beers from a specific brewery */
-    @RequestMapping(path = "/{id}/beer", method = RequestMethod.GET)
+    @RequestMapping(path = "/brewery/{id}", method = RequestMethod.GET)
     public List<Beer> list(@PathVariable int id) {
         return beerDao.getAllBeersFromBrewery(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/brewery/add", method = RequestMethod.POST)
     public Brewery addBrewery(@RequestBody Brewery brewery){
         return breweryDao.createBrewery(brewery);
     }
 
-    @RequestMapping(path = "/{id}/update", method = RequestMethod.PUT)
+    @RequestMapping(path = "/brewery/{id}/update", method = RequestMethod.PUT)
     public Brewery updateBrewery(@RequestBody Brewery brewery, @PathVariable int id) {
         if (id != brewery.getBreweryId()) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN);
@@ -53,15 +53,14 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/beer", method = RequestMethod.POST)
-    public Beer addBeer(@RequestBody Beer beer) {
-        return beerDao.createBeer(beer);
-    }
+@RequestMapping(path = "/login/add", method = RequestMethod.POST)
+public Beer addBeer(@RequestBody Beer beer) {
+    return beerDao.createBeer(beer);
+}
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @RequestMapping(path="/delete/{id}", method = RequestMethod.DELETE)
     public void deleteProduct(@PathVariable int id) {
-
         beerDao.deleteBeerById(id);
     }
 }
