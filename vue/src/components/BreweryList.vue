@@ -7,8 +7,8 @@
   </section>
   <section id="brewerylisting" class="row" >
     <!-- class="col-lg-6 mb-4" -->
-    <div class="col-md-4" v-for="brewery in breweries" :key="brewery.name" >
-      <BreweryCard :brewery="brewery" />
+    <div class="col-md-4" v-for="brewery in breweries" :key="brewery.name">
+      <BreweryCard :brewery="brewery"/>
       
     </div>
   </section>
