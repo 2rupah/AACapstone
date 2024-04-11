@@ -68,9 +68,16 @@ const routes = [
         requiresAuth: false
       }
     },
-    
-    
-  
+
+    // Dashboard
+    {
+    path: "/login/dashboard",
+    name: "login-dashboard",
+    component: DashboardView,
+    meta: {
+      requiresAuth: false
+    }
+  }
   
 ];
 
