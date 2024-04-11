@@ -1,35 +1,34 @@
 <template>
   <h1>Add or Remove Beer</h1>
-  <h2>Update Brewery</h2>
   <section id="form">
-  <form class="row g-3">
+    <form class="row g-3" v-on:submit.prevent="addNewBeer">
     <div class="col-md-3">
       <label for="inputBeer" class="form-label">Beer Name</label>
-      <input type="text" class="form-control" id="inputBeer">
+      <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer">
     </div>
     <div class="col-md-2">
       <label for="inputBreweryId" class="form-label">Brewery Id</label>
-      <input type="text" class="form-control" id="inputBreweryId">
+      <input v-model="newBeer.breweryId" type="number" class="form-control" id="inputBreweryId">
     </div>
     <div class="col-3">
       <label for="inputStyle" class="form-label">Style</label>
-      <input type="text" class="form-control" id="inputStyle">
+      <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle">
     </div>
-    <div class="col-1">
+    <div class="col-2">
       <label for="inputABV" class="form-label">ABV</label>
-      <input type="text" class="form-control" id="inputABV">
+      <input v-model="newBeer.abv" type="number" class="form-control" id="inputABV">
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <label for="inputIBU" class="form-label">IBU</label>
-      <input type="text" class="form-control" id="inputIBU">
+      <input v-model="newBeer.ibu" type="number" class="form-control" id="inputIBU">
     </div>
     <div class="col-md-6">
       <label for="inputDescription" class="form-label">Description</label>
-      <input type="text" class="form-control" id="inputDescription">
+      <input v-model="newBeer.description" type="text" class="form-control" id="inputDescription">
     </div>
     <div class="col-md-6">
       <label for="inputImage" class="form-label">Image</label>
-      <input type="text" class="form-control" id="inputImage">
+      <input v-model="newBeer.imageUrl" type="text" class="form-control" id="inputImage">
     </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -51,13 +50,13 @@ export default {
   },
 
   methods: {
-    addBeer() {
-      this.newBeer.beerId = this.beerId;
-      BreweryService.addBeer(this.newBeer, this.beerId)
+    addNewBeer() {
+    
+      BreweryService.addBeer(this.newBeer)
         .then(response => {
           if (response.status === 201 || response.status === 200) {
             this.$router.push({
-              name: 'login-dashboard'
+              name: 'add'
             });
           }
         })
