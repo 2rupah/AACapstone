@@ -1,5 +1,8 @@
 <template>
+<<<<<<< HEAD
   <h1>Welcome Back Traveler!</h1>
+=======
+>>>>>>> fe3cafa43dfd1d59c747689b56758dc23d15ddf9
   <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Add A Beer</a>

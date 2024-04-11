@@ -40,8 +40,8 @@ export default {
 }
 
 .card-img-top {
-  width: 100%;
-  max-width: 300px;
+  width: 50%;
+  height: 10%;
   /* Limit image width */
   border-radius: 8px;
   /* Add rounded corners to the image */

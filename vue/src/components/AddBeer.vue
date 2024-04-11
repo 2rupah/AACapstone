@@ -72,6 +72,10 @@ export default {
 </script>
 
 <style>
+h1 {
+  text-align: center;
+  padding-bottom: 5%;
+}
 form {
   text-align: center;
 
