@@ -31,6 +31,7 @@ export default {
     shouldDisplayBreweryButton() {
      
      return this.$route.name !== 'brewery'; 
+     
    },
    shouldDisplayLoginButton() {
      
@@ -51,6 +52,13 @@ export default {
     text-decoration: none;
     color:#0A1823;
   }
+  @media only screen and (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
   @media only screen and (max-width: 768px) {
     #container {
         flex-direction: column;

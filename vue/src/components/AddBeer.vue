@@ -31,7 +31,6 @@
       <label for="inputImage" class="form-label">Image</label>
       <input type="text" class="form-control" id="inputImage">
     </div>
-
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>

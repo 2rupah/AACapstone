@@ -8,12 +8,10 @@ import BreweryService from '../services/BreweryService';
 import AddBeer from '../components/AddBeer.vue';
 
 export default {
-    
+
   components: {
     AddBeer
   },
-
-
   methods: {
     deleteBeer(beerId) {
       const breweryIdFromUrlParams = this.$route.params.id;
