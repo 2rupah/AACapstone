@@ -1,5 +1,4 @@
 <template>
-    <h1>Hi</h1>
     <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link" href="add">Add A Beer</a>
