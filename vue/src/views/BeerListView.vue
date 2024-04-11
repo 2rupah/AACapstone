@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <h2>List of Beers
+    <h2>
       <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
     </h2>
     
