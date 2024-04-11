@@ -53,15 +53,14 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/login/add", method = RequestMethod.POST)
-    public Beer addBeer(@RequestBody Beer beer) {
-        return beerDao.createBeer(beer);
-    }
+@RequestMapping(path = "/login/add", method = RequestMethod.POST)
+public Beer addBeer(@RequestBody Beer beer) {
+    return beerDao.createBeer(beer);
+}
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @RequestMapping(path="/brewery/delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path="/delete/{id}", method = RequestMethod.DELETE)
     public void deleteProduct(@PathVariable int id) {
-
         beerDao.deleteBeerById(id);
     }
 }
