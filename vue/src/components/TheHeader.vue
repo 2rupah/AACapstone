@@ -52,6 +52,12 @@ export default {
     text-decoration: none;
     color:#0A1823;
   }
+  @media only screen and (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
 
   @media only screen and (max-width: 768px) {
     #container {
@@ -118,6 +124,7 @@ Search bar
     margin-left: 15px;
     margin-right: 6px;
 }
+
 .search-bar input[type="text"] {
     flex: 1; /* Use remaining space */
     padding: 8px;
@@ -130,6 +137,7 @@ Search bar
     font-family: inherit;
     font-weight: inherit;
 }
+
 .search-bar button {
     padding: 8px 15px;
     background-color: white;

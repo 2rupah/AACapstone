@@ -1,6 +1,8 @@
 <template>
-<h1>Add Beer</h1>
-<form class="row g-3" v-on:submit.prevent="addNewBeer">
+  <h1>Add or Remove Beer</h1>
+  <h2>Update Brewery</h2>
+  <section id="form">
+  <form class="row g-3">
     <div class="col-md-3">
       <label for="inputBeer" class="form-label">Beer Name</label>
       <input type="text" class="form-control" id="inputBeer">
@@ -33,6 +35,7 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
+</section>
 </template>
 
 <script>
@@ -40,40 +43,39 @@ import BreweryService from '../services/BreweryService';
 
 
 export default {
-    props: ['beerId'],
-    data() {
-        return {
-            newBeer: {}
-        };
-    },
-
-methods: {
-    addBeer() {
-    this.newBeer.beerId = this.beerId;
-    BreweryService.addBeer(this.newBeer, this.beerId)
-      .then(response => {
-        if (response.status === 201 || response.status === 200) {
-            this.$router.push( { 
-              name: 'login-dashboard' } );
-            }
-      })
-      
-      .catch(err => console.error(err));
-
+  props: ['beerId'],
+  data() {
+    return {
+      newBeer: {}
+    };
   },
-  resetForm() {
-    this.newBeer = {}
+
+  methods: {
+    addBeer() {
+      this.newBeer.beerId = this.beerId;
+      BreweryService.addBeer(this.newBeer, this.beerId)
+        .then(response => {
+          if (response.status === 201 || response.status === 200) {
+            this.$router.push({
+              name: 'login-dashboard'
+            });
+          }
+        })
+
+        .catch(err => console.error(err));
+
+    },
+    resetForm() {
+      this.newBeer = {}
+    }
   }
 }
-}
-
-
 </script>
 
 <style>
-
 form {
   text-align: center;
+
 }
 form div {
   padding-bottom: 5%;
@@ -83,7 +85,7 @@ form div {
 }
 section {
   width: 80%;
+
 padding-left: 15%;
 }
-
 </style>

@@ -8,9 +8,9 @@ public interface BreweryDao {
 
     List<Brewery> listAllBreweries();
 
-//    Brewery createBrewery(Brewery brewery);
+    Brewery createBrewery(Brewery brewery);
 
-//    Brewery updateBrewery(Brewery brewery);
+    Brewery updateBrewery(Brewery brewery);
 
     Brewery getBreweryById(int breweryId);
 }
