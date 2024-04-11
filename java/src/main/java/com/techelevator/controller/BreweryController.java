@@ -37,26 +37,20 @@ public class BreweryController {
         return beerDao.getAllBeersFromBrewery(id);
     }
 
-//    @ResponseStatus(HttpStatus.CREATED)
-//    @RequestMapping(path = "/(id)", method = RequestMethod.POST)
-//    public Brewery addBrewery(@Valid @RequestBody Brewery brewery){
-//        return breweryDao.createBrewery(brewery);
-//    }
-//
-//    @RequestMapping(path = "", method = RequestMethod.PUT)
-//    public Brewery updateBrewery(@Valid @RequestBody Brewery brewery, @PathVariable("id") int breweryId) {
-//        if(brewery.getBreweryId() != breweryId) {
-//            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Brewery ID doesn't exist! :O");
-//        }
-//
-//        Brewery existingBrewery = breweryDao.getBreweryById(breweryId);
-//        if(existingBrewery == null) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-//        }
-//
-//        breweryDao.updateBrewery(brewery);
-//        return brewery;
-//    }
+    @ResponseStatus(HttpStatus.CREATED)
+    @RequestMapping(path = "/add", method = RequestMethod.POST)
+    public Brewery addBrewery(@RequestBody Brewery brewery){
+        return breweryDao.createBrewery(brewery);
+    }
+
+    @RequestMapping(path = "/{id}/update", method = RequestMethod.PUT)
+    public Brewery updateBrewery(@RequestBody Brewery brewery, @PathVariable int id) {
+        if (id != brewery.getBreweryId()) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN);
+        }
+
+        return breweryDao.updateBrewery(brewery);
+    }
 
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path = "/beer", method = RequestMethod.POST)
