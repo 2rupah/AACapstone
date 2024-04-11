@@ -12,7 +12,7 @@
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
             <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
-            <router-link v-bind:to="{ name: 'login' }">Login</router-link>
+            <router-link v-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
     </div>
 </template>
@@ -31,6 +31,10 @@ export default {
     shouldDisplayBreweryButton() {
      
      return this.$route.name !== 'brewery'; 
+   },
+   shouldDisplayLoginButton() {
+     
+     return this.$route.name !== 'login'; 
    },
   },
 }
