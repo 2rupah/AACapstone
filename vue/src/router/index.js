@@ -8,6 +8,7 @@ import LogoutView from '../views/LogoutView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import BreweryListView from '../views/BreweryListView.vue';
 import BeerListView from '../views/BeerListView.vue';
+import DashboardView from '../views/DashboardView.vue';
 
 
 /**
