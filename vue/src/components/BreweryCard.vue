@@ -41,9 +41,9 @@ export default {
 .brewery-card {
   border: 2px solid black;
   border-radius: 10px;
-  width: 350px;
+  width: 100%;
   height: 450px;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
   perspective: 1000px;
 }
