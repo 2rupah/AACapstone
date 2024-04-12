@@ -84,10 +84,20 @@ public class JdbcBrewery implements BreweryDao{
     //Just gotta grab the sql query statement from here, really simple fix
     @Override
     public Brewery getBreweryById(int breweryId) {
-       
-        return null;
+        Brewery brewery = null;
+        String sql = "SELECT brewery_id, name, location, established_year, description, imageurl\n" +
+                "from brewery\n" +
+                "WHERE brewery_id = ?;";
+        try {
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
+            if (results.next()) {
+                brewery = mapRowToBrewery(results);
+            }
+        }catch(CannotGetJdbcConnectionException e){
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return brewery;
     }
-
 
     private Brewery mapRowToBrewery(SqlRowSet row) {
         Brewery brewery = new Brewery();
