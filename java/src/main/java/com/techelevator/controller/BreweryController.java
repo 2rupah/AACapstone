@@ -57,7 +57,7 @@ public Beer addBeer(@RequestBody Beer beer) {
 }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @RequestMapping(path="/brewery/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path="/brewery/beers/{id}", method = RequestMethod.DELETE)
     public void deleteBeer(@PathVariable int id) {
         beerDao.deleteBeerById(id);
     }

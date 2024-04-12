@@ -10,7 +10,7 @@ export default {
         },
 
     getBeersByBreweryId(breweryId) {
-        return axios.get(`/brewery/${breweryId}/beer`);
+        return axios.get(`/brewery/${breweryId}`);
         },
     
     // Dashboard
@@ -19,8 +19,8 @@ export default {
         return axios.post('/login/add', beer);
     },
 
-    deleteBeer(breweryId){
-        return axios.delete(`/brewery/${breweryId}`);
+    deleteBeer( beerId){
+        return axios.delete(`/brewery/beers/${beerId}`);
     }
 
 }

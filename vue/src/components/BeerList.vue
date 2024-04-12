@@ -10,6 +10,7 @@
 import BeerCard from './BeerCard.vue';
 
 export default {
+  
   components: {
     BeerCard
   },
@@ -21,7 +22,10 @@ export default {
     breweryName: {
       type: String,
       required: true
-    }
+    },
+    
+  
+
   }
 };
 </script>
