@@ -41,6 +41,7 @@ public class BreweryController {
         return breweryDao.createBrewery(brewery);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path = "/brewery/{id}/update", method = RequestMethod.PUT)
     public Brewery updateBrewery(@RequestBody Brewery brewery, @PathVariable int id) {
         if (id != brewery.getBreweryId()) {
@@ -51,14 +52,20 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-@RequestMapping(path = "/login/add", method = RequestMethod.POST)
-public Beer addBeer(@RequestBody Beer beer) {
+    @RequestMapping(path = "/login/add", method = RequestMethod.POST)
+    public Beer addBeer(@RequestBody Beer beer) {
     return beerDao.createBeer(beer);
 }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @RequestMapping(path="/brewery/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path="/brewery/beers/{id}", method = RequestMethod.DELETE)
     public void deleteBeer(@PathVariable int id) {
         beerDao.deleteBeerById(id);
+    }
+
+    @RequestMapping(path="/brewery/{id}/info", method = RequestMethod.GET)
+    public Brewery getBreweryInfoById(@PathVariable int id){
+       return breweryDao.getBreweryById(id);
+
     }
 }

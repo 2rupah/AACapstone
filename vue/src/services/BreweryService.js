@@ -19,12 +19,16 @@ export default {
         return axios.post('/login/add', beer);
     },
 
-    deleteBeer(breweryId){
-        return axios.delete(`/brewery/${breweryId}`);
+    deleteBeer( beerId){
+        return axios.delete(`/brewery/beers/${beerId}`);
     },
 
-    updateBrewery(breweryId, breweryData) {
-        console.log("In update Brewery Service: ", breweryId)
-        return axios.put(`/brewery/${breweryId}/update`, breweryData);
-      }
+    updateBrewery(brewery) {
+        console.log("In update Brewery Service: ", brewery)
+        return axios.put(`/brewery/${brewery.breweryId}/update`, brewery);
+    },
+
+    getBreweryInfo(breweryId) {
+        return axios.get(`/brewery/${breweryId}/info`)
+    }
 }

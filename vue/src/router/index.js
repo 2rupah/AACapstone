@@ -7,7 +7,7 @@ import LoginView from '../views/LoginView.vue';
 import LogoutView from '../views/LogoutView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import BreweryListView from '../views/BreweryListView.vue';
-import BeerListView from '../views/BeerListView.vue';
+import BreweryPageView from '../views/BreweryPageView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import DeleteBeerView from '../views/DeleteBeerView.vue';
 import UpdateBreweryView from '../views/UpdateBreweryView.vue'
@@ -66,7 +66,7 @@ const routes = [
     {
       path: "/brewery/:id",
       name: "brewery-detail",
-      component: BeerListView,
+      component: BreweryPageView,
       meta: {
         requiresAuth: false
       }

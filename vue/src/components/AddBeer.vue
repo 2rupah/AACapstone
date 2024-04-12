@@ -43,6 +43,8 @@ import BreweryService from '../services/BreweryService';
 
 export default {
   props: ['beerId'],
+
+  
   data() {
     return {
       newBeer: {}
@@ -59,13 +61,23 @@ export default {
               name: 'add'
             });
           }
+          this.resetForm()
         })
 
         .catch(err => console.error(err));
 
     },
     resetForm() {
-      this.newBeer = {}
+      this.newBeer = {
+        beerId: null,
+        name: "",
+        breweryId: null,
+        style: "",
+        abv: null,
+        ibu: null,
+        description: "",
+        imageUrl:""
+      }
     }
   }
 }
