@@ -23,8 +23,12 @@ export default {
         return axios.delete(`/brewery/${breweryId}`);
     },
 
-    updateBrewery(breweryId, breweryData) {
-        console.log("In update Brewery Service: ", breweryId)
-        return axios.put(`/brewery/${breweryId}/update`, breweryData);
-      }
+    updateBrewery(brewery) {
+        console.log("In update Brewery Service: ", brewery)
+        return axios.put(`/brewery/${brewery.breweryId}/update`, brewery);
+    },
+
+    getBreweryInfo(breweryId) {
+        return axios.get(`/brewery/${breweryId}/info`)
+    }
 }

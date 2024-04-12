@@ -97,7 +97,7 @@ export default {
         },
         fetchBreweryInfo() {
 
-            BreweryService.getBreweryInfo(this.breweryId)
+            BreweryService.getBreweryInfo(this.brewery.breweryId)
                 .then(response => {
                     this.brewery = response.data;
                 })
@@ -108,19 +108,9 @@ export default {
 
         updateBrewery() {
             // Create an object to hold the updated fields
-            let updatedFields = {};
-
-            // Iterate over the properties of the brewery object
-            for (let key in this.brewery) {
-                // Check if the property value is not empty
-                if (this.brewery[key] !== '') {
-                    // Add the property to the updatedFields object
-                    updatedFields[key] = this.brewery[key];
-                }
-            }
-
-            // Call the updateBrewery method with updatedFields
-            BreweryService.updateBrewery(this.breweryId, updatedFields)
+            console.log("Reached Update Brewery in update Brewery view: ", this.breweryId)
+            
+            BreweryService.updateBrewery(this.brewery)
                 .then(response => {
                     console.log('Brewery updated successfully:', response.data);
                 })
