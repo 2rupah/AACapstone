@@ -13,5 +13,5 @@
 </template>
   
 <script>
-import BreweryService from '../services/BreweryService';
+  import BreweryService from '../services/BreweryService';
 </script>
