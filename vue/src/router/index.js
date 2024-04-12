@@ -11,6 +11,7 @@ import BeerListView from '../views/BeerListView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import DeleteBeerView from '../views/DeleteBeerView.vue';
 import UpdateBreweryView from '../views/UpdateBreweryView.vue'
+import NewBreweryView from '../views/NewBreweryView.vue'
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -96,7 +97,14 @@ const routes = [
       requiresAuth: false
     }
   },
-
+  {
+    path: "/add_new_brewery",
+    name: "new-brewery-page",
+    component: NewBreweryView,
+    meta: {
+      requiresAuth: false
+    }
+  },
   
 ];
 
