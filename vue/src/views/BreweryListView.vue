@@ -1,12 +1,13 @@
 <template>
   <section id="brewerypage">
 
-  <BreweryList />
+    <BreweryList />
 
-  </section> 
+  </section>
 </template>
   
 <script>
+
 import BreweryList from '../components/BreweryList.vue';
 
 export default {

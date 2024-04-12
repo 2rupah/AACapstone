@@ -10,7 +10,7 @@ export default {
         },
 
     getBeersByBreweryId(breweryId) {
-        return axios.get(`/brewery/${breweryId}/beer`);
+        return axios.get(`/brewery/${breweryId}`);
         },
     
     // Dashboard
@@ -19,8 +19,12 @@ export default {
         return axios.post('/login/add', beer);
     },
 
-    deleteBeer(beerId){
-        return axios.delete(`/delete/${beerId}`);
-    }
+    deleteBeer(breweryId){
+        return axios.delete(`/brewery/${breweryId}`);
+    },
 
+    updateBrewery(breweryId, breweryData) {
+        console.log("In update Brewery Service: ", breweryId)
+        return axios.put(`/brewery/${breweryId}/update`, breweryData);
+      }
 }

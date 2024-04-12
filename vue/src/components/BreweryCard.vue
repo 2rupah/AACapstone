@@ -121,4 +121,5 @@ export default {
 .btn:hover {
   background-color: #192c46;
 }
+
 </style>

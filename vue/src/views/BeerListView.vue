@@ -1,14 +1,9 @@
 <template>
   <div>
-    
-
     <h2>
-      
       <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
     </h2>
-    
     <BeerList :beers="beerList" />
-    
   </div>
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
@@ -22,8 +17,8 @@ import BreweryService from '../services/BreweryService';
 export default {
   components: {
     BeerList,
-    
-    
+
+
   },
   data() {
     return {
@@ -36,9 +31,9 @@ export default {
     BreweryService.getBeersByBreweryId(breweryIdFromUrlParams)
       .then(response => {
         this.beerList = response.data;
-        
+
       })
-      
+
       .catch(err => console.error(err));
 
   }
@@ -56,4 +51,6 @@ h2 {
   text-align: center;
   margin: 10px;
 }
+
+
 </style>
