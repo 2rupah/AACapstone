@@ -1,5 +1,5 @@
 <template>
-    <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link" href="add">Add A Beer</a>
     </li>
@@ -10,10 +10,8 @@
       <a class="nav-link" href="update">Update Your Brewery</a>
     </li>
   </ul>
+</template>
   
-  
-  </template>
-  
-  <script>
-  import BreweryService from '../services/BreweryService';
+<script>
+import BreweryService from '../services/BreweryService';
 </script>

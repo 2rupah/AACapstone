@@ -10,17 +10,17 @@ export default {
         },
 
     getBeersByBreweryId(breweryId) {
-        return axios.get(`/brewery/${breweryId}`);
-    },
-
+        return axios.get(`/brewery/${breweryId}/beer`);
+        },
+    
     // Dashboard
     addBeer(beer) {
         console.log("In add Beer of Brewery Service: ", beer)
         return axios.post('/login/add', beer);
     },
 
-    deleteBeer(beerId){
-        return axios.delete(`/delete/${beerId}`);
+    deleteBeer(breweryId){
+        return axios.delete(`/brewery/${breweryId}`);
     }
 
 }

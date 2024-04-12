@@ -2,14 +2,12 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.BeerDao;
 import com.techelevator.dao.BreweryDao;
-import com.techelevator.dao.JdbcBrewery;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin
@@ -59,8 +57,8 @@ public Beer addBeer(@RequestBody Beer beer) {
 }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @RequestMapping(path="/delete/{id}", method = RequestMethod.DELETE)
-    public void deleteProduct(@PathVariable int id) {
+    @RequestMapping(path="/brewery/{id}", method = RequestMethod.DELETE)
+    public void deleteBeer(@PathVariable int id) {
         beerDao.deleteBeerById(id);
     }
 }

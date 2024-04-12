@@ -3,7 +3,6 @@
     <p id="tagline">"Beer lovers <br> helping you <br> find your next <br> favorite brewery"</p>
     <p id="second">Find Breweries <br> Rate Beers <br> Find Friends </p>
   </div>
-  
 </template>
 <script>
 export default {
@@ -11,6 +10,7 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
 .overlay {
   position: fixed;
   top: -10;
@@ -19,8 +19,10 @@ export default {
   height: 100vh;
   background-color: #0A1823;
   display: flex;
-  justify-content: center; /* Horizontally center the image */
-  align-items: center; /* Vertically center the image */
+  justify-content: center;
+  /* Horizontally center the image */
+  align-items: center;
+  /* Vertically center the image */
 }
 
 .overlay::before {
@@ -37,7 +39,7 @@ export default {
   background-repeat: no-repeat;
 }
 
-#tagline{
+#tagline {
   margin-right: auto;
   padding-left: 10%;
   color: white;
@@ -47,7 +49,7 @@ export default {
 }
 
 
-#second{
+#second {
   margin-left: auto;
   color: white;
   font-size: 2vw;

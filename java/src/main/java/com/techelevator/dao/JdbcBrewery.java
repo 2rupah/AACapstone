@@ -35,7 +35,7 @@ public class JdbcBrewery implements BreweryDao{
         return breweries;
     }
 
-    //copied and pasted this, we need to update the String sql for our brewery database!
+//    copied and pasted this, we need to update the String sql for our brewery database!
     @Override
     public Brewery createBrewery(Brewery brewery) {
         String sql = "INSERT INTO brewery (name, location, established_year, description, imageurl) " +
