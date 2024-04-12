@@ -51,9 +51,7 @@ export default {
 
         .catch(err => console.error(err));
      
-        const deleteBeerFromScreen = (index) => {
-          state.index.splice()
-        }
+        
   }
 }
 };
