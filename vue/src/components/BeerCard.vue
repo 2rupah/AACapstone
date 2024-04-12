@@ -51,7 +51,9 @@ export default {
 
         .catch(err => console.error(err));
      
-        this.$parent.beers = this.$parent.beers.filter(beer => beer.id !== this.beer.id);
+        const deleteBeerFromScreen = (index) => {
+          state.index.splice()
+        }
   }
 }
 };
@@ -74,7 +76,7 @@ export default {
 
 .card-img-top {
   width: 50%;
-  height: 10%;
+  height: 2%;
   /* Limit image width */
   border-radius: 8px;
   /* Add rounded corners to the image */

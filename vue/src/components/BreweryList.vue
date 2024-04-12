@@ -33,7 +33,7 @@ export default {
 <style scoped>
 #banner {
   text-align: center;
-  padding: 20px; /* Adjust the padding as needed */
+  padding: 10px; /* Adjust the padding as needed */
 }
 
 #wholePage {

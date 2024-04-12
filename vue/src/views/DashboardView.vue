@@ -11,16 +11,20 @@
     </li>
   </ul>
   <AddBeer />
+
 </template>
 
 <script>
+
 import BreweryService from '../services/BreweryService';
 import AddBeer from '../components/AddBeer.vue';
+
 
 export default {
 
   components: {
-    AddBeer
+    AddBeer,
+
   },
   
   }

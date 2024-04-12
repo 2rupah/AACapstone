@@ -42,8 +42,8 @@ export default {
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
-  height: 100%;
-  margin: 20px;
+  height: 450px;
+  margin: 10px;
   cursor: pointer;
   perspective: 1000px;
 }

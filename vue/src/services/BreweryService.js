@@ -21,6 +21,10 @@ export default {
 
     deleteBeer( beerId){
         return axios.delete(`/brewery/beers/${beerId}`);
-    }
+    },
 
+    updateBrewery(breweryId, breweryData) {
+        console.log("In update Brewery Service: ", breweryId)
+        return axios.put(`/brewery/${breweryId}/update`, breweryData);
+      }
 }

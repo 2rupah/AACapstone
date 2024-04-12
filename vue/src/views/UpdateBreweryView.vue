@@ -1,39 +1,183 @@
 <template>
-    <h1>Hi</h1>
     <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" href="add">Add A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="delete">Delete A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="update">Update Your Brewery</a>
-    </li>
-  </ul>
 
-  <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-</div>
-<div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-</div>
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
-  
-  
-  </template>
-  
-  <script>
-  import BreweryService from '../services/BreweryService';
+        <li class="nav-item">
+            <a class="nav-link" href="add">Add a Beer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="delete">Delete a Beer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Update Your Brewery</a>
+        </li>
+    </ul>
+    <div class="container">
+        <h2>Update Brewery Information</h2>
 
+        <div class="form-group">
+            <label for="brewerySelect">Select Brewery:</label>
+
+            <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
+                <option value="">Select a brewery</option>
+                <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
+                </option>
+            </select>
+        </div>
+
+
+        <form @submit.prevent="updateBrewery">
+            
+            <div class="form-group">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" v-model="brewery.name">
+            </div>
+            <div class="form-group">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" class="form-control" id="location" v-model="brewery.location">
+            </div>
+            <div class="form-group">
+                <label for="establishedYear" class="form-label">Established Year:</label>
+                <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear">
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label">Description:</label>
+                <textarea class="form-control" id="description" v-model="brewery.description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl" class="form-label">Image URL:</label>
+                <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Brewery</button>
+        </form>
+    </div>
+</template>
+  
+<script>
+
+import BreweryService from '../services/BreweryService';
+
+export default {
+    
+    data() {
+        return {
+            breweries: [],
+            // breweryId: '',
+
+            brewery: {
+                breweryId: '',
+                name: '',
+                location: '',
+                establishedYear: '',
+                description: '',
+                imageUrl: '',
+
+            },
+            // updatedBrewery: {
+            //     name: '',
+            //     location: '',
+            //     establishedYear: null,
+            //     description: '',
+            //     imageUrl: ''
+            // }
+        };
+    },
+    mounted() {
+
+        this.fetchBreweries();
+    },
+    methods: {
+        fetchBreweries() {
+
+            BreweryService.listAllBreweries()
+                .then(response => {
+                    this.breweries = response.data;
+                })
+                .catch(error => {
+                    console.error('Error fetching breweries:', error);
+                });
+        },
+        fetchBreweryInfo() {
+
+            BreweryService.getBreweryInfo(this.breweryId)
+                .then(response => {
+                    this.brewery = response.data;
+                })
+                .catch(error => {
+                    console.error('Error fetching brewery information:', error);
+                });
+        },
+
+        updateBrewery() {
+            // Create an object to hold the updated fields
+            let updatedFields = {};
+
+            // Iterate over the properties of the brewery object
+            for (let key in this.brewery) {
+                // Check if the property value is not empty
+                if (this.brewery[key] !== '') {
+                    // Add the property to the updatedFields object
+                    updatedFields[key] = this.brewery[key];
+                }
+            }
+
+            // Call the updateBrewery method with updatedFields
+            BreweryService.updateBrewery(this.breweryId, updatedFields)
+                .then(response => {
+                    console.log('Brewery updated successfully:', response.data);
+                })
+                .catch(error => {
+                    console.error('Error updating brewery:', error);
+                });
+        }
+
+    }
+}
 </script>
+  
+<style scoped>
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#brewerySelect {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+</style>
+  
