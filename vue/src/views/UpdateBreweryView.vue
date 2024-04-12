@@ -17,7 +17,7 @@
         <div class="form-group">
             <label for="brewerySelect">Select Brewery:</label>
 
-            <select v-model="breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
+            <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
                 <option value="">Select a brewery</option>
                 <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
                 </option>
@@ -26,6 +26,7 @@
 
 
         <form @submit.prevent="updateBrewery">
+            
             <div class="form-group">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" class="form-control" id="name" v-model="brewery.name">
@@ -55,13 +56,14 @@
 import BreweryService from '../services/BreweryService';
 
 export default {
-    // props: ['breweryId'],
+    
     data() {
         return {
             breweries: [],
-            breweryId: '',
+            // breweryId: '',
 
             brewery: {
+                breweryId: '',
                 name: '',
                 location: '',
                 establishedYear: '',
