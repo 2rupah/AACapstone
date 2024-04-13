@@ -20,7 +20,7 @@ export default {
     },
 
     addBrewery(brewery) {
-        return axios.post('/brewery/add', brewery);
+        return axios.post('/add_new_brewery', brewery);
     },
 
     deleteBeer(beerId){

@@ -1,4 +1,5 @@
 <template>
+    
     <div class="container">
     <h1>Add A New Brewery</h1>
     <!--think we've still gotta implement the functionality from the back end-->
@@ -6,27 +7,39 @@
     <form v-on:submit.prevent="addNewBrewery">
     <div class="brewery-form">
     <label for="brewery-name">Brewery Name: </label>
-    <input type="text" id="name" name="brewery-name" class="new-brew-form" placeholder='Enter Brewery Name'>
+    <input v-model="newBrewery.name" type="text" id="name" name="brewery-name" class="new-brew-form" placeholder='Enter Brewery Name' >
+    </div>
+
+    <div class="brewery-form">
+    <label for="location">Brewery Address: </label>
+    <input v-model="newBrewery.location" type="text" id="location" name="location" class="new-brew-form" placeholder='Enter Brewery Address' >
+    </div>
+
+
+    <div class="brewery-form">
+    <label for="year">Year of Establishment: </label>
+    <input v-model="newBrewery.establishedYear" type="text" id="year" name="year" class="new-brew-form"  placeholder='Enter Year Established'>
     </div>
 
     <div class="brewery-form">
     <label for="description">Brewery Description: </label>
-    <textarea type="text" id="description" name="description" class="new-brew-form" placeholder='Enter Brewery Description'></textarea>
-    </div>
-
-    <div class="brewery-form">
-    <label for="year">Brewery Establishment Year: </label>
-    <input type="text" id="year" name="year" class="new-brew-form"  placeholder='Enter Year Established'>
+    <textarea v-model="newBrewery.description" type="text" id="description" name="description" class="new-brew-form" placeholder='Enter Brewery Description' ></textarea>
     </div>
 
     <div class="brewery-form">
     <label for="logo">Brewery Logo Url: </label>
-    <input type="text" id="logo" name="logo" class="new-brew-form" placeholder='Enter Image URL'>
+    <input v-model="newBrewery.imageUrl" type="text" id="logo" name="logo" class="new-brew-form" placeholder='Enter Image URL'>
     </div>
     
     <button type="submit" class="btn btn-primary">Add Brewery</button>    
     </form>
     </div>
+
+    <!-- v-model="newBrewery.name"
+    v-model="newBrewery.location"
+    v-model="newBrewery.establishedYear"
+    v-model="newBrewery.description"
+    v-model="newBrewery.imageUrl" -->
 
 </template>
 
@@ -34,22 +47,18 @@
 import BreweryService from '../services/BreweryService';
 
 export default {
+    props: ['breweryId'],
+
     data() {
         return {
-            brewery: {
-                breweryId: '',
-                name: '',
-                location: '',
-                establishedYear: '',
-                description: '',
-                imageUrl: '',
-            },
-        }
+            newBrewery: {}
+        };
     },
 
     methods: {
         addNewBrewery() {
     
+        console.log("I'm working!!! It's me!! Here I am!!")
         BreweryService.addBrewery(this.newBrewery)
         .then(response => {
           if (response.status === 201 || response.status === 200) {
@@ -65,15 +74,15 @@ export default {
         },
 
         resetForm(){
-            this.brewery = {
+            this.newBrewery = {
                 breweryId: null,
                 name: '',
                 location: '',
                 establishedYear: null,
                 description: '',
                 imageUrl: '',
-            };
-        },
+            }
+        }
     }
 };
 

@@ -36,7 +36,7 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/brewery/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/add_new_brewery", method = RequestMethod.POST)
     public Brewery addBrewery(@RequestBody Brewery brewery){
         return breweryDao.createBrewery(brewery);
     }
