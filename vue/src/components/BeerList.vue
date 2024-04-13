@@ -10,7 +10,7 @@
 import BeerCard from './BeerCard.vue';
 
 export default {
-  
+
   components: {
     BeerCard
   },
@@ -23,12 +23,11 @@ export default {
       type: String,
       required: true
     },
-    
-  
+
+
 
   }
 };
 </script>
-  <style scoped>
-  /* Add your styling here */
-  </style>
+
+<style scoped></style>

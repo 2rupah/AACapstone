@@ -7,13 +7,13 @@
     <p class="beer-details"><strong>ABV:</strong> {{ beer.abv }}%</p>
     <p class="beer-details"><strong>IBU:</strong> {{ beer.ibu }}</p>
     <p class="beer-description"><strong>Description:</strong> {{ beer.description }}</p>
-    <button @click="deleteBeer()">Delete</button>
+    
   </div>
 </template>
 
 <script>
 import BreweryService from '../services/BreweryService';
-import axios from 'axios';
+
 
 export default {
   data() {
@@ -31,28 +31,10 @@ export default {
       type: String,
       required: true
     },
-    // deleteBeer: {
-    //   type: Function,
-    //   required: true
-    // }
+    
   },
   methods: {
-    deleteBeer() {
     
-    console.log("In delete beer of beer card.vue: ", this.beer.beerId)
-      BreweryService.deleteBeer( this.beer.beerId)
-      .then(response => {
-          if (response.status === 201 || response.status === 200) {
-            this.$router.push({
-              name: 'brewery-detail'
-            });
-          }
-        })
-
-        .catch(err => console.error(err));
-     
-         
-  }
 }
 };
 
