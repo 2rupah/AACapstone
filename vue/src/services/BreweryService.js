@@ -19,7 +19,11 @@ export default {
         return axios.post('/login/add', beer);
     },
 
-    deleteBeer( beerId){
+    addBrewery(brewery) {
+        return axios.post('/brewery/add', brewery);
+    },
+
+    deleteBeer(beerId){
         return axios.delete(`/brewery/beers/${beerId}`);
     },
 
