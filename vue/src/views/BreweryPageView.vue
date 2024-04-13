@@ -46,6 +46,7 @@ export default {
 .btn {
   float: right;
   background-color: #0A1823;
+  
 }
 
 h2 {

@@ -12,7 +12,7 @@
         </li>
     </ul>
     <div class="container">
-        <h2>Update Brewery Information</h2>
+        <h1>Update Brewery Information</h1>
 
         <div class="form-group">
             <label for="brewerySelect">Select Brewery:</label>
@@ -26,7 +26,7 @@
 
 
         <form @submit.prevent="updateBrewery">
-            
+
             <div class="form-group">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" class="form-control" id="name" v-model="brewery.name">
@@ -57,11 +57,10 @@
 import BreweryService from '../services/BreweryService';
 
 export default {
-    
+
     data() {
         return {
             breweries: [],
-            // breweryId: '',
 
             brewery: {
                 breweryId: '',
@@ -72,13 +71,7 @@ export default {
                 imageUrl: '',
 
             },
-            // updatedBrewery: {
-            //     name: '',
-            //     location: '',
-            //     establishedYear: null,
-            //     description: '',
-            //     imageUrl: ''
-            // }
+
         };
     },
     mounted() {
@@ -110,7 +103,7 @@ export default {
         updateBrewery() {
             // Create an object to hold the updated fields
             console.log("Reached Update Brewery in update Brewery view: ", this.breweryId)
-            
+
             BreweryService.updateBrewery(this.brewery)
                 .then(response => {
                     console.log('Brewery updated successfully:', response.data);
