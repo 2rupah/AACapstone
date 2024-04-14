@@ -1,10 +1,10 @@
 <template>
-  <div>
+  
     <h2>
       <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
     </h2>
     <BeerList :beers="beerList" />
-  </div>
+  
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
 <script>
@@ -37,22 +37,27 @@ export default {
       .catch(err => console.error(err));
 
   },
-  
+
 }
 </script>
 
 <style scoped>
 /* Add any necessary styles */
 .btn {
-  float: right;
+
   background-color: #0A1823;
-  
+  width: 8%;
+  float: right;
 }
 
 h2 {
   text-align: center;
   margin: 10px;
+  
 }
 
-
+/* div {
+  display: flex;
+  flex-wrap: wrap;
+} */
 </style>

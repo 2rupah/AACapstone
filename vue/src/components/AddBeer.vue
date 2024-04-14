@@ -2,15 +2,19 @@
   <div class="container">
     <h1>Add A Beer</h1>
     <section id="form">
+      <label for="brewerySelect">Select Brewery:</label>
+      <select v-model="newBeer.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
+        <option value="">Select a brewery</option>
+        <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
+        </option>
+      </select>
+
       <form class="row g-3" v-on:submit.prevent="addNewBeer">
         <div class="col-md-3">
           <label for="inputBeer" class="form-label">Beer Name</label>
           <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer">
         </div>
-        <div class="col-md-2">
-          <label for="inputBreweryId" class="form-label">Brewery Id</label>
-          <input v-model="newBeer.breweryId" type="number" class="form-control" id="inputBreweryId">
-        </div>
+        
         <div class="col-3">
           <label for="inputStyle" class="form-label">Style</label>
           <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle">
@@ -49,8 +53,23 @@ export default {
 
   data() {
     return {
-      newBeer: {}
+      newBeer: {},
+      breweries: [],
+      brewery: {
+        breweryId: '',
+        name: '',
+        location: '',
+        establishedYear: '',
+        description: '',
+        imageUrl: '',
+
+      },
+
     };
+  },
+  mounted() {
+
+    this.fetchBreweries();
   },
 
   methods: {
@@ -80,7 +99,27 @@ export default {
         description: "",
         imageUrl: ""
       }
-    }
+    },
+    fetchBreweries() {
+
+      BreweryService.listAllBreweries()
+        .then(response => {
+          this.breweries = response.data;
+        })
+        .catch(error => {
+          console.error('Error fetching breweries:', error);
+        });
+    },
+    fetchBreweryInfo() {
+
+      BreweryService.getBreweryInfo(this.brewery.breweryId)
+        .then(response => {
+          this.brewery = response.data;
+        })
+        .catch(error => {
+          console.error('Error fetching brewery information:', error);
+        });
+    },
   }
 }
 </script>
@@ -90,14 +129,19 @@ h1 {
   text-align: center;
   padding-bottom: 5%;
 }
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+
+.form-label {
+    font-weight: bold;
 }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
 .form-control {
     width: 100%;
     padding: 1px;
@@ -107,7 +151,7 @@ h1 {
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -127,4 +171,19 @@ section {
   width: 80%;
 
   padding-left: 15%;
-}</style>
+
+}
+
+button.btn.btn-primary {
+  padding: 8px 15px;
+  background-color: #0A1823;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 25%;
+}
+
+</style>

@@ -12,7 +12,7 @@
   </ul>
 
   <div class="container">
-    <h2>Delete A Beer</h2>
+    <h1>Delete A Beer</h1>
     
     <div class="form-group">
       <label for="brewerySelect">Select Brewery:</label>
@@ -23,13 +23,13 @@
         </option>
       </select>
 
-      <label for="beerSelect">Select A Beer To Delete:</label>
+      <label v-show="beerListAvailable" for="beerSelect">Select A Beer To Delete:</label>
 
-      <select @change="getBeerInfo" v-model="selectedBeerId" v-show="beerListAvailable" >
+      <select v-show="beerListAvailable" @change="getBeerInfo" v-model="selectedBeerId"  >
         <option v-for="beer in beerList" :key="beer.beerId" :value="beer.beerId">{{ beer.name }}
         </option>
       </select>
-      <button id="delete" @click="deleteBeer(selectedBeerId)">Delete</button>
+      <button v-show="beerListAvailable" id="delete" @click="deleteBeer(selectedBeerId)" >Delete</button>
     </div>
 
 
@@ -51,8 +51,10 @@ export default {
       selectedBreweryId: null,
       beerList: [],
       beerListAvailable: false,
+      beerSelected: false,
       beer: {},
       selectedBeerId: null,
+
     };
 
   },
@@ -77,8 +79,6 @@ export default {
     },
 
     getBreweryInfo() {
-
-
       if (this.selectedBreweryId) {
         BreweryService.getBeersByBreweryId(this.selectedBreweryId)
           .then(response => {
@@ -90,6 +90,7 @@ export default {
           });
       }
     },
+
     deleteBeer() {
 
       console.log("In delete beer of beer card.vue: ", this.selectedBeerId)
@@ -100,28 +101,35 @@ export default {
               name: 'brewery-detail'
             });
           }
+          this.resetForm();
         })
 
         .catch(err => console.error(err));
-
 
     },
     getBeerInfo(){
     BreweryService.getBeerById(this.selectedBeerId)
     .then(response => {
-            this.beerList = response.data;
+            this.beer = response.data;
             this.beerListAvailable = true;
           })
           .catch(error => {
             console.error('Error fetching brewery beers:', error);
           });
-        }
+        },
+
+    resetForm() {
+      location.reload();
+    }
 
   }
 }
 </script>
 
 <style>
+h1 {
+  text-align: center;
+}
 select {
   
     width: 100%;
@@ -134,6 +142,9 @@ select {
     border-radius: 5px;
     margin-bottom: 10px;
 
+}
+.form-label {
+    font-weight: bold;
 }
 
 label {

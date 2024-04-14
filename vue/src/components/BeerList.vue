@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="mainPage">
     <section id="beerList">
       <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" :breweryName="breweryName" />
     </section>
@@ -30,4 +30,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+div.mainPage {
+  padding: 5%;
+  display: inline-block;
+}
+section#beerList {
+  padding: 5%;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 10px 10px 10px;
+}
+</style>

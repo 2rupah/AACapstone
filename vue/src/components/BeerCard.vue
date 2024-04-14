@@ -42,26 +42,30 @@ export default {
 
 <style scoped>
 .beer-card {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Add a subtle box shadow */
-  padding: 20px;
+  padding-top: 20px;
   margin-bottom: 20px;
   background-color: #fff;
   /* Light background color */
   text-align: center;
-
+  width: 28%;
+  max-height: max-content;
+  margin-right: 14px;
 }
 
 .card-img-top {
-  width: 50%;
-  height: 2%;
+  width: 80%;
+  height: 50%;
   /* Limit image width */
   border-radius: 8px;
   /* Add rounded corners to the image */
   margin-bottom: 15px;
+  
   /* Add some spacing below the image */
+  
 }
 
 .beer-details {
