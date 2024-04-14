@@ -7,6 +7,7 @@ export function createStore(currentToken, currentUser) {
     state: {
       token: currentToken || '',
       user: currentUser || {},
+      isAuthenticated: !!currentToken,
       breweryList: [],
       beerList: []
     },
@@ -35,6 +36,7 @@ export function createStore(currentToken, currentUser) {
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
+        state.isAuthenticated = !!token;
         localStorage.setItem('token', token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       },
@@ -47,6 +49,7 @@ export function createStore(currentToken, currentUser) {
         localStorage.removeItem('user');
         state.token = '';
         state.user = {};
+        state.isAuthenticated = false;
         axios.defaults.headers.common = {};
       }
     },
