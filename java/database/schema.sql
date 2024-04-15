@@ -1,5 +1,7 @@
 BEGIN TRANSACTION;
-DROP TABLE IF EXISTS brewery, beer, users, user_brewery;
+
+DROP TABLE IF EXISTS brewery, beer, reviews, users, user_brewery;
+
 CREATE TABLE brewery (
     brewery_id serial PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -19,6 +21,18 @@ CREATE TABLE beer (
     FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
     imageURL VARCHAR(255)
 );
+
+CREATE TABLE reviews (
+    review_id serial primary key,
+    beer_id bigint not null,
+    reviewer varchar(255) NOT NULL,
+    title varchar(255) NOT NULL,
+    review text NOT NULL,
+    rating int NOT NULL,
+
+    CONSTRAINT fk_reviews_beer_id FOREIGN KEY (beer_id) REFERENCES beer(beer_id)
+);
+
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username varchar(50) NOT NULL UNIQUE,
@@ -34,4 +48,5 @@ CREATE TABLE user_brewery (
     CONSTRAINT FK_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
     PRIMARY KEY (user_id, brewery_id)
 );
+
 COMMIT TRANSACTION;
