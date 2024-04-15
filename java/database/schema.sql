@@ -9,8 +9,7 @@ CREATE TABLE brewery (
     established_year INT,
     description TEXT,
     imageURL VARCHAR(255),
-    latitude DECIMAL(10, 6),
-    longitude DECIMAL(10, 6)
+    mapURL text
 );
 
 CREATE TABLE beer (
