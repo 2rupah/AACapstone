@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS brewery, beer, users, user_brewery;
 
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
