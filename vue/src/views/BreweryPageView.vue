@@ -37,7 +37,11 @@ export default {
       .catch(err => console.error(err));
 
   },
-
+  methods: {
+    getBreweryById() {
+      BreweryService.getBreweryInfo
+    }
+  }
 }
 </script>
 
