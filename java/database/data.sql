@@ -77,15 +77,15 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 
 INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (1, HopHead87, 'As a dedicated hop lover, I was eager to try the 60$ Nachos Double IPA, and it did not disappoint!', 4.0),
-(1, TheHoppyEnding,),
-(2, SourAleSipper67,),
-(2, BrewEnthusiast92,),
-(3, BeerlyBeloved,),
-(3, AleInWonderland,),
-(4, SourAleSipper67,),
-(4, HopsAndDreams,),
-(5, BeerlyBeloved,),
-(5, CraftyDrinker22,),
-(6, BrewedAwakening,),
-(6, AleInWonderland,);
+(1, TheHoppyEnding,'The taste follows suit, with a bold hoppy flavor that is balanced by a smooth malt backbone. It is refreshing and satisfying, perfect for a sunny afternoon.', 4.0),
+(1, SourAleSipper67,'The aroma is almost non-existent, with a faint hint of stale grains. The taste is equally lackluster, with no discernible flavor other than a vague sweetness that quickly fades into nothingness. Save your money and skip this one.', 1.0),
+(2, BrewEnthusiast92,'It pours a murky yellow with an off-putting aroma of spoiled fruit and wet cardboard.', 1.0),
+(2, BeerlyBeloved,' It is dangerously drinkable for its ABV, and I can not help but savor every sip.', 5.0),
+(2, AleInWonderland,'This beer pours a deep mahogany with a creamy tan head. The aroma is a heavenly blend of roasted malts and sweet vanilla, inviting you in for a sip.', 5.0),
+(3, SourAleSipper67,'Stouty McStoutface is a stout lovers dream come true!', 3.0),
+(3, HopsAndDreams,'While I appreciate a good funky beer, this one misses the mark entirely.', 2.0),
+(3, BeerlyBeloved,'The aroma is rich and roasty, with hints of chocolate and coffee. The taste is equally impressive, with layers of dark chocolate, espresso, and a subtle bitterness that balances it all out.', 1.0),
+(4, CraftyDrinker22,'There is no balance or nuance here, just a blunt taste of bitterness. I would not recommend this beer to anyone.', 2.0),
+(4, BrewedAwakening,'Tropical Thunder IPA is a tropical explosion of flavor!', 4.0),
+(4, AleInWonderland,'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0);
 COMMIT TRANSACTION;
