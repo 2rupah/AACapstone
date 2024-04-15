@@ -45,7 +45,7 @@ public class BeerController {
         return reviewDao.getById(reviewId);
     }
 
-    @PostMapping("/beers/{id}/reviews")
+    @PostMapping("/{id}/reviews")
     @ResponseStatus(HttpStatus.CREATED)
     public Review addReviewToBeer(@PathVariable("id") int beerId, @RequestBody Review review) {
         return reviewDao.add(review, beerId);
