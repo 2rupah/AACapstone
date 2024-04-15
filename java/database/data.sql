@@ -74,7 +74,4 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('The Scientist', 8, 'IPA', 7, 27, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
 ('Oubliette', 8, 'Imperial Stout', 12, 33, '','https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/specialty-beer.jpg');
 
-
-
-
 COMMIT TRANSACTION;
