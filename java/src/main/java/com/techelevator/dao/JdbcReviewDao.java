@@ -22,7 +22,7 @@ public class JdbcReviewDao implements ReviewDao {
     @Override
     public List<Review> listByBeerId(int beerId) {
         List<Review> reviews = new ArrayList<Review>();
-        String sql = "SELECT beer_id, reviewer, review, rating FROM reviews WHERE beer_id = ?";
+        String sql = "SELECT review_id, beer_id, reviewer, review, rating FROM reviews WHERE beer_id = ?";
         SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, beerId);
         while(rows.next()) {
             reviews.add( mapRowToReview(rows) );
@@ -31,7 +31,7 @@ public class JdbcReviewDao implements ReviewDao {
     }
 
     @Override
-    public Review getById(long reviewId) {
+    public Review getById(int reviewId) {
         Review review = null;
         String sql = "SELECT review_id, beer_id, reviewer, review, rating FROM reviews WHERE review_id = ?";
         SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, reviewId);
@@ -44,8 +44,8 @@ public class JdbcReviewDao implements ReviewDao {
     @Override
     public Review add(Review review, int beerId) {
         String sql = "INSERT INTO reviews (beer_id, reviewer, review, rating) " +
-                "VALUES (?, ?, ?, ?, ?, ?) RETURNING review_id";
-        Long reviewId = jdbcTemplate.queryForObject(sql, long.class, review.getBeerId(), review.getReviewer(),
+                "VALUES (?, ?, ?, ?) RETURNING review_id";
+        int reviewId = jdbcTemplate.queryForObject(sql, int.class, beerId, review.getReviewer(),
                 review.getReview(), review.getRating());
         review.setReviewId(reviewId);
         review.setBeerId(beerId);
@@ -65,7 +65,8 @@ public class JdbcReviewDao implements ReviewDao {
     private Review mapRowToReview(SqlRowSet rowSet) {
         Review review = new Review();
 
-        review.setBeerId(rowSet.getInt("product_id"));
+        review.setReviewId(rowSet.getInt("review_id"));
+        review.setBeerId(rowSet.getInt("beer_id"));
         review.setReviewer(rowSet.getString("reviewer"));
         review.setReview(rowSet.getString("review"));
         review.setRating(rowSet.getInt("rating"));

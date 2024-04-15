@@ -2,13 +2,13 @@ package com.techelevator.model;
 
 public class Review {
 
-    private long reviewId;
+    private int reviewId;
     private int beerId;
     private String reviewer;
     private String review;
     private int rating;
 
-    public Review(long reviewId, int beerId, String reviewer, String review, int rating) {
+    public Review(int reviewId, int beerId, String reviewer, String review, int rating) {
         this.reviewId = reviewId;
         this.beerId = beerId;
         this.reviewer = reviewer;
@@ -17,18 +17,17 @@ public class Review {
     }
 
     public Review() {
-
     }
 
-    public long getReviewId() {
+    public int getReviewId() {
         return reviewId;
     }
 
-    public void setReviewId(long reviewId) {
+    public void setReviewId(int reviewId) {
         this.reviewId = reviewId;
     }
 
-    public long getBeerId() {
+    public int getBeerId() {
         return beerId;
     }
 
@@ -59,5 +58,5 @@ public class Review {
     public void setRating(int rating) {
         this.rating = rating;
     }
-
 }
+
