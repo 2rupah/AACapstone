@@ -1,5 +1,5 @@
 <template>
-  
+  <section id="container">
     <div id="login">
       <form v-on:submit.prevent="login">
         <h1>Please Sign In</h1>
@@ -27,7 +27,7 @@
 
       </form>
     </div>
-  
+  </section>
 </template>
 
 <script>
@@ -75,4 +75,21 @@ export default {
 label {
   margin-right: 0.5rem;
 }
+#container {
+  width:40vw;
+  
+  
+}
+form {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
 </style>

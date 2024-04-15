@@ -8,9 +8,8 @@ CREATE TABLE brewery (
     location VARCHAR(150) NOT NULL,
     established_year INT,
     description TEXT,
-    imageURL VARCHAR(255) 
+    imageURL VARCHAR(255)
 );
-
 CREATE TABLE beer (
     beer_id serial PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -20,7 +19,7 @@ CREATE TABLE beer (
     ibu INT,
     description TEXT,
     FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
-    imageURL VARCHAR(255) 
+    imageURL VARCHAR(255)
 );
 
 CREATE TABLE reviews (
@@ -42,7 +41,6 @@ CREATE TABLE users (
     brewery_id INT, -- New column to associate users with breweries
     CONSTRAINT FK_user_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
 );
-
 CREATE TABLE user_brewery (
     user_id INT,
     brewery_id INT,

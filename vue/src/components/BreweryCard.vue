@@ -1,4 +1,5 @@
 <template>
+  
   <div class="brewery-card" @click="isFlipped = !isFlipped">
     <div class="card" :class="{ 'flipped': isFlipped }">
       <div class="front">
