@@ -3,12 +3,23 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
-	user_id SERIAL,
-	username varchar(50) NOT NULL UNIQUE,
-	password_hash varchar(200) NOT NULL,
-	role varchar(50) NOT NULL,
-	CONSTRAINT PK_user PRIMARY KEY (user_id)
+    user_id SERIAL PRIMARY KEY,
+    username varchar(50) NOT NULL UNIQUE,
+    password_hash varchar(200) NOT NULL,
+    role varchar(50) NOT NULL,
+    brewery_id INT, -- New column to associate users with breweries
+    CONSTRAINT FK_user_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
 );
+
+
+CREATE TABLE user_brewery (
+    user_id INT,
+    brewery_id INT,
+    CONSTRAINT FK_user FOREIGN KEY (user_id) REFERENCES users(user_id),
+    CONSTRAINT FK_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
+    PRIMARY KEY (user_id, brewery_id)
+);
+
 
 CREATE TABLE brewery (
     brewery_id serial PRIMARY KEY,

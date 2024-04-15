@@ -12,7 +12,8 @@
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
             <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
-            <router-link v-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
+            <a v-if="isLoggedIn" @click="logout" class="nav-button">Logout</a>
+            <router-link v-else-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
     </div>
 </template>
@@ -24,6 +25,11 @@ export default {
         }
     },
     computed: {
+      isLoggedIn() {
+            // Assuming you have a state in your Vuex store indicating the user's authentication status
+            return this.$store.state.isAuthenticated;
+      },
+
     shouldDisplayHomeButton() {
      
       return this.$route.name !== 'home'; 
@@ -35,12 +41,20 @@ export default {
    },
    shouldDisplayLoginButton() {
      
-     return this.$route.name !== 'login'; 
+    return this.$route.name !== 'login' //&& !this.isLoggedIn; 
    },
   },
+  methods: {
+        logout() {
+            // Perform logout action, such as clearing authentication state and redirecting to login page
+            this.$store.commit("LOGOUT");
+            this.$router.push("/login");
+        }
+      }
 }
 </script>
 <style scoped>
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
   h1{
     height: auto;
@@ -52,6 +66,7 @@ export default {
     text-decoration: none;
     color:#0A1823;
   }
+
   @media only screen and (max-width: 768px) {
     #container {
         flex-direction: column;
@@ -98,6 +113,20 @@ export default {
     border-radius: 6px;
     height: auto;
 }
+.nav-button {
+    margin: 5px;
+    padding: 13px 25px;
+    background-color: #0A1823;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+.nav-button:hover {
+    text-decoration: underline !important;
+}
+
 
 nav a {
   margin: 5px;
