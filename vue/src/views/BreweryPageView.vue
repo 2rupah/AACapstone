@@ -1,24 +1,27 @@
 <template>
-  <h1>{{ currentBrewery.name }}</h1>
-
-  <h2>
+    <h2>
     <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
   </h2>
+  <h1>{{ currentBrewery.name }}</h1>
   <BeerList :beers="beerList" />
+
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
 <script>
 import BeerList from '../components/BeerList.vue';
 import BreweryService from '../services/BreweryService';
 
+
 export default {
   components: {
     BeerList,
   },
+
   data() {
     return {
       beerList: [],
-      currentBrewery: {}
+      currentBrewery: {},
+
     };
   },
   async created() {
