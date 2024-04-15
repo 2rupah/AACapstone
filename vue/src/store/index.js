@@ -9,7 +9,8 @@ export function createStore(currentToken, currentUser) {
       user: currentUser || {},
       isAuthenticated: !!currentToken,
       breweryList: [],
-      beerList: []
+      beerList: [],
+      brewery: {}
     },
     actions: {
       getAllBreweries(context) {
@@ -23,8 +24,14 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_BEERLIST', response.data)
         })
         .catch(err => console.error(err));
-      }
+      },
       
+      getBreweryInfo(context, breweryId) {
+        BreweryService.getBreweryInfo(breweryId).then(response => {
+          context.commit('SET_BREWERY', response.data)
+        })
+        .catch(err => console.error(err));
+      }
 
     },
     mutations: {
@@ -33,6 +40,9 @@ export function createStore(currentToken, currentUser) {
       },
       SET_BEERLIST(state, beerList){
         state.beerList = beerList
+      },
+      SET_BREWERY(state, brewery){
+        state.brewery = brewery
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
