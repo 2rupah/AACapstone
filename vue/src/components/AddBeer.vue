@@ -62,7 +62,6 @@ export default {
         establishedYear: '',
         description: '',
         imageUrl: '',
-
       },
 
     };
