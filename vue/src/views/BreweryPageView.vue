@@ -4,7 +4,9 @@
   </h2>
   <h1>{{ currentBrewery.name }}</h1>
   <BeerList :beers="beerList" />
-
+  <div class="breweryMap">
+    <iframe src={{ currentBrewery.mapURL }} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
 <script>
