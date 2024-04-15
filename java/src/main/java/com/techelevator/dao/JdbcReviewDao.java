@@ -6,6 +6,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 import javax.sql.DataSource;
 import javax.xml.crypto.Data;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcReviewDao implements ReviewDao {
@@ -17,7 +18,13 @@ public class JdbcReviewDao implements ReviewDao {
 
     @Override
     public List<Review> listByBeerId(int beerId) {
-        return null;
+        List<Review> reviews = new ArrayList<Review>();
+        String sql = "SELECT id, beer_id, reviewer, review, rating, FROM reviews WHERE beer_id = ?";
+        SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, beerId);
+        while(rows.next()) {
+            reviews.add( mapRowToReview(rows) );
+        }
+        return reviews;
     }
 
     @Override
@@ -29,16 +36,16 @@ public class JdbcReviewDao implements ReviewDao {
     public Review add(Review review, int beerId) {
         return null;
     }
+//
+//    @Override
+//    public Review update(Review review) {
+//        return null;
+//    }
 
-    @Override
-    public Review update(Review review) {
-        return null;
-    }
-
-    @Override
-    public void delete(int beerId) {
-
-    }
+//    @Override
+//    public void delete(int beerId) {
+//
+//    }
 
     private Review mapRowToReview(SqlRowSet rowSet) {
         Review review = new Review();
