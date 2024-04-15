@@ -8,7 +8,9 @@ CREATE TABLE brewery (
     location VARCHAR(150) NOT NULL,
     established_year INT,
     description TEXT,
-    imageURL VARCHAR(255)
+    imageURL VARCHAR(255),
+    latitude DECIMAL(10, 6),
+    longitude DECIMAL(10, 6)
 );
 
 CREATE TABLE beer (
@@ -23,8 +25,6 @@ CREATE TABLE beer (
     imageURL VARCHAR(255)
 );
 
-<<<<<<< HEAD
-=======
 CREATE TABLE reviews (
     review_id serial primary key,
     beer_id bigint not null,
@@ -35,7 +35,6 @@ CREATE TABLE reviews (
     CONSTRAINT fk_reviews_beer_id FOREIGN KEY (beer_id) REFERENCES beer(beer_id)
 );
 
->>>>>>> ecde3e09b139cb087741659f3473c2c4e5ce3ba3
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username varchar(50) NOT NULL UNIQUE,
@@ -44,7 +43,6 @@ CREATE TABLE users (
     brewery_id INT, -- New column to associate users with breweries
     CONSTRAINT FK_user_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
 );
-
 
 CREATE TABLE user_brewery (
     user_id INT,
