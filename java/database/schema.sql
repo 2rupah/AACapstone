@@ -26,7 +26,6 @@ CREATE TABLE reviews (
     review_id serial primary key,
     beer_id bigint not null,
     reviewer varchar(255) NOT NULL,
-    title varchar(255) NOT NULL,
     review text NOT NULL,
     rating int NOT NULL,
 

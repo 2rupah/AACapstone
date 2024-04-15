@@ -13,7 +13,7 @@ public class Beer {
     private String description;
     private String imageUrl;
 
-    public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl, int rating){
+    public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl){
         this.beerId = beerId;
         this.name = name;
         this.breweryId = breweryId;
@@ -22,7 +22,6 @@ public class Beer {
         this.ibu = ibu;
         this.description = description;
         this.imageUrl = imageUrl;
-        this.rating = rating;
     }
 
     public String getImageUrl() {
@@ -93,11 +92,4 @@ public class Beer {
         this.description = description;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
 }
