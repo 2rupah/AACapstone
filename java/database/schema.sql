@@ -9,8 +9,8 @@ CREATE TABLE brewery (
     established_year INT,
     description TEXT,
     imageURL VARCHAR(255),
-	latitude DECIMAL(10, 6),
-	longitude DECIMAL(10, 6)
+    latitude DECIMAL(10, 6),
+    longitude DECIMAL(10, 6)
 );
 
 CREATE TABLE beer (
@@ -43,7 +43,6 @@ CREATE TABLE users (
     brewery_id INT, -- New column to associate users with breweries
     CONSTRAINT FK_user_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
 );
-
 
 CREATE TABLE user_brewery (
     user_id INT,
