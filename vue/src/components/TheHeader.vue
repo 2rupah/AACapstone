@@ -12,6 +12,7 @@
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
             <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
+            <router-link v-bind:to="{ name: 'add' }" class="nav-button dashboard-button">Dashboard</router-link>
             <a v-if="isLoggedIn" @click="logout" class="nav-button">Logout</a>
             <router-link v-else-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
         </nav>
@@ -29,6 +30,8 @@ export default {
             // Assuming you have a state in your Vuex store indicating the user's authentication status
             return this.$store.state.isAuthenticated;
       },
+    
+
 
     shouldDisplayHomeButton() {
      
@@ -80,6 +83,7 @@ export default {
         align-items: stretch;
     }
 }
+
 
   img {
     /* grid-area: logo; */

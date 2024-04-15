@@ -47,6 +47,10 @@
                 <label for="imageUrl" class="form-label">Image URL:</label>
                 <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl">
             </div>
+            <div class="form-group">
+                <label for="imageUrl" class="form-label">Image URL:</label>
+                <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl">
+            </div>
             <button type="submit" class="btn btn-primary">Update Brewery</button>
         </form>
     </div>
@@ -69,7 +73,7 @@ export default {
                 establishedYear: '',
                 description: '',
                 imageUrl: '',
-
+                mapUrl: '',
             },
 
         };
