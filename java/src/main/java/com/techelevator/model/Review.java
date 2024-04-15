@@ -17,10 +17,9 @@ public class Review {
     }
 
     public Review() {
-
     }
 
-    public long getReviewId() {
+    public int getReviewId() {
         return reviewId;
     }
 
@@ -28,7 +27,7 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public long getBeerId() {
+    public int getBeerId() {
         return beerId;
     }
 
@@ -59,5 +58,5 @@ public class Review {
     public void setRating(int rating) {
         this.rating = rating;
     }
-
 }
+

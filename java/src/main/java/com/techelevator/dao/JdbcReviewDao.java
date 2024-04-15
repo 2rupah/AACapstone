@@ -45,7 +45,7 @@ public class JdbcReviewDao implements ReviewDao {
     public Review add(Review review, int beerId) {
         String sql = "INSERT INTO reviews (beer_id, reviewer, review, rating) " +
                 "VALUES (?, ?, ?, ?) RETURNING review_id";
-        Integer reviewId = jdbcTemplate.queryForObject(sql, int.class, review.getBeerId(), review.getReviewer(),
+        int reviewId = jdbcTemplate.queryForObject(sql, int.class, beerId, review.getReviewer(),
                 review.getReview(), review.getRating());
         review.setReviewId(reviewId);
         review.setBeerId(beerId);
