@@ -12,7 +12,6 @@ public class Beer {
     private int ibu;
     private String description;
     private String imageUrl;
-    private int rating;
 
     public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl, int rating){
         this.beerId = beerId;
