@@ -9,16 +9,19 @@ public class Brewery {
     private String description;
     private String imageUrl;
 
+    private String mapUrl;
+
     public Brewery() {
     }
 
-    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl) {
+    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl, String mapUrl) {
         this.breweryId = breweryId;
         this.name = name;
         this.location = location;
         this.establishedYear = establishedYear;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.mapUrl = mapUrl;
     }
 
     public String getImageUrl() {
@@ -67,5 +70,13 @@ public class Brewery {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getMapUrl() {
+        return mapUrl;
+    }
+
+    public void setMapUrl(String mapUrl) {
+        this.mapUrl = mapUrl;
     }
 }
