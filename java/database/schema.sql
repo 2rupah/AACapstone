@@ -23,6 +23,19 @@ CREATE TABLE beer (
     imageURL VARCHAR(255)
 );
 
+<<<<<<< HEAD
+=======
+CREATE TABLE reviews (
+    review_id serial primary key,
+    beer_id bigint not null,
+    reviewer varchar(255) NOT NULL,
+    review text NOT NULL,
+    rating int NOT NULL,
+
+    CONSTRAINT fk_reviews_beer_id FOREIGN KEY (beer_id) REFERENCES beer(beer_id)
+);
+
+>>>>>>> ecde3e09b139cb087741659f3473c2c4e5ce3ba3
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username varchar(50) NOT NULL UNIQUE,

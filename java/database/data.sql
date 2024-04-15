@@ -75,4 +75,17 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('The Scientist', 8, 'IPA', 7, 27, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
 ('Oubliette', 8, 'Imperial Stout', 12, 33, '','https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/specialty-beer.jpg');
 
+INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
+(1, HopHead87, 'As a dedicated hop lover, I was eager to try the 60$ Nachos Double IPA, and it did not disappoint!', 4.0),
+(1, TheHoppyEnding,),
+(2, SourAleSipper67,),
+(2, BrewEnthusiast92,),
+(3, BeerlyBeloved,),
+(3, AleInWonderland,),
+(4, SourAleSipper67,),
+(4, HopsAndDreams,),
+(5, BeerlyBeloved,),
+(5, CraftyDrinker22,),
+(6, BrewedAwakening,),
+(6, AleInWonderland,);
 COMMIT TRANSACTION;

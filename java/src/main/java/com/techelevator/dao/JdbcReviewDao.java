@@ -1,12 +1,19 @@
 package com.techelevator.dao;
 
 import com.techelevator.model.Review;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
 import java.util.List;
 
 public class JdbcReviewDao implements ReviewDao {
+    private JdbcTemplate jdbcTemplate;
 
+    public JdbcReviewDao(DataSource dataSource){
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
 
     @Override
     public List<Review> listByBeerId(int beerId) {
@@ -33,13 +40,14 @@ public class JdbcReviewDao implements ReviewDao {
 
     }
 
-    private Review mapRowToReview(SqlRowSet row) {
+    private Review mapRowToReview(SqlRowSet rowSet) {
         Review review = new Review();
-        review.setBeerId(row.getLong("product_id"));
-        review.setReviewer(row.getString("reviewer"));
-        review.setTitle(row.getString("title"));
-        review.setReview(row.getString("review"));
-        review.setRating(row.getInt("rating"));
+
+        review.setBeerId(rowSet.getInt("product_id"));
+        review.setReviewer(rowSet.getString("reviewer"));
+        review.setReview(rowSet.getString("review"));
+        review.setRating(rowSet.getInt("rating"));
+
         return review;
     }
 }
