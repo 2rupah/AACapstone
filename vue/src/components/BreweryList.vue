@@ -7,6 +7,7 @@
     <div class="brewery-container">
       <div class="brewery-item" v-for="brewery in breweries" :key="brewery.name">
         <BreweryCard :brewery="brewery" />
+        
       </div>
     </div>
   </div>

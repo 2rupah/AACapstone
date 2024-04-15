@@ -4,15 +4,16 @@ INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULi
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
 -- INSERT brewery
-INSERT INTO brewery (name, location, established_year, description, imageURL) VALUES
-('Hoof Hearted Brewery and Kitchen', '850 N 4th St, Columbus, OH 43215', 2011, 'Quirky brewery & restaurant offering craft beers, inventive pub fare & a large patio.','https://images.squarespace-cdn.com/content/v1/530fa82ae4b059649e4b5d3c/1394423334322-L2RLZT2CSZEFC4S7XDTI/HHB_ROUND_flat_RGB.jpg?format=1500w'),
-('Wolfs Ridge Brewing', '215 N 4th St, Columbus, OH 43215', 2013, 'Modern brewpub serving a range of craft beers & elevated pub fare in a sleek, industrial setting.', 'https://i0.wp.com/www.dublinarts.org/wp-content/uploads/2016/10/WRB-Element_02LogoWolf.png?fit=2400%2C2400&ssl=1'),
-('Knotty Pine Brewing', '1765 W 3rd Ave, Columbus, OH 43212', 2017, 'Brewpub serving housemade craft beers & American eats in a cozy space with a woodsy vibe.', 'https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/restaurant/cover_square/b3b1bcfa-578c-44fe-afbd-0e7be697a034.png'),
-('Barleys Brewing Company', '467 N High St, Columbus, OH 43215', 1992, 'Longtime brewpub serving housemade beers & classic pub fare in a cozy, brick-walled space.', 'https://popmenucloud.com/apxqvlfc/a2ee7f33-6b54-4193-b5c1-6da023bc3221.png'),
-('Columbus Brewing Company', '2555 Harrison Rd, Columbus, OH 43204', 1988, 'Columbus Brewing Company is an independent craft brewery dedicated to exploring the flavors of American hops. Best known for Columbus IPA and Bodhi.', 'https://beerpulse.com/wp-content/uploads/2011/02/CBC_CMYK_square_burgandy_sm.png'),
-('Olentangy River Brewing Company', '303 Green Meadows Dr S, Lewis Center, OH 43035', 2008, 'Olentangy River Brewing Company, nestled in Ohio, offers a vibrant array of handcrafted brews, reflecting the regions spirit and heritage, all within a welcoming and community-focused atmosphere.', 'https://images.squarespace-cdn.com/content/v1/6192e85d8c6bc27fc2530eec/473350b2-03fb-4fd4-855e-2783d465337c/Logo_Badge.png?format=1500w'),
-('Thunderwing Brewing Company', '2419 Scioto Harper Dr, Columbus, OH 43204', 2023, 'Thunderwing Brewing is an American Craft brewery which is operating out of the west side of Columbus . Focusing on a wide variety of offerings, from light easy drinkers, to dark robust ales with plenty of hoppy options as well!', 'https://thunderwingbrewing.com/wp-content/uploads/2023/07/ThunderWing-Full-1.png'),
-('Seventh Son Brewing Co', '1101 N 4th St, Columbus, OH 43201', 2013, 'Comfortable tap room and patio with a rotating schedule of food trucks. Since April of 2013 Seventh Son has brewed over 225 different beers and has been consistently voted Columbus best brewery', 'https://drinkupcolumbus.com/wp-content/uploads/2012/04/seventh-son.png' );
+
+INSERT INTO brewery (name, location, established_year, description, imageURL, mapURL) VALUES
+('Hoof Hearted Brewery and Kitchen', '850 N 4th St, Columbus, OH 43215', 2011, 'Quirky brewery & restaurant offering craft beers, inventive pub fare & a large patio.','https://images.squarespace-cdn.com/content/v1/530fa82ae4b059649e4b5d3c/1394423334322-L2RLZT2CSZEFC4S7XDTI/HHB_ROUND_flat_RGB.jpg?format=1500w', ''),
+('Wolfs Ridge Brewing', '215 N 4th St, Columbus, OH 43215', 2013, 'Modern brewpub serving a range of craft beers & elevated pub fare in a sleek, industrial setting.', 'https://i0.wp.com/www.dublinarts.org/wp-content/uploads/2016/10/WRB-Element_02LogoWolf.png?fit=2400%2C2400&ssl=1',''),
+('Knotty Pine Brewing', '1765 W 3rd Ave, Columbus, OH 43212', 2017, 'Brewpub serving housemade craft beers & American eats in a cozy space with a woodsy vibe.', 'https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/restaurant/cover_square/b3b1bcfa-578c-44fe-afbd-0e7be697a034.png', ''),
+('Barleys Brewing Company', '467 N High St, Columbus, OH 43215', 1992, 'Longtime brewpub serving housemade beers & classic pub fare in a cozy, brick-walled space.', 'https://popmenucloud.com/apxqvlfc/a2ee7f33-6b54-4193-b5c1-6da023bc3221.png', ''),
+('Columbus Brewing Company', '2555 Harrison Rd, Columbus, OH 43204', 1988, 'Columbus Brewing Company is an independent craft brewery dedicated to exploring the flavors of American hops. Best known for Columbus IPA and Bodhi.', 'https://beerpulse.com/wp-content/uploads/2011/02/CBC_CMYK_square_burgandy_sm.png', ''),
+('Olentangy River Brewing Company', '303 Green Meadows Dr S, Lewis Center, OH 43035', 2008, 'Olentangy River Brewing Company, nestled in Ohio, offers a vibrant array of handcrafted brews, reflecting the regions spirit and heritage, all within a welcoming and community-focused atmosphere.', 'https://images.squarespace-cdn.com/content/v1/6192e85d8c6bc27fc2530eec/473350b2-03fb-4fd4-855e-2783d465337c/Logo_Badge.png?format=1500w', ''),
+('Thunderwing Brewing Company', '2419 Scioto Harper Dr, Columbus, OH 43204', 2023, 'Thunderwing Brewing is an American Craft brewery which is operating out of the west side of Columbus . Focusing on a wide variety of offerings, from light easy drinkers, to dark robust ales with plenty of hoppy options as well!', 'https://thunderwingbrewing.com/wp-content/uploads/2023/07/ThunderWing-Full-1.png', ''),
+('Seventh Son Brewing Co', '1101 N 4th St, Columbus, OH 43201', 2013, 'Comfortable tap room and patio with a rotating schedule of food trucks. Since April of 2013 Seventh Son has brewed over 225 different beers and has been consistently voted Columbus best brewery', 'https://drinkupcolumbus.com/wp-content/uploads/2012/04/seventh-son.png', '');
 
 -- INSERT beer
 INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALUES
@@ -74,7 +75,18 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('The Scientist', 8, 'IPA', 7, 27, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
 ('Oubliette', 8, 'Imperial Stout', 12, 33, '','https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/specialty-beer.jpg');
 
-
-
+INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
+(1, 'HopHead87', 'As a dedicated hop lover, I was eager to try the 60$ Nachos Double IPA, and it did not disappoint!', 4.0),
+(1, 'TheHoppyEnding', 'The taste follows suit, with a bold hoppy flavor that is balanced by a smooth malt backbone. It is refreshing and satisfying, perfect for a sunny afternoon.', 4.0),
+(1, 'SourAleSipper67', 'The aroma is almost non-existent, with a faint hint of stale grains. The taste is equally lackluster, with no discernible flavor other than a vague sweetness that quickly fades into nothingness. Save your money and skip this one.', 1.0),
+(2, 'BrewEnthusiast92', 'It pours a murky yellow with an off-putting aroma of spoiled fruit and wet cardboard.', 1.0),
+(2, 'BeerlyBeloved', 'It is dangerously drinkable for its ABV, and I can not help but savor every sip.', 5.0),
+(2, 'AleInWonderland', 'This beer pours a deep mahogany with a creamy tan head. The aroma is a heavenly blend of roasted malts and sweet vanilla, inviting you in for a sip.', 5.0),
+(3, 'SourAleSipper67', 'Stouty McStoutface is a stout lovers dream come true!', 3.0),
+(3, 'HopsAndDreams', 'While I appreciate a good funky beer, this one misses the mark entirely.', 2.0),
+(3, 'BeerlyBeloved', 'The aroma is rich and roasty, with hints of chocolate and coffee. The taste is equally impressive, with layers of dark chocolate, espresso, and a subtle bitterness that balances it all out.', 1.0),
+(4, 'CraftyDrinker22', 'There is no balance or nuance here, just a blunt taste of bitterness. I would not recommend this beer to anyone.', 2.0),
+(4, 'BrewedAwakening', 'Tropical Thunder IPA is a tropical explosion of flavor!', 4.0),
+(4, 'AleInWonderland', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0);
 
 COMMIT TRANSACTION;

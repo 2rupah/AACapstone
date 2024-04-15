@@ -13,8 +13,6 @@ public class Beer {
     private String description;
     private String imageUrl;
 
-
-
     public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl){
         this.beerId = beerId;
         this.name = name;
@@ -26,16 +24,16 @@ public class Beer {
         this.imageUrl = imageUrl;
     }
 
+    public Beer(){
+
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public Beer(){
-
     }
 
     public int getBeerId() {
@@ -93,4 +91,5 @@ public class Beer {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

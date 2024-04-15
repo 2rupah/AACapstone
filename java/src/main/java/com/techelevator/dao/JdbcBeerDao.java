@@ -81,11 +81,6 @@ public class JdbcBeerDao implements BeerDao {
 
 
 
-
-
-
-
-
     private Beer mapRowToBeer(SqlRowSet rowSet){
         Beer beer = new Beer();
 
@@ -97,8 +92,6 @@ public class JdbcBeerDao implements BeerDao {
         beer.setIbu(rowSet.getInt("ibu") );
         beer.setDescription(rowSet.getString("description") );
         beer.setImageUrl(rowSet.getString("imageurl"));
-
-
 
         return beer;
     }
