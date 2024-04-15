@@ -4,6 +4,7 @@
   <h2>
     <router-link :to="{ name: 'brewery' }" class="btn btn-primary mr-2">Back</router-link>
   </h2>
+  <div> {{ currentBrewery.imageUrl }}</div>
   <BeerList :beers="beerList" />
 </template>
 <!-- TODO : Display Brewery Name at the top of page -->
