@@ -19,7 +19,7 @@ public class JdbcBrewery implements BreweryDao{
 
     private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
             "FROM brewery";
-
+    private static final String SELECT_IMAGE_SQL = "SELECT image_url FROM brewery_images";
 
     private JdbcTemplate jdbcTemplate;
 

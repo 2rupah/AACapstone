@@ -22,12 +22,10 @@ public class BreweryController {
         this.breweryDao = breweryDao;
         this.beerDao = beerDao;
     }
-
     @RequestMapping(path = "/brewery", method = RequestMethod.GET)
     public List<Brewery> listAll() {
         return breweryDao.listAllBreweries();
     }
-
      /*4.10.2024 - Reconsidering our endpoints we should rename it something like /brewery/{id}/beer to gather our list
      of beers from a specific brewery */
     @RequestMapping(path = "/brewery/{id}", method = RequestMethod.GET)
