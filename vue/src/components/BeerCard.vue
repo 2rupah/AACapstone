@@ -9,6 +9,7 @@
       <p class="beer-details"><strong>ABV:</strong> {{ beer.abv }}%</p>
       <p class="beer-details"><strong>IBU:</strong> {{ beer.ibu }}</p>
       <p class="beer-description"><strong>Description:</strong> {{ beer.description }}</p>
+      
     </div>
 
     <div class="col">
@@ -86,9 +87,6 @@ export default {
 
   /* Add some spacing below the image */
 
-}
-#one {
-  align-items: center;
 }
 
 .beer-details {
