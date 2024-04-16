@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS brewery, beer, reviews, users, user_brewery;
+DROP TABLE IF EXISTS brewery_images, brewery, beer, reviews, users, user_brewery;
 
 CREATE TABLE brewery (
     brewery_id serial PRIMARY KEY,
@@ -50,5 +50,13 @@ CREATE TABLE user_brewery (
     CONSTRAINT FK_brewery FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id),
     PRIMARY KEY (user_id, brewery_id)
 );
+
+CREATE TABLE brewery_images (
+    image_id serial PRIMARY KEY,
+    brewery_id INT NOT NULL,
+    image_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (brewery_id) REFERENCES brewery(brewery_id)
+);
+
 
 COMMIT TRANSACTION;
