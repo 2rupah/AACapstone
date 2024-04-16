@@ -9,15 +9,18 @@
       <p class="beer-details"><strong>ABV:</strong> {{ beer.abv }}%</p>
       <p class="beer-details"><strong>IBU:</strong> {{ beer.ibu }}</p>
       <p class="beer-description"><strong>Description:</strong> {{ beer.description }}</p>
+      
     </div>
 
     <div class="col">
       <div v-for="review in beer.listOfReviews" :key="review.reviewId">
-      <p>{{ review.reviewer }} says: {{ review.review }}</p>
-      <img src="../assets/star.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
+      
+      <img src="../assets/beer.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
         v-for="n in review.rating" v-bind:key="n" />
+        <p><strong>{{ review.reviewer }}:</strong></p>
+        <p>{{ review.review }}</p>
       </div>
-    </div>
+  </div>
 
   </div>
   </div>
@@ -86,7 +89,6 @@ export default {
 
 }
 
-
 .beer-details {
   margin-bottom: 5px;
   /* Add spacing between details */
@@ -99,9 +101,11 @@ export default {
 
 .container {
     max-width: 100%;
+    padding: 5px;
 }
 
 .rating-star {
   width: 10%;
+  padding-bottom: 5px;
 }
 </style>

@@ -17,7 +17,7 @@ public class Brewery {
     public Brewery() {
     }
 
-    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl, String mapUrl, List<BreweryImage>breweryImage) {
+    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl, String mapUrl) {
         this.breweryId = breweryId;
         this.name = name;
         this.location = location;
@@ -25,7 +25,6 @@ public class Brewery {
         this.description = description;
         this.imageUrl = imageUrl;
         this.mapUrl = mapUrl;
-        this.breweryImage = breweryImage;
     }
 
     public List<BreweryImage> getBreweryImage() {
