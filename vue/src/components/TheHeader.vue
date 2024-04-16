@@ -5,7 +5,7 @@
         <h1 id="siteTitle">Ale Atlas</h1>
         </router-link>
         <div class="search-bar">
-              <input type="text" placeholder="Search Breweries here! ^_^" style="width: 600px;">
+              <input type="text" placeholder="Search Breweries here! ^_^" style="width: 100%;">
               <button>Search</button>
           </div>
         <nav>  
@@ -169,6 +169,7 @@ Search bar
     font-size: 16px;
     font-family: inherit;
     font-weight: inherit;
+    margin-bottom: 0;
 }
 
 .search-bar button {
