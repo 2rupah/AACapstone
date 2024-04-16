@@ -89,4 +89,36 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (4, 'BrewedAwakening', 'Tropical Thunder IPA is a tropical explosion of flavor!', 4.0),
 (4, 'AleInWonderland', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0);
 
+INSERT INTO brewery_images (brewery_id, image_url) VALUES
+(1, 'https://i.ytimg.com/vi/szglL4L4Zxw/maxresdefault.jpg'),
+(1, 'https://resizer.otstatic.com/v2/photos/wide-huge/2/26171120.jpg'),
+(1, 'https://cdn.columbusunderground.com/wp-content/uploads/2016/02/hoof-hearted-01.jpg'),
+
+(2, 'https://media-cdn.tripadvisor.com/media/photo-s/15/73/f2/88/storefront.jpg'),
+(2, 'https://i0.wp.com/ohiocraftbeer.org/wp-content/uploads/2015/11/Header_WolfRidge3.jpg?fit=800%2C533&ssl=1'),
+(2, 'https://images.squarespace-cdn.com/content/v1/5eb095c59e8905404744a7b9/1600707117058-90FW815G1H57GZKLAONO/image-asset.jpeg'),
+
+(3, 'https://i.ytimg.com/vi/IzW51YGN_Bs/hqdefault.jpg'),
+(3, 'https://media-cdn.tripadvisor.com/media/photo-s/12/bb/79/3c/1524529469233-largejpg.jpg'),
+(3, 'https://www.columbusmonthly.com/gcdn/authoring/2015/07/01/NCOA/ghows-OH-207953c2-bb9f-449a-992b-7ed533b559bf-943d0844.jpeg'),
+
+(4, 'https://i0.wp.com/ohiocraftbeer.org/wp-content/uploads/2015/11/barleys_header2.jpg?fit=800%2C533&ssl=1'),
+(4, 'https://www.scootersbars.com/wp-content/uploads/2016/07/1136_1.jpg'),
+(4, 'https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/apxqvlfc/1d8bb0e8-0738-4967-b8ac-8a54718d2802.jpg'),
+
+(5, 'https://breakfastwithnick.com/wp-content/uploads/cbc-beer-hall-13.jpeg'),
+(5, 'https://breakfastwithnick.com/wp-content/uploads/cbc-beer-hall-8.jpeg'),
+(5, 'https://images.squarespace-cdn.com/content/v1/5267e4e1e4b0cdd9f1919db3/1683730150399-U02R3NM6EFKG67RNZ93C/Bar+view.jpg'),
+
+(6, 'https://media-cdn.tripadvisor.com/media/photo-s/1c/a1/e7/33/view-of-lovely-taproom.jpg'),
+(6, 'https://www.oxstudioinc.com/wp-content/uploads/2019/01/20181211_ccs_orb_ext_428-2_hdr.jpg'),
+(6, 'https://cdn7.localdatacdn.com/oh/lewis-center/4944215/original/k0g2y5yBn7.jpg'),
+
+(7, 'https://ohio.org/static/uploads/0688y00000B9fWRAAZ.jpg'),
+(7, 'https://patspints.files.wordpress.com/2023/10/psx_20231004_173134.jpg?w=1024'),
+(7, 'https://thunderwingbrewing.com/wp-content/uploads/2023/10/Social.jpg'),
+
+(8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313359131-8VZDS8MZODE3WUBB2QKC/DSCF3526.jpg'),
+(8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313354278-V0THO8EZ1OVNRCJKM74P/DSCF2933.JPG'),
+(8, 'https://www.columbusmonthly.com/gcdn/authoring/2016/03/30/NCOA/ghows-OH-ca7b932f-77fb-4c72-88f0-fbef83175097-3a284ac9.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp');
 COMMIT TRANSACTION;
