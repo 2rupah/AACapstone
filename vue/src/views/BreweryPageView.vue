@@ -144,11 +144,11 @@ body {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  width: 30px; /* Adjust button size */
-  height: 30px; /* Adjust button size */
-  border-radius: 50%;
+  width: 50px !important; /* Adjust button size */
+  height: 45px; /* Adjust button size */
+  border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -15px; /* Adjust vertical alignment */
+  margin-top: 350px !important; /* Adjust vertical alignment */
 }
 .btn {
   background-color: #0a1823;

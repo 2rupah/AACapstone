@@ -2,6 +2,8 @@ package com.techelevator.dao;
 
 import com.techelevator.exception.DaoException;
 import com.techelevator.model.Brewery;
+import com.techelevator.model.BreweryImage;
+import com.techelevator.model.Review;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,7 +21,7 @@ public class JdbcBrewery implements BreweryDao{
 
     private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
             "FROM brewery";
-
+    private static final String SELECT_IMAGE_SQL = "SELECT image_url FROM brewery_images";
 
     private JdbcTemplate jdbcTemplate;
 
@@ -100,6 +102,17 @@ public class JdbcBrewery implements BreweryDao{
         return brewery;
     }
 
+    @Override
+    public List<BreweryImage> getImagesByBreweryId(int breweryId) {
+        List<BreweryImage> breweryImagesById = new ArrayList<BreweryImage>();
+        String sql = "SELECT brewery_id, image_id, image_url FROM brewery_images WHERE brewery_id = ?";
+        SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, breweryId);
+        while(rows.next()) {
+            breweryImagesById.add( mapRowToBreweryImage(rows) );
+        }
+        return breweryImagesById;
+    }
+
     private Brewery mapRowToBrewery(SqlRowSet row) {
         Brewery brewery = new Brewery();
 
@@ -111,7 +124,19 @@ public class JdbcBrewery implements BreweryDao{
         brewery.setImageUrl( row.getString("imageurl") );
         brewery.setMapUrl(row.getString("mapurl"));
 
+        List<BreweryImage> breweryImage = getImagesByBreweryId(brewery.getBreweryId());
+        brewery.setBreweryImage(breweryImage);
 
         return brewery;
+    }
+    private BreweryImage mapRowToBreweryImage(SqlRowSet rowSet) {
+        BreweryImage breweryImage = new BreweryImage();
+
+        breweryImage.setBreweryId(rowSet.getInt("brewery_id"));
+        breweryImage.setImageId(rowSet.getInt("image_id"));
+        breweryImage.setImageUrl(rowSet.getString("image_url"));
+
+
+        return breweryImage;
     }
 }

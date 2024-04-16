@@ -7,9 +7,9 @@ INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpUL
 
 INSERT INTO brewery (name, location, established_year, description, imageURL, mapURL) VALUES
 ('Hoof Hearted Brewery and Kitchen', '850 N 4th St, Columbus, OH 43215', 2011, 'Quirky brewery & restaurant offering craft beers, inventive pub fare & a large patio.','https://images.squarespace-cdn.com/content/v1/530fa82ae4b059649e4b5d3c/1394423334322-L2RLZT2CSZEFC4S7XDTI/HHB_ROUND_flat_RGB.jpg?format=1500w', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.251963376068!2d-83.00065082419543!3d39.98047427151304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388ed3fe9f69d1%3A0x1fb02f69eba443e1!2sHoof%20Hearted%20Brewery%20and%20Kitchen!5e0!3m2!1sen!2sus!4v1713208195595!5m2!1sen!2sus'),
-('Wolfs Ridge Brewing', '215 N 4th St, Columbus, OH 43215', 2013, 'Modern brewpub serving a range of craft beers & elevated pub fare in a sleek, industrial setting.', 'https://i0.wp.com/www.dublinarts.org/wp-content/uploads/2016/10/WRB-Element_02LogoWolf.png?fit=2400%2C2400&ssl=1','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24462.52699608176!2d-83.05841504181831!3d39.96786917694444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388f2c353c2bdd%3A0x28b696ba7106a90!2sWolf&#39;s%20Ridge%20Brewing!5e0!3m2!1sen!2sus!4v1713208249245!5m2!1sen!2sus'),
+('Wolfs Ridge Brewing', '215 N 4th St, Columbus, OH 43215', 2013, 'Modern brewpub serving a range of craft beers & elevated pub fare in a sleek, industrial setting.', 'https://i0.wp.com/www.dublinarts.org/wp-content/uploads/2016/10/WRB-Element_02LogoWolf.png?fit=2400%2C2400&ssl=1','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24462.52699608176!2d-83.05841504181831!3d39.96786917694444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388f2c353c2bdd%3A0x28b696ba7106a90!2sWolf;s%20Ridge%20Brewing!5e0!3m2!1sen!2sus!4v1713208249245!5m2!1sen!2sus'),
 ('Knotty Pine Brewing', '1765 W 3rd Ave, Columbus, OH 43212', 2017, 'Brewpub serving housemade craft beers & American eats in a cozy space with a woodsy vibe.', 'https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/restaurant/cover_square/b3b1bcfa-578c-44fe-afbd-0e7be697a034.png', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.037201431978!2d-83.05552092419516!3d39.98527397151228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388e492fe8207f%3A0xde42b5db95f33551!2sKnotty%20Pine%20Brewing!5e0!3m2!1sen!2sus!4v1713208298094!5m2!1sen!2sus'),
-('Barleys Brewing Company', '467 N High St, Columbus, OH 43215', 1992, 'Longtime brewpub serving housemade beers & classic pub fare in a cozy, brick-walled space.', 'https://popmenucloud.com/apxqvlfc/a2ee7f33-6b54-4193-b5c1-6da023bc3221.png', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.6351409227395!2d-83.00547072419586!3d39.9719094715146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388f289220bced%3A0xea496178b8e8bce6!2sBarley&#39;s%20Brewing%20Company!5e0!3m2!1sen!2sus!4v1713208843827!5m2!1sen!2sus'),
+('Barleys Brewing Company', '467 N High St, Columbus, OH 43215', 1992, 'Longtime brewpub serving housemade beers & classic pub fare in a cozy, brick-walled space.', 'https://popmenucloud.com/apxqvlfc/a2ee7f33-6b54-4193-b5c1-6da023bc3221.png', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.6351409227395!2d-83.00547072419586!3d39.9719094715146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388f289220bced%3A0xea496178b8e8bce6!2sBarley;s%20Brewing%20Company!5e0!3m2!1sen!2sus!4v1713208843827!5m2!1sen!2sus'),
 ('Columbus Brewing Company', '2555 Harrison Rd, Columbus, OH 43204', 1988, 'Columbus Brewing Company is an independent craft brewery dedicated to exploring the flavors of American hops. Best known for Columbus IPA and Bodhi.', 'https://beerpulse.com/wp-content/uploads/2011/02/CBC_CMYK_square_burgandy_sm.png', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48925.377467960294!2d-83.14548385136723!3d39.96741719999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388fdac1305edb%3A0x6a88bcef9bbd49e4!2sColumbus%20Brewing%20Company!5e0!3m2!1sen!2sus!4v1713208929788!5m2!1sen!2sus'),
 ('Olentangy River Brewing Company', '303 Green Meadows Dr S, Lewis Center, OH 43035', 2008, 'Olentangy River Brewing Company, nestled in Ohio, offers a vibrant array of handcrafted brews, reflecting the regions spirit and heritage, all within a welcoming and community-focused atmosphere.', 'https://images.squarespace-cdn.com/content/v1/6192e85d8c6bc27fc2530eec/473350b2-03fb-4fd4-855e-2783d465337c/Logo_Badge.png?format=1500w', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.409447249634!2d-83.0150228241863!3d40.1554365714828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838f395ceefffff%3A0xb4503eb1b1af7c54!2sOlentangy%20River%20Brewing%20Company!5e0!3m2!1sen!2sus!4v1713208993035!5m2!1sen!2sus'),
 ('Thunderwing Brewing Company', '2419 Scioto Harper Dr, Columbus, OH 43204', 2023, 'Thunderwing Brewing is an American Craft brewery which is operating out of the west side of Columbus . Focusing on a wide variety of offerings, from light easy drinkers, to dark robust ales with plenty of hoppy options as well!', 'https://thunderwingbrewing.com/wp-content/uploads/2023/07/ThunderWing-Full-1.png', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.8617100103256!2d-83.06951082419613!3d39.96684447151542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388fbcd3b4a447%3A0xa2ff98361ecd063d!2sThunderwing%20Brewing!5e0!3m2!1sen!2sus!4v1713209034839!5m2!1sen!2sus'),
@@ -89,4 +89,36 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (4, 'BrewedAwakening', 'Tropical Thunder IPA is a tropical explosion of flavor!', 4.0),
 (4, 'AleInWonderland', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0);
 
+INSERT INTO brewery_images (brewery_id, image_url) VALUES
+(1, 'https://i.ytimg.com/vi/szglL4L4Zxw/maxresdefault.jpg'),
+(1, 'https://resizer.otstatic.com/v2/photos/wide-huge/2/26171120.jpg'),
+(1, 'https://cdn.columbusunderground.com/wp-content/uploads/2016/02/hoof-hearted-01.jpg'),
+
+(2, 'https://media-cdn.tripadvisor.com/media/photo-s/15/73/f2/88/storefront.jpg'),
+(2, 'https://i0.wp.com/ohiocraftbeer.org/wp-content/uploads/2015/11/Header_WolfRidge3.jpg?fit=800%2C533&ssl=1'),
+(2, 'https://images.squarespace-cdn.com/content/v1/5eb095c59e8905404744a7b9/1600707117058-90FW815G1H57GZKLAONO/image-asset.jpeg'),
+
+(3, 'https://i.ytimg.com/vi/IzW51YGN_Bs/hqdefault.jpg'),
+(3, 'https://media-cdn.tripadvisor.com/media/photo-s/12/bb/79/3c/1524529469233-largejpg.jpg'),
+(3, 'https://www.columbusmonthly.com/gcdn/authoring/2015/07/01/NCOA/ghows-OH-207953c2-bb9f-449a-992b-7ed533b559bf-943d0844.jpeg'),
+
+(4, 'https://i0.wp.com/ohiocraftbeer.org/wp-content/uploads/2015/11/barleys_header2.jpg?fit=800%2C533&ssl=1'),
+(4, 'https://www.scootersbars.com/wp-content/uploads/2016/07/1136_1.jpg'),
+(4, 'https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/apxqvlfc/1d8bb0e8-0738-4967-b8ac-8a54718d2802.jpg'),
+
+(5, 'https://breakfastwithnick.com/wp-content/uploads/cbc-beer-hall-13.jpeg'),
+(5, 'https://breakfastwithnick.com/wp-content/uploads/cbc-beer-hall-8.jpeg'),
+(5, 'https://images.squarespace-cdn.com/content/v1/5267e4e1e4b0cdd9f1919db3/1683730150399-U02R3NM6EFKG67RNZ93C/Bar+view.jpg'),
+
+(6, 'https://media-cdn.tripadvisor.com/media/photo-s/1c/a1/e7/33/view-of-lovely-taproom.jpg'),
+(6, 'https://www.oxstudioinc.com/wp-content/uploads/2019/01/20181211_ccs_orb_ext_428-2_hdr.jpg'),
+(6, 'https://cdn7.localdatacdn.com/oh/lewis-center/4944215/original/k0g2y5yBn7.jpg'),
+
+(7, 'https://ohio.org/static/uploads/0688y00000B9fWRAAZ.jpg'),
+(7, 'https://patspints.files.wordpress.com/2023/10/psx_20231004_173134.jpg?w=1024'),
+(7, 'https://thunderwingbrewing.com/wp-content/uploads/2023/10/Social.jpg'),
+
+(8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313359131-8VZDS8MZODE3WUBB2QKC/DSCF3526.jpg'),
+(8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313354278-V0THO8EZ1OVNRCJKM74P/DSCF2933.JPG'),
+(8, 'https://www.columbusmonthly.com/gcdn/authoring/2016/03/30/NCOA/ghows-OH-ca7b932f-77fb-4c72-88f0-fbef83175097-3a284ac9.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp');
 COMMIT TRANSACTION;

@@ -4,6 +4,7 @@ import com.techelevator.dao.BeerDao;
 import com.techelevator.dao.BreweryDao;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
+import com.techelevator.model.BreweryImage;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -18,16 +19,15 @@ public class BreweryController {
     private BreweryDao breweryDao;
     private BeerDao beerDao;
 
+
     public BreweryController(BreweryDao breweryDao, BeerDao beerDao) {
         this.breweryDao = breweryDao;
         this.beerDao = beerDao;
     }
-
     @RequestMapping(path = "/brewery", method = RequestMethod.GET)
     public List<Brewery> listAll() {
         return breweryDao.listAllBreweries();
     }
-
      /*4.10.2024 - Reconsidering our endpoints we should rename it something like /brewery/{id}/beer to gather our list
      of beers from a specific brewery */
     @RequestMapping(path = "/brewery/{id}", method = RequestMethod.GET)
@@ -68,4 +68,5 @@ public class BreweryController {
        return breweryDao.getBreweryById(id);
 
     }
+
 }
