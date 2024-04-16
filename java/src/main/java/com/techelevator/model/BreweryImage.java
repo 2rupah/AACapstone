@@ -1,40 +1,40 @@
 package com.techelevator.model;
 
 public class BreweryImage {
-    private int brewery_id;
-    private int image_id;
-    private String image_url;
+    private int breweryId;
+    private int imageId;
+    private String imageUrl;
 
-    public int getBrewery_id() {
-        return brewery_id;
-    }
-
-    public BreweryImage(int brewery_id, int image_id, String image_url) {
-        this.brewery_id = brewery_id;
-        this.image_id = image_id;
-        this.image_url = image_url;
+    public BreweryImage(int breweryId, int imageId, String imageUrl) {
+        this.breweryId = breweryId;
+        this.imageId = imageId;
+        this.imageUrl = imageUrl;
     }
 
     public BreweryImage() {
-
-    }
-    public void setBrewery_id(int brewery_id) {
-        this.brewery_id = brewery_id;
     }
 
-    public int getImage_id() {
-        return image_id;
+    public int getBreweryId() {
+        return breweryId;
     }
 
-    public void setImage_id(int image_id) {
-        this.image_id = image_id;
+    public void setBreweryId(int breweryId) {
+        this.breweryId = breweryId;
     }
 
-    public String getImage_url() {
-        return image_url;
+    public int getImageId() {
+        return imageId;
     }
 
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

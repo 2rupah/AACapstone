@@ -2,7 +2,6 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.BeerDao;
 import com.techelevator.dao.BreweryDao;
-import com.techelevator.dao.BreweryImageDao;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryImage;
@@ -19,7 +18,7 @@ public class BreweryController {
 
     private BreweryDao breweryDao;
     private BeerDao beerDao;
-    private BreweryImageDao breweryImageDao;
+
 
     public BreweryController(BreweryDao breweryDao, BeerDao beerDao) {
         this.breweryDao = breweryDao;
@@ -70,8 +69,4 @@ public class BreweryController {
 
     }
 
-    @RequestMapping(path="/brewery/{id}/images", method = RequestMethod.GET)
-    public List<BreweryImage> getPicturesByBreweryId(@PathVariable int id){
-        return breweryImageDao.getImagesByBreweryId(id);
-    }
 }
