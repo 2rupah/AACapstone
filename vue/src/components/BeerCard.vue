@@ -51,9 +51,7 @@ export default {
     }
   },
 
-  methods: {
-
-  }
+  
 };
 
 </script>
@@ -87,9 +85,7 @@ export default {
   /* Add some spacing below the image */
 
 }
-#one {
-  
-}
+
 
 .beer-details {
   margin-bottom: 5px;
