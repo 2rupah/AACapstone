@@ -1,6 +1,7 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS brewery_images, brewery, beer, reviews, users, user_brewery;
+DROP TABLE IF EXISTS brewery, beer, reviews, users, user_brewery, brewery_images;
+
 
 CREATE TABLE brewery (
     brewery_id serial PRIMARY KEY,
