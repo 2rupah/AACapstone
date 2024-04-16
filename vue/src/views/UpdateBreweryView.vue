@@ -10,6 +10,9 @@
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Update Your Brewery</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="new-brewery-page">Add New Brewery</a>
+        </li>
     </ul>
     <div class="container">
         <h1>Update Brewery Information</h1>
