@@ -13,11 +13,13 @@
 
     <div class="col">
       <div v-for="review in beer.listOfReviews" :key="review.reviewId">
-      <p>{{ review.reviewer }} says: {{ review.review }}</p>
-      <img src="../assets/star.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
+      
+      <img src="../assets/beer.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
         v-for="n in review.rating" v-bind:key="n" />
+        <p><strong>{{ review.reviewer }}:</strong></p>
+        <p>{{ review.review }}</p>
       </div>
-    </div>
+  </div>
 
   </div>
   </div>
@@ -88,7 +90,7 @@ export default {
 
 }
 #one {
-  
+  align-items: center;
 }
 
 .beer-details {
@@ -103,9 +105,11 @@ export default {
 
 .container {
     max-width: 100%;
+    padding: 5px;
 }
 
 .rating-star {
   width: 10%;
+  padding-bottom: 5px;
 }
 </style>
