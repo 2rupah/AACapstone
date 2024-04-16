@@ -1,5 +1,7 @@
 package com.techelevator.model;
 
+import java.util.List;
+
 public class Beer {
 
     //When adding beers we may find the @Min, @Max, and @NotBlank annotations useful
@@ -12,6 +14,8 @@ public class Beer {
     private int ibu;
     private String description;
     private String imageUrl;
+
+    private List<Review> listOfReviews;
 
     public Beer(int beerId, String name, int breweryId, String style, double abv, int ibu, String description, String imageUrl){
         this.beerId = beerId;
@@ -92,4 +96,11 @@ public class Beer {
         this.description = description;
     }
 
+    public List<Review> getListOfReviews() {
+        return listOfReviews;
+    }
+
+    public void setListOfReviews(List<Review> listOfReviews) {
+        this.listOfReviews = listOfReviews;
+    }
 }
