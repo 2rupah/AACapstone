@@ -21,9 +21,7 @@
     </div>
   </div>
 
-  <div v-for="image in brewery.breweryImage" :key="image.imageId">
-      <p>{{ image.imageId }} </p>
-  </div>
+  
 
 </template>
 

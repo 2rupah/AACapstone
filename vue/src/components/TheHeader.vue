@@ -12,9 +12,10 @@
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
             <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
-            <router-link v-bind:to="{ name: 'add' }" class="nav-button dashboard-button">Dashboard</router-link>
+            <router-link v-if="shouldDisplayDashboardButton" v-bind:to="{ name: 'add' }" class="nav-button dashboard-button">Dashboard</router-link>
             <a v-if="isLoggedIn" @click="logout" class="nav-button">Logout</a>
             <router-link v-else-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
+            
         </nav>
     </div>
 </template>
@@ -31,7 +32,9 @@ export default {
             return this.$store.state.isAuthenticated;
       },
     
-
+      shouldDisplayDashboardButton() {
+        return this.$route.name !== 'add' && this.$route.name !== 'delete' && this.$route.name !== 'update'
+      },
 
     shouldDisplayHomeButton() {
      
@@ -39,7 +42,7 @@ export default {
     },
     shouldDisplayBreweryButton() {
      
-     return this.$route.name !== 'brewery'; 
+     return this.$route.name !== 'brewery-detail' && this.$route.name !== 'brewery'; 
      
    },
    shouldDisplayLoginButton() {

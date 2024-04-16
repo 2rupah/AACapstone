@@ -17,7 +17,7 @@ INSERT INTO brewery (name, location, established_year, description, imageURL, ma
 
 -- INSERT beer
 INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALUES
-('60$ Nachos', 1, 'Double IPA', 8.0, 80, 'Intensely hoppy ale with a bold bitterness and tropical fruit flavors.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
+('$60 Nachos', 1, 'Double IPA', 8.0, 80, 'Intensely hoppy ale with a bold bitterness and tropical fruit flavors.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
 ('$120 Nachos', 1, 'Triple IPA', 12, 80, 'Triple Dry-Hopped Triple IPA with Citra Hops', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/imperial-india-pale-ale.jpg'),
 ('Fitness Freak', 1, 'Berliner Weisse', 4.0, 5, 'Tart and refreshing wheat beer with a clean, crisp finish.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/berliner-style-weisse.jpg'),
 ('Belloq', 1, 'Stout with Coffee and Vanilla', 4.2, 10, 'Smooth caramel & chocolate notes get a massive coffee rogering. Competitively intellectual flavor that makes you feel smarter than you look.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/coffee-beer.jpg'),
@@ -30,7 +30,6 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('Hazy IPA', 2, 'Hazy IPA', 6.5, 25, 'Our new core Hazy IPA is all about the hops, featuring Simcoe and Mosaic for classic citrus and pine flavors, as well as late-addition Cryo Amarillo for an extra aromatic punch of tropical fruit and berry. A soft, pillowy mouthfeel keeps our Hazy from imparting too much lingering bitterness, a perfectly balanced brew to enjoy for any occasion, any time of year!', 'http://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/new-england-ipa.jpg'),
 ('Walking Taco', 2, 'Mexican-style Lager with Lime', 4.5, 9,'A classic Mexican brew gets the Midwestern treatment! Like tasty tacos crunched up in your favorite bag of chips, our Mexican-style lager with lime is sure to be a crushable crowd pleaser for any occasion. Whether you’re on the go or posted up on a patio, there’s nothing like a Walking Taco!', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/german-style-kolsch.jpg'),
 ('Dream Boat', 2, 'Oatmeal Stout', 5.2, 21, 'How do you make a "dreamy" stout?  Just add oats! We took a classic stout recipe and brewed it with 800 lbs of flaked oats, providing an ultra creamy body and smooth mouthfeel. Rich flavors of bakers chocolate and coffee will gently float along your palate; one sip is all it takes to fall in love!', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/irish-style-dry-stout.jpg'),
-
 
 ('Knotty Pine Amber Ale', 3, 'Amber Ale', 5.5, 20, 'A moderate, hoppy beer with a distinct caramel malty flavor.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-amber-lager.jpg'),
 ('Knotty Pine Jays', 3, 'German Pils', 4.5, 10, 'Light, crisp, maltiness and a clean heady finish are just a taste of what to expect from "Jays" German Lager', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/vienna-style-lager.jpg'),
@@ -45,7 +44,6 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('Rye Eye Eye IIPA', 4, 'Double IPA', 8.2, 15, 'This golden Double IPAs mash bill includes a copious amount of American rye, which contributes notes of spice and dill. The bulk of the mash is Pale Ale malt from Montana with a smidgen of toasted malt to emphasize the bready malt flavor.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/imperial-india-pale-ale.jpg'),
 ('Hazy Odyssey', 4, 'Juicy/ Hazy IPA', 6, 15, 'Barleys take on the juicy/hazy IPA that has a pleasant hop profile evoking flavors of mango and pineapple with a slight bitterness that is mellowed by the addition of lactose.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/california-common.jpg'),
 ('Frost Hop Cold IPA', 4, 'Crisp IPA', 7.4, 10, 'This super crisp IPA is piney, spicy, and bursting with citrus. Liam, Barleys Assistant Brewer, suggested we brew our first Cold IPA and include resinous Chinook hops paired with Citra and Mosaic.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-india-pale-ale.jpg'),
-
 
 ('Bodhi', 5, 'Double IPA', 8.5, 80, 'Bodhi is a classic double IPA from Columbus Brewing Company, known for its bold hop flavors and citrusy aroma.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/imperial-india-pale-ale.jpg'),
 ('Creeper', 5, 'Imperial Stout', 10.2, 65, 'Creeper is a rich and robust imperial stout brewed by Columbus Brewing Company, featuring notes of chocolate, coffee, and caramel.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/chocolate-beer.jpg'),
@@ -76,7 +74,7 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 ('Oubliette', 8, 'Imperial Stout', 12, 33, '','https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/specialty-beer.jpg');
 
 INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
-(1, 'HopHead87', 'As a dedicated hop lover, I was eager to try the 60$ Nachos Double IPA, and it did not disappoint!', 4.0),
+(1, 'HopHead87', 'As a dedicated hop lover, I was eager to try the $60 Nachos Double IPA, and it did not disappoint!', 4.0),
 (1, 'TheHoppyEnding', 'The taste follows suit, with a bold hoppy flavor that is balanced by a smooth malt backbone. It is refreshing and satisfying, perfect for a sunny afternoon.', 4.0),
 (1, 'SourAleSipper67', 'The aroma is almost non-existent, with a faint hint of stale grains. The taste is equally lackluster, with no discernible flavor other than a vague sweetness that quickly fades into nothingness. Save your money and skip this one.', 1.0),
 (2, 'BrewEnthusiast92', 'It pours a murky yellow with an off-putting aroma of spoiled fruit and wet cardboard.', 1.0),
@@ -87,7 +85,38 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (3, 'BeerlyBeloved', 'The aroma is rich and roasty, with hints of chocolate and coffee. The taste is equally impressive, with layers of dark chocolate, espresso, and a subtle bitterness that balances it all out.', 1.0),
 (4, 'CraftyDrinker22', 'There is no balance or nuance here, just a blunt taste of bitterness. I would not recommend this beer to anyone.', 2.0),
 (4, 'BrewedAwakening', 'Tropical Thunder IPA is a tropical explosion of flavor!', 4.0),
-(4, 'AleInWonderland', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0);
+(4, 'AleInWonderland', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 2.0),
+
+(7, 'LagerMcLovin97', 'This beer should come with a warning label: May induce gag reflex. It is a crime against taste buds everywhere.', 1.0),
+(7, 'BrewedAwakening', 'I have had better beverages from a stagnant puddle. Drinking this beer was like licking the floor of a dive bar after a frat party.', 2.0),
+(7, 'AleInWonderland', 'I have never been more disappointed in a beer in my life. It is like they bottled disappointment and labeled it as beer. I would rather drink my own tears than take another sip of this garbage.', 1.0),
+(8, 'BeerlyBeloved', 'The light body and clarity were fine, but they could not compensate for the lack of flavor. Not terrible, but definitely not worth seeking out.', 3.0 ),
+(8, 'Hoptimistic', 'Daybreak was a letdown from start to finish. The promise of a light-bodied iced coffee beer sounded intriguing, but the execution fell flat.', 2.0 ),
+(8, 'LagerMcLovin97', 'I had high hopes for Daybreak, but it failed to deliver. The idea of combining coffee with beer sounded intriguing, but the reality was lackluster.', 2.0 ),
+(9, 'BrewskiBear', 'The balance of flavors is spot on, with just the right amount of bitterness to keep things interesting.', 4.0),
+(9, 'AleInWonderland', 'Impressive IPA from Wolfs Ridge Brewery! This beer showcases a masterful blend of hop flavors and aromas. From the tropical citrus notes to the subtle undertones of pine, each sip is a journey of flavor.', 4.0),
+(9, 'BrewedAwakening', 'It is refreshing enough to enjoy on a hot summer day yet complex enough to satisfy even the most discerning palate. Well done!', 4.0),
+
+(13, 'Brewbacca', 'Knotty Pine Amber Ale hits the mark with its balance of hoppy bitterness and caramel malt sweetness. The flavors complement each other nicely, creating a beer that is both refreshing and satisfying.', 5.0 ),
+(13, 'AleInWonderland', 'Whether you are a seasoned beer enthusiast or just looking to try something new, this beer will not disappoint.', 3.0 ),
+(13, 'Hoptimistic', 'The caramel malty flavor adds a nice richness to the beer, while the hoppy notes provide a pleasant bitterness that keeps things interesting. ', 5.0 ),
+(14, 'Brewbacca', 'Do yourself a favor and steer clear unless you enjoy disappointment in a bottle.', 1.0),
+(14, 'BarleyQuinn', 'Knotty Pine Jays German Lager did not quite live up to its promise. While it is certainly refreshing with its light and crisp profile, the maltiness was disappointingly subdued.', 2.0),
+(14, 'LagerMcLovin97', 'While it may appeal to those who prefer a lighter lager, it did not leave a lasting impression on my palate.', 2.0),
+(15, 'BrewskiBear', 'Knotty Pine Drip So Hard is a true gem in the world of porters. Its rich coffee aroma draws you in, while the smooth, velvety texture and subtle chocolate undertones keep you coming back for more. A deliciously satisfying brew!', 4.0),
+(15, 'BarleyQuinn', 'Smooth on the palate, it offers a comforting warmth with each sip. A perfect choice for those cozy nights by the fire.', 3.0),
+(15, 'BrewskiBear', 'Congratulations to the brewery for creating a beer that manages to offend every sense. It smells like a skunks backside, tastes like regret, and leaves a lingering aftertaste of despair.', 1.0),
+
+(19, 'Brewbacca', '', 5.0 ),
+(19, 'Brewbacca', 'I have never been more disappointed in a beer in my life. It is like they bottled disappointment and labeled it as beer. I would rather drink my own tears than take another sip of this garbage.', 1.0 ),
+(19, 'Brewbacca', '', 5.0 ),
+(20, 'Brewbacca', 'It is like they scraped the bottom of the barrel and bottled it. Do yourself a favor and avoid this dumpster juice at all costs.', 2.0 ),
+(20, 'Brewbacca', '', 5.0 ),
+(20, 'Brewbacca', '', 5.0 ),
+(21, 'Brewbacca', '', 5.0 ),
+(21, 'Brewbacca', '', 5.0 ),
+(21, 'Brewbacca', '', 5.0 );
+
 
 INSERT INTO brewery_images (brewery_id, image_url) VALUES
 (1, 'https://i.ytimg.com/vi/szglL4L4Zxw/maxresdefault.jpg'),
