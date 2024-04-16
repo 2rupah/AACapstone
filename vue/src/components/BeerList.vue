@@ -1,8 +1,10 @@
 <template>
   <div id="mainPage">
     <section id="beerList">
-      <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" :breweryName="breweryName" />
+      <BeerCard v-for="beer in beers" :key="beer.beerId" :beer="beer" :breweryName="breweryName"  />
+    
     </section>
+
   </div>
 </template>
 
@@ -16,15 +18,13 @@ export default {
   },
   props: {
     beers: {
-      type: Array,
+      type: Object,
       required: true
     },
     breweryName: {
       type: String,
       required: true
     },
-
-
 
   }
 };
