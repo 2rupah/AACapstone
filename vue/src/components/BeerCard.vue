@@ -9,6 +9,19 @@
     <p class="beer-description"><strong>Description:</strong> {{ beer.description }}</p>
     
   </div>
+    
+    <div class="review-card" v-for="review in beer.listOfReviews" :key="review.reviewId">
+      <p>{{ review.reviewer }} says: {{ review.review }}</p>
+      <!-- <p>Rating: {{ review.rating }}</p> -->
+      <img
+        src="../assets/star.png"
+        v-bind:title="review.rating + ' Star Review'" class="rating-star"
+        v-for="n in review.rating" v-bind:key="n"
+      />
+    </div>
+
+    
+ 
 </template>
 
 <script>
@@ -26,13 +39,9 @@ export default {
     beer: {
       type: Object,
       required: true
-    },
-    breweryName: {
-      type: String,
-      required: true
-    },
-    
+    }    
   },
+  
   methods: {
     
 }
@@ -42,6 +51,21 @@ export default {
 
 <style scoped>
 .beer-card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add a subtle box shadow */
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  /* Light background color */
+  text-align: center;
+  width: 28%;
+  max-height: max-content;
+  margin-right: 14px;
+}
+
+.review-card {
   border: 2px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

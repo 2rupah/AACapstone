@@ -37,5 +37,11 @@ export default {
 
     getBreweryInfo(breweryId) {
         return axios.get(`/brewery/${breweryId}/info`)
+    },
+
+    // Reviews
+
+    getReviewsByBeerId(beerId) {
+        return axios.get(`/beer/${beerId}/reviews`)
     }
 }
