@@ -98,8 +98,8 @@ const routes = [
     }
   },
   {
-    path: "/add_new_brewery",
-    name: "new-brewery-page",
+    path: "/login/new",
+    name: "new",
     component: NewBreweryView,
     meta: {
       requiresAuth: false
