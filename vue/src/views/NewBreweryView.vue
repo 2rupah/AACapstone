@@ -1,19 +1,5 @@
 <template>
-    <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" href="add">Add A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="delete">Delete A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="update">Update Your Brewery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="new">Add New Brewery</a>
-    </li>
-  </ul>
-
+    
     <div class="container">
     <h1>Add A New Brewery</h1>
     <!--think we've still gotta implement the functionality from the back end-->
