@@ -40,6 +40,7 @@ export default {
 
 #wholePage {
   padding: 0; /* Remove padding to allow full width */
+
 }
 
 .brewery-container {

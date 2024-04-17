@@ -1,5 +1,5 @@
 <template>
-  <section id="container">
+  
     <div id="login">
       <form v-on:submit.prevent="login">
         <h1>Please Sign In</h1>
@@ -27,7 +27,6 @@
 
       </form>
     </div>
-  </section>
 </template>
 
 <script>
@@ -68,6 +67,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 .form-input-group {
   margin-bottom: 1rem;
 }
@@ -75,10 +76,10 @@ export default {
 label {
   margin-right: 0.5rem;
 }
-#container {
-  width:40vw;
-  
-  
+
+#login {
+  /* width:40vw; */
+
 }
 form {
   position: absolute;
