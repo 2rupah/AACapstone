@@ -20,7 +20,7 @@ export default {
     getRandomBrewery() {
         return axios.get(`/brewery/random`)
     },
-    
+
     // Dashboard
     addBeer(beer) {
         console.log("In add Beer of Brewery Service: ", beer)
@@ -28,7 +28,7 @@ export default {
     },
 
     addBrewery(brewery) {
-        return axios.post('/add_new_brewery', brewery);
+        return axios.post('/login/new', brewery);
     },
 
     deleteBeer(beerId){
@@ -48,5 +48,9 @@ export default {
 
     getReviewsByBeerId(beerId) {
         return axios.get(`/beer/${beerId}/reviews`)
+    },
+
+    searchBreweries(searchTerm) {
+        return axios.get(`/api/search/breweries?searchTerm=${searchTerm}`);
     }
 }

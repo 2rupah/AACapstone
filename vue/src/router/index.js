@@ -14,6 +14,7 @@ import UpdateBreweryView from '../views/UpdateBreweryView.vue';
 import NewBreweryView from '../views/NewBreweryView.vue';
 import PubCrawlView from '../views/PubCrawlView.vue';
 import BreweryRouletteView from '../views/BreweryRouletteView.vue';
+import SearchResultsView from '../views/SearchResultsView.vue';
 
 
 /**
@@ -25,6 +26,14 @@ import BreweryRouletteView from '../views/BreweryRouletteView.vue';
  * If they have (or don't need to) they're allowed to go about their way.
  */
 const routes = [
+  {
+    path: '/search/:query', // Example: /search/query
+    name: 'search',
+    component: SearchResultsView,
+    meta: {
+      requiresAuth: false,
+    },
+  },
   {
     path: '/',
     name: 'home',
