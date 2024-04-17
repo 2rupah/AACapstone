@@ -2,6 +2,8 @@ import { createStore as _createStore } from 'vuex';
 import axios from 'axios';
 import BreweryService from '../services/BreweryService'
 
+
+
 export function createStore(currentToken, currentUser) {
   let store = _createStore({
     state: {
@@ -89,6 +91,7 @@ export function createStore(currentToken, currentUser) {
         axios.defaults.headers.common = {};
       }
     },
+
   });
   return store;
 }

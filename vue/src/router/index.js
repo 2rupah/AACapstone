@@ -86,7 +86,7 @@ const routes = [
 
     // Dashboard
     {
-    path: "/login/add",
+    path: "/add",
     name: "add",
     component: DashboardView,
     meta: {
@@ -94,7 +94,7 @@ const routes = [
     }
   },
   {
-    path: "/login/delete",
+    path: "/delete",
     name: "delete",
     component: DeleteBeerView,
     meta: {
@@ -102,7 +102,7 @@ const routes = [
     }
   },
   {
-    path: "/login/update",
+    path: "/update",
     name: "update",
     component:UpdateBreweryView,
     meta: {
@@ -110,7 +110,7 @@ const routes = [
     }
   },
   {
-    path: "/login/new",
+    path: "/new",
     name: "new",
     component: NewBreweryView,
     meta: {

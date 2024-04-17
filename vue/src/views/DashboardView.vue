@@ -1,21 +1,21 @@
 <template>
   <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Add A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="delete">Delete A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="update">Update Your Brewery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="new">Add New Brewery</a>
-    </li>
+    <router-link to="/add" class="nav-item" tag="li"> 
+      <a class="nav-link active" aria-current="update">Add a Beer</a>
+    </router-link>
+    <router-link to="/delete" class="nav-item" tag="li">
+      <a class="nav-link">Delete a Beer</a>
+    </router-link>
+    <router-link to="/update" class="nav-item" tag="li">
+      <a class="nav-link">Update Your Brewery</a>
+    </router-link>
+    <router-link to="/new" class="nav-item" tag="li">
+      <a class="nav-link">Add New Brewery</a>
+    </router-link>
   </ul>
   <AddBeer />
-
 </template>
+
 
 <script>
 
@@ -24,6 +24,16 @@ import AddBeer from '../components/AddBeer.vue';
 
 
 export default {
+  computed: {
+  isPopUpVisible() {
+    // Check if the current route is the home screen
+    const currentRouteName = this.$route.name;
+    if (currentRouteName === 'home') {
+      return this.$store.state.isPopUpVisible;
+    }
+    return false; // Don't show pop-up on other routes
+  }
+},
 
   components: {
     AddBeer,
@@ -31,5 +41,6 @@ export default {
   },
   
   }
+  
 
 </script>
