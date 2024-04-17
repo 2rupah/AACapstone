@@ -13,11 +13,14 @@ public class Brewery {
 
     private String mapUrl;
 
+    private double longitude;
+    private double latitude;
+
     private List<BreweryImage> breweryImage;
     public Brewery() {
     }
 
-    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl, String mapUrl) {
+    public Brewery(int breweryId, String name, String location, int establishedYear, String description, String imageUrl, String mapUrl, double longitude, double latitude) {
         this.breweryId = breweryId;
         this.name = name;
         this.location = location;
@@ -25,10 +28,28 @@ public class Brewery {
         this.description = description;
         this.imageUrl = imageUrl;
         this.mapUrl = mapUrl;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
 
     public List<BreweryImage> getBreweryImage() {
         return breweryImage;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
     public void setBreweryImage(List<BreweryImage> breweryImage) {

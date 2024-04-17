@@ -19,7 +19,7 @@ import java.util.List;
 @Component
 public class JdbcBrewery implements BreweryDao{
 
-    private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
+    private static final String SELECT_BREWERY_SQL = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl, longitude, latitude " +
             "FROM brewery";
     private static final String SELECT_IMAGE_SQL = "SELECT image_url FROM brewery_images";
 
@@ -60,11 +60,12 @@ public class JdbcBrewery implements BreweryDao{
     //    copied and pasted this, we need to update the String sql for our brewery database!
     @Override
     public Brewery createBrewery(Brewery brewery) {
-        String sql = "INSERT INTO brewery (name, location, established_year, description, imageurl, mapurl) " +
-                "VALUES (?, ?, ?, ?, ?, ? ) RETURNING brewery_id";
+        String sql = "INSERT INTO brewery (name, location, established_year, description, imageurl, mapurl, longitude, latitude) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ? ) RETURNING brewery_id";
         try {
             int newBreweryId = jdbcTemplate.queryForObject(sql, int.class, brewery.getName(), brewery.getLocation(),
-                    brewery.getEstablishedYear(), brewery.getDescription(), brewery.getImageUrl(), brewery.getMapUrl());
+                    brewery.getEstablishedYear(), brewery.getDescription(), brewery.getImageUrl(), brewery.getMapUrl(),
+                    brewery.getLongitude(), brewery.getLatitude());
             brewery.setBreweryId(newBreweryId);
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to database.", e);
@@ -84,6 +85,8 @@ public class JdbcBrewery implements BreweryDao{
                 "    description = ?, " +
                 "    imageurl = ? " +
                 "    mapurl = ? " +
+                "    longitude = ? " +
+                "    latitude = ?" +
                 "WHERE brewery_id = ?;";
         try {
             jdbcTemplate.update(sql,
@@ -93,6 +96,8 @@ public class JdbcBrewery implements BreweryDao{
                     brewery.getDescription(),
                     brewery.getImageUrl(),
                     brewery.getMapUrl());
+                    brewery.getLongitude();
+                    brewery.getLatitude();
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to database.", e);
         } catch (DataIntegrityViolationException e) {
@@ -106,7 +111,7 @@ public class JdbcBrewery implements BreweryDao{
     @Override
     public Brewery getBreweryById(int breweryId) {
         Brewery brewery = null;
-        String sql = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl\n" +
+        String sql = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl, longitude, latitude\n" +
                 "from brewery\n" +
                 "WHERE brewery_id = ?;";
         try {
@@ -145,6 +150,8 @@ public class JdbcBrewery implements BreweryDao{
 
         List<BreweryImage> breweryImage = getImagesByBreweryId(brewery.getBreweryId());
         brewery.setBreweryImage(breweryImage);
+        brewery.setLongitude(row.getDouble("longitude"));
+        brewery.setLatitude(row.getDouble("latitude"));
 
         return brewery;
     }
