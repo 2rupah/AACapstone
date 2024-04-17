@@ -10,10 +10,18 @@ export function createStore(currentToken, currentUser) {
       isAuthenticated: !!currentToken,
       breweryList: [],
       beerList: [],
-      brewery: {},
-      beerReviewsList: []
+      searchResults: [],
+      searchQuery: [],
     },
     actions: {
+      async searchBreweries(context, query) {
+        try {
+          const response = await BreweryService.searchBreweries(query);
+          context.commit('SET_SEARCH_RESULTS', response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      },
       getAllBreweries(context) {
         BreweryService.listAllBreweries().then(response => {
           context.commit('SET_BREWERYLIST', response.data)
@@ -55,6 +63,12 @@ export function createStore(currentToken, currentUser) {
       },
       SET_BEERREVIEWSLISTeviewsList(state, beerReviewsList){
         state.beerReviewsList = beerReviewsList
+      },
+      SET_SEARCH_QUERY(state, query) {
+        state.searchQuery = query;
+      },
+      SET_SEARCH_RESULTS(state, results) {
+        state.searchResults = results;
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;

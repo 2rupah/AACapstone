@@ -43,5 +43,9 @@ export default {
 
     getReviewsByBeerId(beerId) {
         return axios.get(`/beer/${beerId}/reviews`)
+    },
+
+    searchBreweries(searchTerm) {
+        return axios.get(`/api/search/breweries?searchTerm=${searchTerm}`);
     }
 }

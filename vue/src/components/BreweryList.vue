@@ -4,10 +4,14 @@
       <h1>Brewery Results</h1>
       <p>Select a Brewery to find out more!</p>
     </div>
-    <div class="brewery-container">
+    <div class="brewery-container" v-if="!searchResults.length>0" >
       <div class="brewery-item" v-for="brewery in breweries" :key="brewery.name">
         <BreweryCard :brewery="brewery" />
-        
+      </div>
+    </div>
+    <div class="brewery-container" v-else>
+      <div class="brewery-item" v-for="brewery in searchResults" :key="brewery.name">
+        <BreweryCard :brewery="brewery"/>
       </div>
     </div>
   </div>
@@ -28,6 +32,8 @@ export default {
   created() {
     this.$store.dispatch('getAllBreweries');
   },
+
+  props: ['searchResults'],
 }
 </script>
 
