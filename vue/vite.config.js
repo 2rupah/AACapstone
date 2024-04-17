@@ -12,11 +12,4 @@ export default defineConfig({
     }
   },
 
-  optimizeDeps: {
-    include: [
-      "vue-google-map-community-fork",
-      "fast-deep-equal",
-    ],
-  },
-
 })

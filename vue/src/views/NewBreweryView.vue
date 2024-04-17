@@ -120,6 +120,7 @@ h1, label {
     flex-direction: column;
     align-items: center;
     font-weight: bold;
+    font-family: "Balthazar";
 }
 
 input, textarea {
@@ -127,6 +128,7 @@ input, textarea {
     padding: 5px;
     box-sizing: border-box;
     margin-bottom: 10px;
+    
 }
 
 #button {
