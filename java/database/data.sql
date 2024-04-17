@@ -105,7 +105,7 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (14, 'LagerMcLovin97', 'While it may appeal to those who prefer a lighter lager, it did not leave a lasting impression on my palate.', 2.0),
 (15, 'BrewskiBear', 'Knotty Pine Drip So Hard is a true gem in the world of porters. Its rich coffee aroma draws you in, while the smooth, velvety texture and subtle chocolate undertones keep you coming back for more. A deliciously satisfying brew!', 4.0),
 (15, 'BarleyQuinn', 'Smooth on the palate, it offers a comforting warmth with each sip. A perfect choice for those cozy nights by the fire.', 3.0),
-(15, 'BrewskiBear', 'Congratulations to the brewery for creating a beer that manages to offend every sense. It smells like a skunks backside, tastes like regret, and leaves a lingering aftertaste of despair.', 1.0),
+(15, 'BeerlyBeloved', 'Congratulations to the brewery for creating a beer that manages to offend every sense. It smells like a skunks backside, tastes like regret, and leaves a lingering aftertaste of despair.', 1.0),
 
 (19, 'Brewbacca', '', 5.0 ),
 (19, 'Brewbacca', 'I have never been more disappointed in a beer in my life. It is like they bottled disappointment and labeled it as beer. I would rather drink my own tears than take another sip of this garbage.', 1.0 ),

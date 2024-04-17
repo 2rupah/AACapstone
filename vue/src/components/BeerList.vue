@@ -36,7 +36,9 @@ div.mainPage {
   display: inline-block;
 }
 section#beerList {
-  padding: 5%;
+
+  padding-left: 3%;
+  padding-right: 5%;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;

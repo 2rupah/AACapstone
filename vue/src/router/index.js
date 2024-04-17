@@ -13,6 +13,8 @@ import DeleteBeerView from '../views/DeleteBeerView.vue';
 import UpdateBreweryView from '../views/UpdateBreweryView.vue';
 import NewBreweryView from '../views/NewBreweryView.vue';
 import PubCrawlView from '../views/PubCrawlView.vue';
+import BreweryRouletteView from '../views/BreweryRouletteView.vue';
+
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -99,12 +101,28 @@ const routes = [
     }
   },
   {
-    path: "/add_new_brewery",
-    name: "new-brewery-page",
+    path: "/login/new",
+    name: "new",
     component: NewBreweryView,
     meta: {
       requiresAuth: false
-    }
+    },
+  },
+  // {
+  //   path: "/brewery/pub_crawl",
+  //   name: "pub-crawl",
+  //   component: PubCrawlView,
+  //   meta: {
+  //     requiresAuth: false
+  //   },
+  // },
+  {
+    path: "/brewery/roulette",
+    name: "roulette",
+    component: BreweryRouletteView,
+    meta: {
+      requiresAuth: false
+    },
   },
   {
     path: "/map",
