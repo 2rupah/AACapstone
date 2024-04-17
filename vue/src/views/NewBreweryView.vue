@@ -35,12 +35,6 @@
     </form>
     </div>
 
-    <!-- v-model="newBrewery.name"
-    v-model="newBrewery.location"
-    v-model="newBrewery.establishedYear"
-    v-model="newBrewery.description"
-    v-model="newBrewery.imageUrl" -->
-
 </template>
 
 <script>  

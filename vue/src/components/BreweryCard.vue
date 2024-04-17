@@ -106,6 +106,7 @@ export default {
 .card-details {
   padding: 20px;
   text-align: center; /* Center the content horizontally */
+  font-family: "Balthazar"
 }
 
 
@@ -122,5 +123,6 @@ export default {
 .btn:hover {
   background-color: #192c46;
 }
+
 
 </style>

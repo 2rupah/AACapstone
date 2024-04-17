@@ -161,4 +161,7 @@ label {
     font-size: 15px;
     margin-top: 10px;
 }
+.nav-item {
+  font-family: "Balthazar";
+}
 </style>

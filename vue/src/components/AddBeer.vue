@@ -127,6 +127,7 @@ export default {
 h1 {
   text-align: center;
   padding-bottom: 5%;
+  font-family: "Cinzel"
 }
 
 .form-label {
@@ -183,6 +184,11 @@ button.btn.btn-primary {
   font-size: 15px;
   margin-top: 10px;
   width: 25%;
+  font-family: "Cinzel"
+}
+
+label {
+  font-family: "Balthazar"
 }
 
 </style>

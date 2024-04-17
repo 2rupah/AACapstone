@@ -92,4 +92,8 @@ form {
     background-color: #f9f9f9;
 }
 
+button, p {
+  font-family: "Balthazar"
+}
+
 </style>

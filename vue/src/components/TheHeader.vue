@@ -58,7 +58,8 @@ export default {
 </script>
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Cinzel:wght@400..900&display=swap');
+
   h1{
     height: auto;
     margin-right: auto;
@@ -116,6 +117,7 @@ export default {
     color: white;
     border-radius: 6px;
     height: auto;
+    font-family: "Cinzel"
 }
 .nav-button {
     margin: 5px;
@@ -167,7 +169,7 @@ Search bar
     margin-left: 5px;
     background-color: #F1F1F1;
     font-size: 16px;
-    font-family: inherit;
+    font-family: "Balthazar";
     font-weight: inherit;
     margin-bottom: 0;
 }
@@ -180,6 +182,7 @@ Search bar
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
+    font-family: "Cinzel";
 }
 
 
