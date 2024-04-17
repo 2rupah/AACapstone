@@ -12,6 +12,7 @@ import DashboardView from '../views/DashboardView.vue';
 import DeleteBeerView from '../views/DeleteBeerView.vue';
 import UpdateBreweryView from '../views/UpdateBreweryView.vue'
 import NewBreweryView from '../views/NewBreweryView.vue'
+import SearchResultsView from '../views/SearchResultsView.vue';
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -22,6 +23,14 @@ import NewBreweryView from '../views/NewBreweryView.vue'
  * If they have (or don't need to) they're allowed to go about their way.
  */
 const routes = [
+  {
+    path: '/search/:query', // Example: /search/query
+    name: 'search',
+    component: SearchResultsView,
+    meta: {
+      requiresAuth: false,
+    },
+  },
   {
     path: '/',
     name: 'home',

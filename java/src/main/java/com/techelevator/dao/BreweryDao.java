@@ -15,4 +15,6 @@ public interface BreweryDao {
 
     Brewery getBreweryById(int breweryId);
     List<BreweryImage> getImagesByBreweryId(int breweryId);
+
+    List<Brewery> searchBreweries(String searchTerm);
 }

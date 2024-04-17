@@ -18,10 +18,9 @@
         <h1>Update Brewery Information</h1>
 
         <div class="form-group">
-            <label for="brewerySelect">Select Brewery:</label>
-
+            
             <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-                <option value="">Select a brewery</option>
+                <option value="">Select a brewery:</option>
                 <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
                 </option>
             </select>

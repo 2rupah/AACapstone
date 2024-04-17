@@ -68,5 +68,9 @@ public class BreweryController {
        return breweryDao.getBreweryById(id);
 
     }
-
+    @RequestMapping(path = "/api/search/breweries", method = RequestMethod.GET)
+    public List<Brewery> searchBreweries(@RequestParam String searchTerm) {
+        List<Brewery> searchResults = breweryDao.searchBreweries(searchTerm);
+        return searchResults;
+    }
 }

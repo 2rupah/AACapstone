@@ -5,6 +5,7 @@ import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryImage;
 import com.techelevator.model.Review;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -13,6 +14,10 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,6 +117,26 @@ public class JdbcBrewery implements BreweryDao{
         }
         return breweryImagesById;
     }
+
+    @Override
+    public List<Brewery> searchBreweries(String searchTerm) {
+        List<Brewery> breweries = new ArrayList<>();
+        String query = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
+                "FROM brewery " +
+                "WHERE LOWER(name) LIKE ?";
+        try {
+            SqlRowSet rows = jdbcTemplate.queryForRowSet(query, "%" + searchTerm.toLowerCase() + "%");
+            while (rows.next()) {
+                breweries.add(mapRowToBrewery(rows));
+            }
+        } catch (EmptyResultDataAccessException e) {
+            // No results found, return an empty list
+        } catch (Exception e) {
+            throw new DaoException("Error searching breweries", e);
+        }
+        return breweries;
+    }
+
 
     private Brewery mapRowToBrewery(SqlRowSet row) {
         Brewery brewery = new Brewery();

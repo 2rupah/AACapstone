@@ -5,9 +5,9 @@
         <h1 id="siteTitle">Ale Atlas</h1>
         </router-link>
         <div class="search-bar">
-              <input type="text" placeholder="Search Breweries here! ^_^" style="width: 100%;">
-              <button>Search</button>
-          </div>
+            <input type="text" v-model="searchQuery" placeholder="Search Breweries here! ^_^" style="width: 100%;">
+            <button @click="search">Search</button>
+        </div>
         <nav>  
           
             <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
@@ -23,7 +23,9 @@
 export default {
     data() {
         return {
-          title: 'Brewery'
+          title: 'Brewery',
+          searchQuery: ''
+
         }
     },
     computed: {
@@ -51,6 +53,18 @@ export default {
    },
   },
   methods: {
+      search() {
+      // Redirect to search route with the search query as a parameter
+      if (this.searchQuery.trim() !== '') {
+        this.searchQuery = this.searchQuery.trim().replaceAll(' ', '+');
+
+
+        this.$router.push({ name: 'search', params: { query: this.searchQuery } });
+      } else {
+        // Handle empty search query
+        console.log('Please enter a search query.');
+            }
+        },
         logout() {
             // Perform logout action, such as clearing authentication state and redirecting to login page
             this.$store.commit("LOGOUT");
