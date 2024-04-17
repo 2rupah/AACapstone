@@ -1,17 +1,16 @@
 <template>
-    
     <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link" href="add">Add A Beer</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="delete">Delete A Beer</a>
+      <a class="nav-link" href="delete">Delete A Beer</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="update">Update Your Brewery</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="#">Add New Brewery</a>
+      <a class="nav-link active" aria-current="new">Add New Brewery</a>
     </li>
   </ul>
 
@@ -49,12 +48,6 @@
     <button type="submit" class="btn btn-primary">Add Brewery</button>    
     </form>
     </div>
-
-    <!-- v-model="newBrewery.name"
-    v-model="newBrewery.location"
-    v-model="newBrewery.establishedYear"
-    v-model="newBrewery.description"
-    v-model="newBrewery.imageUrl" -->
 
 </template>
 
@@ -126,6 +119,7 @@ h1, label {
     flex-direction: column;
     align-items: center;
     font-weight: bold;
+    font-family: "Balthazar";
 }
 
 input, textarea {
@@ -133,6 +127,7 @@ input, textarea {
     padding: 5px;
     box-sizing: border-box;
     margin-bottom: 10px;
+    
 }
 
 #button {

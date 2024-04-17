@@ -46,6 +46,7 @@ export default {
 
 #wholePage {
   padding: 0; /* Remove padding to allow full width */
+
 }
 
 .brewery-container {
@@ -59,6 +60,15 @@ export default {
 .brewery-item {
   flex: 0 1 calc(33.33% - 20px); /* Adjust the width of each card (in this case, 33.33% width for three cards per row) */
   margin: 10px; /* Adjust margin as needed */
+}
+
+h1 {
+  font-family: "Cinzel";
+  font-weight: bold;
+}
+
+p {
+  font-family: "Balthazar"
 }
 </style>
 

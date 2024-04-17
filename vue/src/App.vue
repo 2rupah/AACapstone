@@ -21,6 +21,6 @@ export default {
 
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Cinzel:wght@400..900&display=swap');
 </style>
 

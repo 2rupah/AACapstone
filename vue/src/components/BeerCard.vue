@@ -89,14 +89,20 @@ export default {
 
 }
 
+.beer-card h2 {
+  font-family: "Cinzel";
+}
+
 .beer-details {
   margin-bottom: 5px;
   /* Add spacing between details */
+  font-family: "Balthazar";  
 }
 
 .beer-description {
   margin-top: 10px;
   /* Add spacing above the description */
+  font-family: "Balthazar";
 }
 
 .container {

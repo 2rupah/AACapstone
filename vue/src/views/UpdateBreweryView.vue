@@ -8,10 +8,10 @@
             <a class="nav-link" href="delete">Delete a Beer</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Update Your Brewery</a>
+            <a class="nav-link active" aria-current="update">Update Your Brewery</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="new-brewery-page">Add New Brewery</a>
+            <a class="nav-link" href="new">Add New Brewery</a>
         </li>
     </ul>
     <div class="container">

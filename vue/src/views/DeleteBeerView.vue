@@ -10,7 +10,7 @@
       <a class="nav-link" href="update">Update Your Brewery</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="new-brewery-page">Add New Brewery</a>
+      <a class="nav-link" href="new">Add New Brewery</a>
     </li>
   </ul>
 
@@ -163,5 +163,8 @@ label {
     cursor: pointer;
     font-size: 15px;
     margin-top: 10px;
+}
+.nav-item {
+  font-family: "Balthazar";
 }
 </style>
