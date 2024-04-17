@@ -69,4 +69,8 @@ public class BreweryController {
 
     }
 
+    @RequestMapping(path="/brewery/random", method = RequestMethod.GET)
+    public Brewery randomBrewery(){
+        return breweryDao.getRandomBrewery();
+    }
 }
