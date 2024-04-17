@@ -435,29 +435,6 @@ table th {
   display: inline;
 }
 
-@media screen and (max-width: 768px) {
-  .is-inline-mobile {
-    display: inline !important;
-  }
-}
-
-@media screen and (min-width: 769px), print {
-  .is-inline-tablet {
-    display: inline !important;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 999px) {
-  .is-inline-tablet-only {
-    display: inline !important;
-  }
-}
-
-@media screen and (max-width: 999px) {
-  .is-inline-touch {
-    display: inline !important;
-  }
-}
 
 @media screen and (min-width: 1000px) {
   .is-inline-desktop {
@@ -479,30 +456,6 @@ table th {
 
 .is-inline-block {
   display: inline-block;
-}
-
-@media screen and (max-width: 768px) {
-  .is-inline-block-mobile {
-    display: inline-block !important;
-  }
-}
-
-@media screen and (min-width: 769px), print {
-  .is-inline-block-tablet {
-    display: inline-block !important;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 999px) {
-  .is-inline-block-tablet-only {
-    display: inline-block !important;
-  }
-}
-
-@media screen and (max-width: 999px) {
-  .is-inline-block-touch {
-    display: inline-block !important;
-  }
 }
 
 @media screen and (min-width: 1000px) {
