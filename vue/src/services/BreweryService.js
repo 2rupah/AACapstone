@@ -14,7 +14,12 @@ export default {
 
     getBeersByBreweryId(breweryId) {
         return axios.get(`/brewery/${breweryId}`);
+        
         },
+    
+    getRandomBrewery() {
+        return axios.get(`/brewery/random`)
+    },
     
     // Dashboard
     addBeer(beer) {
