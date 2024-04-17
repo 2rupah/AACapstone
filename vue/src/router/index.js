@@ -12,8 +12,9 @@ import DashboardView from '../views/DashboardView.vue';
 import DeleteBeerView from '../views/DeleteBeerView.vue';
 import UpdateBreweryView from '../views/UpdateBreweryView.vue';
 import NewBreweryView from '../views/NewBreweryView.vue';
-// import PubCrawlView from '../views/PubCrawlView.vue';
+import PubCrawlView from '../views/PubCrawlView.vue';
 import BreweryRouletteView from '../views/BreweryRouletteView.vue';
+
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -123,6 +124,12 @@ const routes = [
       requiresAuth: false
     },
   },
+  {
+    path: "/map",
+    name: "map",
+    component: PubCrawlView
+  }
+  
 ];
 
 // Create the router

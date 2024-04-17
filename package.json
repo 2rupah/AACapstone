@@ -1,5 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+    "mapbox-gl": "^3.3.0"
+=======
     "vue3-google-map": "^0.20.0"
+>>>>>>> 846bdc0bc96aa096c5706f17bf1adc338a8aabfa
   }
 }
