@@ -1,17 +1,17 @@
 <template>
     <div id="wholePage">
       <div id="banner">
-        <h1>Brewery Results</h1>
-        <p>Select a Brewery to find out more!</p>
+        <h1>Breweries</h1>
+        <p>Select a Brewery to add it to the Crawl!</p>
       </div>
       <div class="brewery-container">
         <div class="brewery-item" v-for="brewery in breweries" :key="brewery.name">
-          <BreweryCard :brewery="brewery" />
+          <MapBreweryCard :brewery="brewery" />
           
         </div>
       </div>
     </div>
-    <MapBreweryCard />
+    
   </template>
   
   <script>
