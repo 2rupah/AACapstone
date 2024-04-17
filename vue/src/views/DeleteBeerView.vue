@@ -1,17 +1,16 @@
 <template>
   <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" href="add">Add A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="delete">Delete A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="update">Update Your Brewery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="new">Add New Brewery</a>
-    </li>
+    <router-link to="/add" class="nav-item" tag="li"> <a class="nav-link">Add a Beer</a>
+    </router-link>
+    <router-link to="/delete" class="nav-item" tag="li">
+      <a class="nav-link active" aria-current="update">Delete a Beer</a>
+    </router-link>
+    <router-link to="/update" class="nav-item" tag="li">
+      <a class="nav-link">Update Your Brewery</a>
+    </router-link>
+    <router-link to="/new" class="nav-item" tag="li">
+      <a class="nav-link">Add New Brewery</a>
+    </router-link>
   </ul>
 
   <div class="container">

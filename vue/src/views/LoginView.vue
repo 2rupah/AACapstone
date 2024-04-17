@@ -43,6 +43,16 @@ export default {
       invalidCredentials: false
     };
   },
+  computed: {
+    isPopUpVisible() {
+      // Check if the current route is not the Login route
+      const currentRouteName = this.$route.name;
+      if (currentRouteName !== 'login') {
+        return this.$store.state.isPopUpVisible;
+      }
+      return false; // Don't show pop-up on the Login route
+    }
+  },
   methods: {
     login() {
       authService

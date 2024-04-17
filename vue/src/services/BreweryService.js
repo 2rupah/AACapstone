@@ -24,7 +24,7 @@ export default {
     // Dashboard
     addBeer(beer) {
         console.log("In add Beer of Brewery Service: ", beer)
-        return axios.post('/login/add', beer);
+        return axios.post('/add', beer);
     },
 
     addBrewery(brewery) {
