@@ -10,7 +10,7 @@
       <a class="nav-link">Update Your Brewery</a>
     </router-link>
     <router-link to="/new" class="nav-item" tag="li">
-      <a class="nav-link active" aria-current="update">Add New Brewery</a>
+      <a class="nav-link active" aria-current="new">Add New Brewery</a>
     </router-link>
   </ul>
 

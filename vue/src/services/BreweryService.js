@@ -28,7 +28,7 @@ export default {
     },
 
     addBrewery(brewery) {
-        return axios.post('/login/new', brewery);
+        return axios.post('/new', brewery);
     },
 
     deleteBeer(beerId){
