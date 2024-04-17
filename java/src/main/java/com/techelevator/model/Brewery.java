@@ -1,5 +1,7 @@
 package com.techelevator.model;
 
+import java.util.List;
+
 public class Brewery {
 
     private int breweryId;
@@ -11,6 +13,7 @@ public class Brewery {
 
     private String mapUrl;
 
+    private List<BreweryImage> breweryImage;
     public Brewery() {
     }
 
@@ -22,6 +25,14 @@ public class Brewery {
         this.description = description;
         this.imageUrl = imageUrl;
         this.mapUrl = mapUrl;
+    }
+
+    public List<BreweryImage> getBreweryImage() {
+        return breweryImage;
+    }
+
+    public void setBreweryImage(List<BreweryImage> breweryImage) {
+        this.breweryImage = breweryImage;
     }
 
     public String getImageUrl() {

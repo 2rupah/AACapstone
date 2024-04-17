@@ -3,20 +3,16 @@
     <h2 class="header">
       <router-link :to="{ name: 'brewery' }" class="back button">Back</router-link>
     </h2>
-    <h1>{{ currentBrewery.name }}</h1>
+    <h1>{{ currentBrewery.name }}
+    </h1>
     <div class="row">
       <div class="col-md-6">
         <div class="carousel-container">
-          
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/c6/a4/f8/front-area.jpg" class="d-block w-100 border-box" alt="...">
+              <div v-for="(image, index) in currentBrewery.breweryImage" :key="index" :class="{ 'carousel-item': true, 'active': index === 0 }">
+                <img :src="image.imageUrl" class="d-block w-100 border-box" alt="...">
               </div>
-              <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/szglL4L4Zxw/maxresdefault.jpg" class="d-block w-100 border-box" alt="...">
-              </div>
-              <!-- Add more carousel items here -->
             </div>
             <button class="carousel-control-prev btn btn-primary btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -35,6 +31,7 @@
         </div>
       </div>
     </div>
+    <h1>List of Beers</h1>
     <BeerList :beers="beerList" />
   </div>
 </template>
@@ -88,6 +85,7 @@ export default {
 </script>
 
 <style scoped>
+
 .border {
   border: 2px solid #ccc; /* Adjust border color and thickness */
   border-radius: 10px; /* Adjust border radius */
@@ -145,11 +143,11 @@ body {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  width: 30px; /* Adjust button size */
-  height: 30px; /* Adjust button size */
-  border-radius: 50%;
+  width: 50px !important; /* Adjust button size */
+  height: 45px; /* Adjust button size */
+  border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -15px; /* Adjust vertical alignment */
+  margin-top: 350px !important; /* Adjust vertical alignment */
 }
 .btn {
   background-color: #0a1823;
@@ -162,5 +160,10 @@ iframe {
 h1 {
   font-family: "Cinzel";
   font-weight: bold;
+  padding-bottom: 10px;
+}
+h2{
+  padding-bottom: 10px;
+  
 }
 </style>

@@ -32,6 +32,7 @@ export default {
 </script>
 
 <style scoped>
+
 #banner {
   text-align: center;
   padding: 10px; /* Adjust the padding as needed */

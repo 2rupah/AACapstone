@@ -9,6 +9,9 @@
     <li class="nav-item">
       <a class="nav-link" href="update">Update Your Brewery</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="new-brewery-page">Add New Brewery</a>
+    </li>
   </ul>
 
   <div class="container">

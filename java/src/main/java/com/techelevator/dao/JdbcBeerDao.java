@@ -2,6 +2,7 @@ package com.techelevator.dao;
 
 import com.techelevator.exception.DaoException;
 import com.techelevator.model.Beer;
+import com.techelevator.model.Review;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -42,9 +43,19 @@ public class JdbcBeerDao implements BeerDao {
                 "WHERE brewery_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, breweryId);
         while(results.next()) {
+
             beers.add(mapRowToBeer(results));
         }
         return beers;
+    }
+    private List<Review> listByBeerId(int beerId) {
+        List<Review> reviews = new ArrayList<Review>();
+        String sql = "SELECT review_id, beer_id, reviewer, review, rating FROM reviews WHERE beer_id = ?";
+        SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, beerId);
+        while(rows.next()) {
+            reviews.add( mapRowToReview(rows) );
+        }
+        return reviews;
     }
 
     @Override
@@ -79,8 +90,6 @@ public class JdbcBeerDao implements BeerDao {
         return countOfBeerDeleted ;
     }
 
-
-
     private Beer mapRowToBeer(SqlRowSet rowSet){
         Beer beer = new Beer();
 
@@ -93,6 +102,21 @@ public class JdbcBeerDao implements BeerDao {
         beer.setDescription(rowSet.getString("description") );
         beer.setImageUrl(rowSet.getString("imageurl"));
 
+        List<Review> reviews = listByBeerId(beer.getBeerId());
+        beer.setListOfReviews(reviews);
+
         return beer;
+    }
+
+    private Review mapRowToReview(SqlRowSet rowSet) {
+        Review review = new Review();
+
+        review.setReviewId(rowSet.getInt("review_id"));
+        review.setBeerId(rowSet.getInt("beer_id"));
+        review.setReviewer(rowSet.getString("reviewer"));
+        review.setReview(rowSet.getString("review"));
+        review.setRating(rowSet.getInt("rating"));
+
+        return review;
     }
 }
