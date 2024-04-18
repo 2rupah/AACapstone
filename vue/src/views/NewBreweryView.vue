@@ -164,4 +164,8 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.nav-item {
+  font-family: "Balthazar";
+}
 </style>
