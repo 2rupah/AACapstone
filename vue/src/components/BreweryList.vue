@@ -1,7 +1,7 @@
 <template>
   <div id="wholePage">
     <div id="banner">
-      <h1>Brewery Results</h1>
+      <h1>Brewery Results </h1>
       <p></p>
     </div>
     <div class="brewery-container" v-if="!searchResults.length>0" >
