@@ -141,6 +141,7 @@ body {
 }
 .back-button {
   text-align: center;
+  background-color: #0a1823;
   
 }
 .carousel-item img {
@@ -155,9 +156,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 350px !important; /* Adjust vertical alignment */
 }
-.btn {
-  background-color: #0a1823;
-}
+
 iframe {
   width: 100%;
   height: 90%;
@@ -169,7 +168,7 @@ h1 {
   padding-bottom: 10px;
 }
 h2{
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   
 }
 </style>
