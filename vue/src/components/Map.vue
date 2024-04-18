@@ -24,7 +24,7 @@ export default {
             container: mapDoc,
             style: "mapbox://styles/mapbox/streets-v12",
             center: [-83.041780, 39.997750],
-            zoom: 10,
+            zoom: 9,
 
 
         });
@@ -70,12 +70,23 @@ export default {
 </script>
 
 <style>
+div#layout {
+    justify-self:center;
+}
 .map-container {
-    width: 70vw;
-    height: 70vh;
-    justify-self: center;
+  width: 40vw; /* Adjust the width to take up half of the viewport */
+  height: 60vh; /* Adjust the height to take up the entire viewport */
+  margin: 0 auto; /* Center the map horizontally */
+}
+map#container{
+    width: 100vw;
 }
 .mapboxgl-popup {
     max-width: 200px;
 }
+.brewery-item{
+    width: 50px;
+}
+
+
 </style>

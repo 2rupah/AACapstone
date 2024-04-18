@@ -1,8 +1,8 @@
 <template>
     <div id="wholePage">
         <div id="banner">
-            <h1>Breweries</h1>
-            <p>Select a Brewery to add it to the Crawl!</p>
+            
+            <h4>Select a Brewery to add it to the Crawl!</h4>
         </div>
         <div class="brewery-container">
             <div class="brewery-item" v-for="brewery in breweries" :key="brewery.id">
@@ -59,17 +59,24 @@ export default {
 .brewery-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     /* Evenly distribute items with equal space around them */
-    max-width: 1200px;
+    /* max-width: 100vw; */
     /* Set a max width to limit the container's width */
+    max-width: 100vw;
     margin: 0 auto;
     /* Center the container horizontally */
 }
 
 .brewery-item {
-    flex: 0 1 calc(33.33% - 20px);
+    flex: 0 1 calc(12.59% - 20px);
     /* Adjust the width of each card (in this case, 33.33% width for three cards per row) */
     margin: 10px;
+    max-width: calc(12.5% - 20px);
     /* Adjust margin as needed */
-}</style>
+}
+h4 {
+    font-family: 'Balthazar';
+    text-decoration: underline;
+}
+</style>
