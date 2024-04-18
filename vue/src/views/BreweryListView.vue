@@ -1,6 +1,8 @@
 <template>
   <div class="page-container">
+    
     <section id="brewerypage">
+      <button id="BreweryCrawl">Brewery Crawl</button>
       <!-- Pass searchResults as a prop to BreweryList -->
       <BreweryList :searchResults="searchResults" />
     </section>
