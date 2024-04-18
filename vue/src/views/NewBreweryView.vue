@@ -16,37 +16,41 @@
 
     <div class="container">
     <h1>Add A New Brewery</h1>
+    <section id="form">
     <!--think we've still gotta implement the functionality from the back end-->
     
-    <form v-on:submit.prevent="addNewBrewery">
-    <div class="brewery-form">
+    <form class="row g-3" v-on:submit.prevent="addNewBrewery">
+    <div class="col-12">
     <label for="brewery-name">Brewery Name: </label>
     <input v-model="newBrewery.name" type="text" id="name" name="brewery-name" class="new-brew-form" placeholder='Enter Brewery Name' >
     </div>
 
-    <div class="brewery-form">
+    <div class="col-8">
     <label for="location">Brewery Address: </label>
     <input v-model="newBrewery.location" type="text" id="location" name="location" class="new-brew-form" placeholder='Enter Brewery Address' >
     </div>
 
 
-    <div class="brewery-form">
+    <div class="col-4">
     <label for="year">Year of Establishment: </label>
     <input v-model="newBrewery.establishedYear" type="text" id="year" name="year" class="new-brew-form"  placeholder='Enter Year Established'>
     </div>
 
-    <div class="brewery-form">
+    <div class="col-13">
     <label for="description">Brewery Description: </label>
     <textarea v-model="newBrewery.description" type="text" id="description" name="description" class="new-brew-form" placeholder='Enter Brewery Description' ></textarea>
     </div>
 
-    <div class="brewery-form">
+    <div class="col-13">
     <label for="logo">Brewery Logo Url: </label>
     <input v-model="newBrewery.imageUrl" type="text" id="logo" name="logo" class="new-brew-form" placeholder='Enter Image URL'>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Add Brewery</button>    
+    <div class="col-14">
+    <button type="submit" class="btn btn-primary">Add Brewery</button>  
+  </div>  
     </form>
+  
+  </section>
     </div>
     <TheFooter />
 </template>
@@ -119,7 +123,7 @@ h1, label {
 }
 
 .brewery-form {
-    width: 55%;
+    /* width: 55%; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -133,7 +137,6 @@ input, textarea {
     padding: 5px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    
 }
 
 #button {
@@ -163,9 +166,18 @@ input, textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .nav-item {
   font-family: "Balthazar";
+}
+
+.col-8, .col-4, .col-13, .col-14 {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+.col-12 {
+  padding-bottom: 10px;
 }
 </style>
