@@ -7,7 +7,7 @@
             <img :src="brewery.imageUrl" class="card-img-top" alt="Brewery Image">
           </div>
           <div class="card-details">
-            <h3 class="card-title">{{ brewery.name }}</h3>
+            <!-- <h6 class="card-title">{{ brewery.name }}</h6> -->
           </div>
         </div>
       
@@ -41,13 +41,14 @@
   
   <style scoped>
   .brewery-card {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 10px;
-    width: 100%;
-    height: 450px;
+    width: 90%;
+    height: 130px;
     margin: 10px;
+    margin-top:10px;
     cursor: pointer;
-    perspective: 1000px;
+    perspective: 500px;
   }
   
   .card {
@@ -59,14 +60,9 @@
     border-radius: 10px;
   }
   
-  .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-  }
   
-  .front {
+  
+  /* .front {
     background-color: #f8f9fa;
     transform: rotateY(0deg);
   }
@@ -75,19 +71,18 @@
     background-color: #ffffff;
     transform: rotateY(180deg);
     display: none;
-  }
+  } */
   
-  .flipped .front {
+  /* .flipped .front {
     transform: rotateY(-180deg);
     transition-delay: 0.3s; /* slight delay for a smoother effect */
-  }
   
-  .flipped .back {
+   
+  /* .flipped .back {
     transform: rotateY(0deg);
     display: block;
     transition-delay: 0s; /* no delay for the back side */
-  }
-  
+   
   .card-image {
     width: 100%; /* Set the width to 100% to fill the container */
     height: 70%; /* Adjust the height as needed */
@@ -100,7 +95,7 @@
   }
   .card-image img {
     max-width: 80%; /* Ensure the image doesn't exceed the container width */
-    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+    max-height: 10%; /* Ensure the image doesn't exceed the container height */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
   }
   

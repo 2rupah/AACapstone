@@ -1,4 +1,5 @@
 <template>
+    <h1>Get Your Brewery Crawl On!</h1>
     <div id="layout">
         <Map :breweryMarker="breweryMarker"/>
     </div>
@@ -47,6 +48,11 @@ export default {
     /* flex: 1;
     display: flex; */
     position: relative;
+}
+
+h1 {
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 </style>
