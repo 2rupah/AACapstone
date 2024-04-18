@@ -22,7 +22,6 @@
       <label for="brewerySelect">Select Brewery:</label>
 
       <select @change="getBreweryInfo" v-model="selectedBreweryId" class="form-control">
-        <option value="">Select a brewery</option>
         <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
         </option>
       </select>
@@ -181,7 +180,16 @@ label {
   margin-top: 10px;
 }
 
+#delete:hover {
+    text-decoration: underline !important;
+}
+
 .nav-item {
   font-family: "Balthazar";
+}
+
+.form-group{
+  padding-left: 200px;
+  padding-right: 200px;
 }
 </style>

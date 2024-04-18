@@ -119,12 +119,13 @@ export default {
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  color: white !important;
   position: center;
 }
 
 .btn:hover {
   background-color: #192c46;
+  text-decoration: underline !important;
 }
 
 

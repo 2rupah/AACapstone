@@ -4,7 +4,7 @@
     <section id="form">
       <label for="brewerySelect">Select Brewery:</label>
       <select v-model="newBeer.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-        <option value="">Select a brewery</option>
+        <option value="" id="select">Select a brewery</option>
         <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
         </option>
       </select>
@@ -188,8 +188,13 @@ button.btn.btn-primary {
   font-family: "Cinzel"
 }
 
+button.btn.btn-primary:hover {
+    text-decoration: underline !important;
+}
+
 label {
-  font-family: "Balthazar"
+  font-family: "Balthazar";
+  font-weight: bold;
 }
 
 .col-md-4, .col-4, .col-2, .col-md-2 {
