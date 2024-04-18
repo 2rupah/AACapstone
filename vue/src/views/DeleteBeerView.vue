@@ -187,4 +187,9 @@ label {
 .nav-item {
   font-family: "Balthazar";
 }
+
+.form-group{
+  padding-left: 200px;
+  padding-right: 200px;
+}
 </style>
