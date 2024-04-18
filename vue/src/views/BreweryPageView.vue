@@ -86,6 +86,9 @@ export default {
 
 <style scoped>
 
+h1 {
+  text-decoration: underline;
+}
 .border {
   border: 2px solid #ccc; /* Adjust border color and thickness */
   border-radius: 10px; /* Adjust border radius */
@@ -121,6 +124,7 @@ body {
 }
 .carousel-container {
   margin-bottom: 20px;
+  padding-left: 70px;
 }
 .map-container {
    /* Adjust the margin to move the map down */
@@ -129,6 +133,7 @@ body {
   margin-bottom: 20px;
   padding: 5px; /* Add padding for inner content */
   color: white !important;
+  padding-right: 70px;;
   
 }
 .map-container iframe {

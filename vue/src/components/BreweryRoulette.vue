@@ -6,6 +6,7 @@
       <div class="columns">
         <div class="column">
           <div class="columns is-centered">
+            <BreweryNamesDropDownVue @brewery-selected="addOptionsFromDropdown" />
             <input type="button" class="button is-dark" value="SPIN ROULETTE" id='spin' v-on:click="spin" />
           </div>
           <div class="columns is-centered">
@@ -15,23 +16,10 @@
         <div class="column">
           <div class="columns is-multiline">
             <div class="column is-half">
-
-              <div class="field">
-              <input class="input" type="text" placeholder="Choose from these Breweries" v-model="new_option" v-on:keyup.enter="addOptions">
-            </div>
-
-            <!-- <div class="form-group">
-            <label for="brewerySelect">Select Brewery:</label>
-            <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-                <option value="">Select a brewery</option>
-                <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
-                </option>
-            </select>
-        </div> -->
-            
+              <!-- Removed input field for typing brewery name -->
             </div>
             <div class="column is-half">
-              <button class="button is-primary" v-on:click="addOptions">Add Brewery</button>
+              <!-- Removed button for adding brewery -->
             </div>
             <div class="column is-one-quarter" v-for="option in options" :key="option">
               <button class="button is-danger" v-on:click="removeOptions(option)">x</button>
@@ -46,7 +34,11 @@
 
 <script>
 import BreweryService from '../services/BreweryService';
+import BreweryNamesDropDownVue from './BreweryNamesDropDown.vue';
 export default {
+  components: {
+    BreweryNamesDropDownVue
+  },
   data() {
     return {
       options: ['Hoof Hearted Brewery', 'Wolfs Ridge Brewing', 'Barleys Brewing Company', 'Columbus Brewing Company','Olentangy River Brewing Company',
@@ -63,6 +55,8 @@ export default {
     };
   },
 
+
+
   computed: {
     arc() {
       return Math.PI / (this.options.length / 2);
@@ -70,6 +64,14 @@ export default {
   },
 
   methods: {
+    addOptionsFromDropdown(selectedBrewery) {
+  if (selectedBrewery && !this.options.includes(selectedBrewery)) {
+    // Add the selected brewery to options array if it's not already there
+    this.options.push(selectedBrewery);
+    // Redraw the roulette wheel
+    this.drawRouletteWheel();
+      }
+    },
 
     fetchBreweries() {
       BreweryService.listAllBreweries()

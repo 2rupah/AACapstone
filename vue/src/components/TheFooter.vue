@@ -88,8 +88,11 @@
 
 .container {
   flex: 1; /* Expand to fill remaining space */
+  color: rgb(255, 255, 255);
 }
-
+footer {
+  background-color: white;
+}
 .facebook-btn:hover{
     color: blue !important;
 }
