@@ -190,9 +190,8 @@ export default {
     color: #fff;
     cursor: pointer;
 }
-
-.btn-primary:hover {
-    background-color: #0056b3;
+.content {
+  flex-grow: 1 !important;
 }
 </style>
   
