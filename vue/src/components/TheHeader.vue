@@ -35,7 +35,7 @@ export default {
       },
     
       shouldDisplayDashboardButton() {
-        return this.$route.name !== 'add' && this.$route.name !== 'delete' && this.$route.name !== 'update'
+        return this.$route.name !== 'add' && this.$route.name !== 'delete' && this.$route.name !== 'update' && this.$route.name !== 'new'
       },
 
     shouldDisplayHomeButton() {
