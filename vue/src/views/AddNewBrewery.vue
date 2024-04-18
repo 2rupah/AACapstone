@@ -15,6 +15,7 @@
       <a class="nav-link">Add New Brewery</a>
     </router-link>
   </ul>
+
     <div class="container">
       <h1>Add A Beer</h1>
       <section id="form">
@@ -221,5 +222,9 @@
   label {
     font-family: "Balthazar"
   }
+
+  .nav-item {
+  font-family: "Balthazar";
+}
   
   </style>
