@@ -19,6 +19,7 @@
     <div class="container">
         <h1>Update Brewery Information</h1>
 
+        <section id="form">
         <div class="form-group">
             <label for="brewerySelect" >Select Brewery:</label>
 
@@ -29,35 +30,37 @@
         </div>
 
 
-        <form @submit.prevent="updateBrewery">
+        <form class="row g-3" @submit.prevent="updateBrewery">
 
-            <div class="form-group">
+            <div class="col-md-4">
                 <label for="name" class="form-label">Brewery Name: </label>
                 <input type="text" class="form-control" id="name" v-model="brewery.name" placeholder="Updated Brewery Name">
             </div>
-            <div class="form-group">
+            <div class="col-5">
                 <label for="location" class="form-label">Brewery Address: </label>
                 <input type="text" class="form-control" id="location" v-model="brewery.location" placeholder="Updated Brewery Address">
             </div>
-            <div class="form-group">
+            <div class="col-3">
                 <label for="establishedYear" class="form-label">Year of Establishment: </label>
                 <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear" placeholder="Updated Year of Establishment">
             </div>
-            <div class="form-group">
+            <div class="col-12">
                 <label for="description" class="form-label">Brewery Description: </label>
                 <textarea class="form-control" id="description" v-model="brewery.description" placeholder="Updated Brewery Description"></textarea>
             </div>
-            <div class="form-group">
+            <div class="col-md-6">
                 <label for="imageUrl" class="form-label">Brewery Logo URL:</label>
                 <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl" placeholder="Updated Image URL">
             </div>
-            <div class="form-group">
+            <div class="col-6">
                 <label for="imageUrl" class="form-label">Additional Brewery Image URLs:</label>
                 <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl" placeholder="Ex. Patio, Taproom, Food, etc.">
             </div>
+            <div class="col-12">
             <button type="submit" class="btn btn-primary">Update Brewery</button>
+        </div>
         </form>
-        
+    </section>
     </div>
     
     </div>
@@ -154,15 +157,11 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
-.update-button {
-    text-align: center;
-}
-.container {
-  padding: 20px;
-}
 
 .form-group {
     margin-bottom: 20px;
+    /* padding-left: 200px;
+  padding-right: 200px; */
 }
 
 #brewerySelect {
@@ -198,6 +197,10 @@ export default {
   flex-grow: 1 !important;
 }
 
+.col-md-4, .col-5, .col-3, .col-md-2, .col-12, .col-md-6, .col-6  {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
 .nav-item {
   font-family: "Balthazar";
 }
