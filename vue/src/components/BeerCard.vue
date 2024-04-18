@@ -12,7 +12,8 @@
       
     </div>
 
-    <div class="col">
+    <div id= "two" class="col">
+  
       <div v-for="review in beer.listOfReviews" :key="review.reviewId">
       
       <img src="../assets/beer.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
@@ -78,8 +79,8 @@ export default {
 
 
 .card-img-top {
-  width: 40%;
-  height: 50%;
+  width: 30%;
+  height: 45%;
   /* Limit image width */
   border-radius: 8px;
   /* Add rounded corners to the image */
@@ -93,6 +94,15 @@ export default {
   font-family: "Cinzel";
 }
 
+#one {
+  font-size: 15px;
+  padding-left: 25px;
+}
+
+p#review {
+  padding-right: 40px;
+}
+
 .beer-details {
   margin-bottom: 5px;
   /* Add spacing between details */
@@ -103,6 +113,8 @@ export default {
   margin-top: 10px;
   /* Add spacing above the description */
   font-family: "Balthazar";
+  padding-right: 200px;
+
 }
 
 .container {
@@ -111,7 +123,7 @@ export default {
 }
 
 .rating-star {
-  width: 8%;
+  width: 6%;
   padding-bottom: 5px;
 }
 

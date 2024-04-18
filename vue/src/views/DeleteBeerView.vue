@@ -17,6 +17,7 @@
     <div class="container">
       <h1>Delete A Beer</h1>
     
+    <section id="form"></section>
     <div class="form-group">
       <label for="brewerySelect">Select Brewery:</label>
 

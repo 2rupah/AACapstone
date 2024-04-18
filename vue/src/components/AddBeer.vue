@@ -10,12 +10,12 @@
       </select>
 
       <form class="row g-3" v-on:submit.prevent="addNewBeer">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label for="inputBeer" class="form-label">Beer Name</label>
           <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer">
         </div>
         
-        <div class="col-3">
+        <div class="col-4">
           <label for="inputStyle" class="form-label">Style</label>
           <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle">
         </div>
@@ -126,7 +126,8 @@ export default {
 <style>
 h1 {
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 30px;
+  padding-top: 5px;
   font-family: "Cinzel"
 }
 
@@ -161,7 +162,7 @@ form {
 }
 
 form div {
-  padding-bottom: 5%;
+  padding-bottom: 6%;
   padding-left: 2%;
   padding-right: 2%;
   position: center;
@@ -196,5 +197,9 @@ label {
   font-weight: bold;
 }
 
+.col-md-4, .col-4, .col-2, .col-md-2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
 
 </style>

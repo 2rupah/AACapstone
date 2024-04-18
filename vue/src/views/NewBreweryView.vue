@@ -119,7 +119,7 @@ h1, label {
 }
 
 .brewery-form {
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
