@@ -48,12 +48,12 @@
     <button type="submit" class="btn btn-primary">Add Brewery</button>    
     </form>
     </div>
-
+    <TheFooter />
 </template>
 
 <script>  
 import BreweryService from '../services/BreweryService';
-
+import TheFooter from '../components/TheFooter.vue';
 export default {
     props: ['breweryId'],
 
@@ -92,11 +92,14 @@ export default {
                 mapUrl: '',
                 longitude: '',
                 latitude: '',
-            }
-        }
+              };
     }
-};
+  },
 
+  components: {
+    TheFooter,
+  },
+};
 </script>
 
 <style>
