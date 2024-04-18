@@ -316,7 +316,7 @@ INSERT INTO brewery_images (brewery_id, image_url) VALUES
 
 (15, 'https://media.bizj.us/view/img/7696962/zaftig-brewing-interior-dje*1200xx3093-2324-0-0.jpg'),
 (15, 'https://pbs.twimg.com/media/ERucrn3XsAAbsR8?format=jpg&name=4096x4096'),
-(15, 'https://ksr-ugc.imgix.net/assets/025/996/386/ba44818cf8d90877f26438af81508c6f_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1564649625&auto=format&frame=1&q=92&s=58d37de4ffa7fd271139858e2e7fa1dd'),
+(15, 'https://ksr-ugc.imgix.net/assets/025/996/386/ba44818cf8d90877f26438af81508c6f_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1564649625&auto=format&frame=1&q=92&s=58d37de4ffa7fd271139858e2e7fa1dd');
 
 
 COMMIT TRANSACTION;
