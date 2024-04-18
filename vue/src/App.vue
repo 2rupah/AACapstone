@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <the-header />
-    <wheelpopout />
+    <DisclaimerPopUp />
     <router-view />
  
   </div>
@@ -9,12 +9,12 @@
 
 <script>
 import TheHeader from './components/TheHeader.vue';
-import Wheelpopout from './components/WheelPopOut.vue';
+import DisclaimerPopUp from './components/DisclaimerPopUp.vue';
 
 export default {
   components: {
     TheHeader,
-    Wheelpopout
+    DisclaimerPopUp
 }
 };
 </script>

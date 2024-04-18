@@ -145,7 +145,7 @@ public class JdbcBrewery implements BreweryDao{
     @Override
     public List<Brewery> searchBreweries(String searchTerm) {
         List<Brewery> breweries = new ArrayList<>();
-        String query = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
+        String query = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl, longitude, latitude " +
                 "FROM brewery " +
                 "WHERE LOWER(name) LIKE ?";
         try {

@@ -1,7 +1,8 @@
 <template>
-  <section id="container">
-  <div id="register" class="text-center">
-    <form v-on:submit.prevent="register">
+  <div id="register">
+    <div class="background"></div>
+    <div class="form-container">
+      <form v-on:submit.prevent="register">
       <h1>Create Account</h1>
       <div role="alert" v-if="registrationErrors">
         {{ registrationErrorMsg }}
@@ -22,7 +23,7 @@
       <p><router-link v-bind:to="{ name: 'login' }">Already have an account? Log in.</router-link></p>
     </form>
   </div>
-</section>
+</div>
 </template>
 
 <script>
@@ -77,6 +78,38 @@ export default {
 </script>
 
 <style scoped>
+#register {
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.pikbest.com/wp/202345/two-people-holding-beer-glasses-on-a-dark-background_9598338.jpg!w700wp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1; /* Ensure the background is behind the form */
+}
+
+.form-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(70%); /* Adjust translateY to move the form down */
+  z-index: 1; /* Ensure the form is in front of the background */
+  width: 80%; /* Adjust width as needed */
+  max-width: 400px; /* Adjust max-width as needed */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust background color and opacity as needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Other styles */
 .form-input-group {
   margin-bottom: 1rem;
 }
@@ -85,24 +118,11 @@ label {
   margin-right: 0.5rem;
 }
 
-button, p {
-  font-family: "Balthazar"
+form {
+  width: 100%;
 }
 
-#container {
-  width:40vw;
-  
-  
-}
-form {
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+button, p {
+  font-family: "Balthazar";
 }
 </style>
