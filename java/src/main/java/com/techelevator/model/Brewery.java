@@ -111,4 +111,5 @@ public class Brewery {
     public void setMapUrl(String mapUrl) {
         this.mapUrl = mapUrl;
     }
+
 }

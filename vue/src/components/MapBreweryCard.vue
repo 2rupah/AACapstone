@@ -1,7 +1,7 @@
 <template>
   
-    <div class="brewery-card" @click="isFlipped = !isFlipped">
-      <div class="card" :class="{ 'flipped': isFlipped }">
+    <div class="brewery-card" >
+      
         <div class="front">
           <div class="card-image">
             <img :src="brewery.imageUrl" class="card-img-top" alt="Brewery Image">
@@ -10,15 +10,9 @@
             <h3 class="card-title">{{ brewery.name }}</h3>
           </div>
         </div>
-        <div class="back">
-          <div class="card-details">
-            <h3 class="card-title">{{ brewery.name }}</h3>
-            <p class="card-text"><strong>Location:</strong> {{ brewery.location }}</p>
-            <p class="card-text"><strong>Description:</strong> {{ brewery.description }}</p>
-            <router-link :to="{ name: 'brewery-detail', params: { id: brewery.breweryId } }" class="btn">See Brewery!</router-link>
-          </div>
-        </div>
-      </div>
+      
+        
+      
     </div>
   
     
@@ -26,18 +20,22 @@
   </template>
   
   <script>
+  import BreweryService from '../services/BreweryService';
   export default {
     props: {
       brewery: {
         type: Object,
         required: true
-      }
+      },
+      hasBeenAddedToMap: Boolean
     },
     data() {
       return {
-        isFlipped: false
+        // Brewery: {}
+
       };
-    }
+    },
+
   }
   </script>
   
