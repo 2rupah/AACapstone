@@ -17,8 +17,8 @@
       
       <img src="../assets/beer.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
         v-for="n in review.rating" v-bind:key="n" />
-        <p><strong>{{ review.reviewer }}:</strong></p>
-        <p>{{ review.review }}</p>
+        <p id="reviewer"><strong>{{ review.reviewer }}:</strong></p>
+        <p id="review">{{ review.review }}</p>
       </div>
   </div>
 
@@ -89,7 +89,7 @@ export default {
 
 }
 
-.beer-card h2 {
+#one h2 {
   font-family: "Cinzel";
 }
 
@@ -111,7 +111,15 @@ export default {
 }
 
 .rating-star {
-  width: 10%;
+  width: 8%;
   padding-bottom: 5px;
+}
+
+#reviewer {
+  font-family: 'Balthazar'
+}
+
+#review {
+  font-family: 'Balthazar'
 }
 </style>

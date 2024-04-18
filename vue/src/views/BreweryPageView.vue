@@ -106,6 +106,7 @@ export default {
   text-decoration: none;
   cursor: pointer; 
   font-size: 20px;
+  font-family: 'Cinzel'
 }
 
 .header .back.button:hover {
