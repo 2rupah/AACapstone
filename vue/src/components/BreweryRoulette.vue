@@ -41,8 +41,7 @@ export default {
   },
   data() {
     return {
-      options: ['Hoof Hearted Brewery', 'Wolfs Ridge Brewing', 'Barleys Brewing Company', 'Columbus Brewing Company','Olentangy River Brewing Company',
-    'Thunderwing Brewing Company','Seventh Son Brewing Co'],
+      options: [],
       breweries: [],
       new_option: '',
       startAngle: 0,
@@ -137,8 +136,10 @@ export default {
 
         this.ctx.strokeStyle = "black";
         this.ctx.lineWidth = 2;
+        this.ctx.beginPath();
 
-        this.ctx.font = 'bold 12px Helvetica, Arial';
+        this.ctx.font = 'bold 12px Arial';
+        this.ctx.fillStyle = 'black';
 
         for (let i = 0; i < this.options.length; i++) {
           const angle = this.startAngle + i * this.arc;
@@ -227,7 +228,7 @@ export default {
     this.fetchBreweries();
     },
   created(){
-    this.options.push('Knotty Pine Brewing')
+    this.options.push('ADD MORE BREWERIES TO SPIN!!!')
   }
 };
 </script>
