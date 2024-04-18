@@ -1,5 +1,5 @@
 <template>
-<footer class="text-center bg-body-tertiary">
+<footer class="text-center bg-body-tertiary footer-container">
     <!-- Grid container -->
     <div class="container pt-4">
       <!-- Section: Social media -->
@@ -79,6 +79,16 @@
 
 </script>
 <style scoped>
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  min-width: 100%;
+}
+
+.container {
+  flex: 1; /* Expand to fill remaining space */
+}
 
 .facebook-btn:hover{
     color: blue !important;
