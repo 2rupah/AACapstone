@@ -17,9 +17,9 @@
         <h1>Update Brewery Information</h1>
 
         <div class="form-group">
-            
+            <label for="brewerySelect" >Select Brewery:</label>
+
             <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-                <option value="">Select a brewery:</option>
                 <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
                 </option>
             </select>
@@ -29,28 +29,28 @@
         <form @submit.prevent="updateBrewery">
 
             <div class="form-group">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" v-model="brewery.name">
+                <label for="name" class="form-label">Brewery Name: </label>
+                <input type="text" class="form-control" id="name" v-model="brewery.name" placeholder="Updated Brewery Name">
             </div>
             <div class="form-group">
-                <label for="location" class="form-label">Location:</label>
-                <input type="text" class="form-control" id="location" v-model="brewery.location">
+                <label for="location" class="form-label">Brewery Address: </label>
+                <input type="text" class="form-control" id="location" v-model="brewery.location" placeholder="Updated Brewery Address">
             </div>
             <div class="form-group">
-                <label for="establishedYear" class="form-label">Established Year:</label>
-                <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear">
+                <label for="establishedYear" class="form-label">Year of Establishment: </label>
+                <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear" placeholder="Updated Year of Establishment">
             </div>
             <div class="form-group">
-                <label for="description" class="form-label">Description:</label>
-                <textarea class="form-control" id="description" v-model="brewery.description"></textarea>
+                <label for="description" class="form-label">Brewery Description: </label>
+                <textarea class="form-control" id="description" v-model="brewery.description" placeholder="Updated Brewery Description"></textarea>
             </div>
             <div class="form-group">
-                <label for="imageUrl" class="form-label">Image URL:</label>
-                <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl">
+                <label for="imageUrl" class="form-label">Brewery Logo URL:</label>
+                <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl" placeholder="Updated Image URL">
             </div>
             <div class="form-group">
-                <label for="imageUrl" class="form-label">Image URL:</label>
-                <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl">
+                <label for="imageUrl" class="form-label">Additional Brewery Image URLs:</label>
+                <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl" placeholder="Ex. Patio, Taproom, Food, etc.">
             </div>
             <button type="submit" class="btn btn-primary">Update Brewery</button>
         </form>
@@ -170,13 +170,10 @@ export default {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #0A1823;
     color: #fff;
     cursor: pointer;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
 </style>
   

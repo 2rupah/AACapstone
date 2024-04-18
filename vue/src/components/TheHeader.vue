@@ -10,11 +10,11 @@
         </div>
         <nav>  
           
-            <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }">Home</router-link>
-            <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }">Breweries</router-link>
+            <router-link v-if="shouldDisplayHomeButton" v-bind:to="{ name: 'home' }" class="nav-button">Home</router-link>
+            <router-link v-if="shouldDisplayBreweryButton" v-bind:to="{ name: 'brewery' }" class="nav-button">Breweries</router-link>
             <router-link v-if="shouldDisplayDashboardButton" v-bind:to="{ name: 'add' }" class="nav-button dashboard-button">Dashboard</router-link>
             <a v-if="isLoggedIn" @click="logout" class="nav-button">Logout</a>
-            <router-link v-else-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }">Login</router-link>
+            <router-link v-else-if="shouldDisplayLoginButton" v-bind:to="{ name: 'login' }" class="nav-button">Login</router-link>
             
         </nav>
     </div>
