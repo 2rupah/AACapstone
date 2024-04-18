@@ -96,7 +96,7 @@ INSERT INTO beer (name, brewery_id, style, abv, ibu, description, imageURL) VALU
 
 ('Boat Show', 11, 'IPA', 7, 10, 'Juicy tropical fruit and citrus notes blaze through this fresh and hoppy American IPA. It’s an IPA that drinks more like a strong pale ale. There is a low level of bitterness.', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-pale-ale.jpg'),
 ('Creative Space', 11, 'Hazy IPA', 6.7, 43, 'Made with Citra, Mosaic, and Amarillo hops, this hazy IPA has an assertive citrusy brightness with some tropical fruit undertones. A couple pints of this juicy goodness will get your creative juices flowing!', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/new-england-ipa.jpg'),
-('Captian Stardust', 11, 'Saison', 6.5, 33, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/belgian-style-saison.jpg'),
+('Captain Stardust', 11, 'Saison', 6.5, 33, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/belgian-style-saison.jpg'),
 ('Springer', 11, 'Golden Ale', 5.4, 15, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/blonde-ale.jpg'),
 ('Handsome', 11, 'American Brown', 5.5, 27, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/american-brown-ale.jpg'),
 ('MultiBall', 11, 'Pilsner', 5.5, 12, '', 'https://www.craftbeer.com/wp-content/uploads/_SF/thumbnails/german-style-kolsch.jpg'),

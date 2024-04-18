@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!-- <h1>Search Results</h1> -->
+      <h1>Search Results</h1>
       <div v-if="searchResults.length > 0">
         <!-- <ul>
           <li v-for="(result, index) in searchResults" :key="index"> -->
@@ -60,4 +60,13 @@
     },
   };
   </script>
+
+  <style scoped>
+    h1 {
+      padding-bottom: 25px;
+    }
+    #banner {
+      margin: 0 !important;
+    }
+  </style>
   
