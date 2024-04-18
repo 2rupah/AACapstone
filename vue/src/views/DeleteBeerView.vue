@@ -16,6 +16,7 @@
   <div class="container">
     <h1>Delete A Beer</h1>
     
+    <section id="form"></section>
     <div class="form-group">
       <label for="brewerySelect">Select Brewery:</label>
 
@@ -129,6 +130,20 @@ export default {
 </script>
 
 <style>
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 540px;
+}
+
+.form-control {
+
+}
+
 h1 {
   text-align: center;
 }
