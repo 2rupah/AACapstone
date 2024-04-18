@@ -1,17 +1,17 @@
 <template>
-    <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" href="add">Add A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="delete">Delete A Beer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="update">Update Your Brewery</a>
-    </li>
-    <li class="nav-item">
+  <ul class="nav nav-tabs">
+    <router-link to="/add" class="nav-item" tag="li">
+    <a class="nav-link">Add a Beer</a>
+    </router-link>
+    <router-link to="/delete" class="nav-item" tag="li">
+      <a class="nav-link">Delete a Beer</a>
+    </router-link>
+    <router-link to="/update" class="nav-item" tag="li">
+      <a class="nav-link">Update Your Brewery</a>
+    </router-link>
+    <router-link to="/new" class="nav-item" tag="li">
       <a class="nav-link active" aria-current="new">Add New Brewery</a>
-    </li>
+    </router-link>
   </ul>
 
     <div class="container">
@@ -71,7 +71,7 @@ export default {
         .then(response => {
           if (response.status === 201 || response.status === 200) {
             this.$router.push({
-              name: 'new-brewery-page'
+              name: 'new'
             });
           }
           this.resetForm()
@@ -89,6 +89,9 @@ export default {
                 establishedYear: null,
                 description: '',
                 imageUrl: '',
+                mapUrl: '',
+                longitude: '',
+                latitude: '',
             }
         }
     }

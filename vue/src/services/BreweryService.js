@@ -14,16 +14,21 @@ export default {
 
     getBeersByBreweryId(breweryId) {
         return axios.get(`/brewery/${breweryId}`);
+        
         },
     
+    getRandomBrewery() {
+        return axios.get(`/brewery/random`)
+    },
+
     // Dashboard
     addBeer(beer) {
         console.log("In add Beer of Brewery Service: ", beer)
-        return axios.post('/login/add', beer);
+        return axios.post('/add', beer);
     },
 
     addBrewery(brewery) {
-        return axios.post('/add_new_brewery', brewery);
+        return axios.post('/new', brewery);
     },
 
     deleteBeer(beerId){

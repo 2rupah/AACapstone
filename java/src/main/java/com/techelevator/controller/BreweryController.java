@@ -36,7 +36,7 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "login/new", method = RequestMethod.POST)
+    @RequestMapping(path = "/new", method = RequestMethod.POST)
     public Brewery addBrewery(@RequestBody Brewery brewery){
         return breweryDao.createBrewery(brewery);
     }
@@ -52,7 +52,7 @@ public class BreweryController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/login/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/add", method = RequestMethod.POST)
     public Beer addBeer(@RequestBody Beer beer) {
     return beerDao.createBeer(beer);
 }
@@ -68,9 +68,17 @@ public class BreweryController {
        return breweryDao.getBreweryById(id);
 
     }
+
+
+    @RequestMapping(path="/brewery/random", method = RequestMethod.GET)
+    public Brewery randomBrewery() {
+        return breweryDao.getRandomBrewery();
+    }
+
     @RequestMapping(path = "/api/search/breweries", method = RequestMethod.GET)
     public List<Brewery> searchBreweries(@RequestParam String searchTerm) {
         List<Brewery> searchResults = breweryDao.searchBreweries(searchTerm);
         return searchResults;
     }
+
 }

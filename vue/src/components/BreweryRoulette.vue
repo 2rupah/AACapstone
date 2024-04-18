@@ -155,6 +155,7 @@ export default {
           this.ctx.shadowBlur = 0;
           this.ctx.shadowColor = "rgb(220,220,220)";
           this.ctx.fillStyle = "black";
+          
           this.ctx.translate(250 + Math.cos(angle + this.arc / 2) * textRadius,
             250 + Math.sin(angle + this.arc / 2) * textRadius);
           this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
@@ -292,7 +293,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
+  padding-top: 10px;
+  font-size: 200%;
   font-weight: normal;
 }
 
@@ -431,6 +433,7 @@ small {
 span {
   font-style: inherit;
   font-weight: inherit;
+  padding-left: 10px;
 }
 
 strong {
@@ -4757,7 +4760,7 @@ label.panel-block:hover {
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
-  width: 25%;
+  width: 50%;
 }
 
 .columns.is-mobile>.column.is-offset-three-quarters {
@@ -5169,7 +5172,7 @@ print {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    width: 25%;
+    width: 50%;
   }
 
   .column.is-offset-three-quarters,
@@ -7107,6 +7110,7 @@ print {
 .section {
   background-color: white;
   padding: 3rem 1.5rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
@@ -7122,4 +7126,5 @@ print {
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
-}</style>
+} 
+</style>

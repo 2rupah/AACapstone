@@ -44,7 +44,25 @@ public class JdbcBrewery implements BreweryDao{
         return breweries;
     }
 
-//    copied and pasted this, we need to update the String sql for our brewery database!
+    @Override
+    public Brewery getRandomBrewery() {
+        Brewery brewery = new Brewery();
+        String sql = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
+                "FROM brewery " +
+                "WHERE brewery_id BETWEEN 1 AND 8 " +
+                "ORDER BY RANDOM() LIMIT 1;";
+        try {
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+            if (results.next()) {
+                brewery = mapRowToBrewery(results);
+            }
+        }catch(CannotGetJdbcConnectionException e){
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return brewery;
+    }
+
+    //    copied and pasted this, we need to update the String sql for our brewery database!
     @Override
     public Brewery createBrewery(Brewery brewery) {
         String sql = "INSERT INTO brewery (name, location, established_year, description, imageurl, mapurl, longitude, latitude) " +
@@ -70,9 +88,9 @@ public class JdbcBrewery implements BreweryDao{
                 "    location = ?, " +
                 "    established_year = ?, " +
                 "    description = ?, " +
-                "    imageurl = ? " +
-                "    mapurl = ? " +
-                "    longitude = ? " +
+                "    imageurl = ?, " +
+                "    mapurl = ?, " +
+                "    longitude = ?, " +
                 "    latitude = ?" +
                 "WHERE brewery_id = ?;";
         try {
@@ -82,9 +100,10 @@ public class JdbcBrewery implements BreweryDao{
                     brewery.getEstablishedYear(),
                     brewery.getDescription(),
                     brewery.getImageUrl(),
-                    brewery.getMapUrl());
-                    brewery.getLongitude();
-                    brewery.getLatitude();
+                    brewery.getMapUrl(),
+                    brewery.getLongitude(),
+                    brewery.getLatitude(),
+                    brewery.getBreweryId());
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to database.", e);
         } catch (DataIntegrityViolationException e) {
@@ -126,7 +145,7 @@ public class JdbcBrewery implements BreweryDao{
     @Override
     public List<Brewery> searchBreweries(String searchTerm) {
         List<Brewery> breweries = new ArrayList<>();
-        String query = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl " +
+        String query = "SELECT brewery_id, name, location, established_year, description, imageurl, mapurl, longitude, latitude " +
                 "FROM brewery " +
                 "WHERE LOWER(name) LIKE ?";
         try {

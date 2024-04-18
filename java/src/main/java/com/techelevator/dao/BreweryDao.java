@@ -8,6 +8,7 @@ import java.util.List;
 public interface BreweryDao {
 
     List<Brewery> listAllBreweries();
+    Brewery getRandomBrewery();
 
     Brewery createBrewery(Brewery brewery);
 
@@ -17,4 +18,5 @@ public interface BreweryDao {
     List<BreweryImage> getImagesByBreweryId(int breweryId);
 
     List<Brewery> searchBreweries(String searchTerm);
+
 }
