@@ -55,7 +55,6 @@ export default {
 <style scoped>
 button {
     color: white !important;
-    
     margin: 5px;
     padding: 13px 25px;
     background-color: #0A1823;
@@ -63,7 +62,6 @@ button {
     text-decoration: none;
     cursor: pointer; 
     font-family: 'Cinzel';
-    
     float:right;
   
 }
