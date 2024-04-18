@@ -3,9 +3,9 @@
     
     <section id="brewerypage">
       <button class="other">
-      <router-link :to="{ name: 'map' }" class="back button">Brewery Crawl</router-link></button>
+      <router-link :to="{ name: 'map' }" class="brewery-picker">Brewery Crawl</router-link></button>
       <button>
-      <router-link :to="{ name: 'roulette' }" class="back button">Brewery Roulette</router-link></button>
+      <router-link :to="{ name: 'roulette' }" class="brewery-picker">Brewery Roulette</router-link></button>
       
       <!-- Pass searchResults as a prop to BreweryList -->
       <BreweryList :searchResults="searchResults" />
@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
 button {
-    color: white !important;
+    color: rgb(207, 0, 0) !important;
     margin: 5px;
     padding: 13px 25px;
     background-color: #0A1823;
@@ -63,7 +63,9 @@ button {
     cursor: pointer; 
     font-family: 'Cinzel';
     float:right;
-  
+}
+.brewery-picker:hover {
+    text-decoration: underline !important;
 }
 .page-container {
   min-height: 100vh;
