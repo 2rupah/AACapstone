@@ -73,7 +73,8 @@ button {
 #brewerypage, #brewerypage-bottom {
   width: 100vw;
   background-color: #fffefe;
-  background-image: url('https://i.pinimg.com/originals/b7/ae/b1/b7aeb12c4365b11620cb9b6b2b773018.jpg');
+  /* background-image: url('https://i.pinimg.com/originals/b7/ae/b1/b7aeb12c4365b11620cb9b6b2b773018.jpg'); */
+  background-image: url('../assets/Home.png');
   background-size: cover;
   background-position: center;
   height: calc(140vh - 10px); /* Adjust as needed, subtracting the footer height */

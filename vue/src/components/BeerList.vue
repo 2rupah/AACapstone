@@ -34,6 +34,7 @@ export default {
 div.mainPage {
   padding: 5%;
   display: inline-block;
+ 
 }
 section#beerList {
 
@@ -44,5 +45,10 @@ section#beerList {
   flex-wrap: wrap;
   justify-content: center;
   margin: 10px 10px 10px 10px;
+ 
+}
+
+#mainPage {
+  background-image: url('../assets/Home.png');
 }
 </style>

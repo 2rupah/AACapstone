@@ -118,8 +118,9 @@ p#review {
 }
 
 .container {
-    max-width: 100%;
-    padding: 5px;
+    max-width: 95%;
+    padding: 7px;
+    max-height: 450px;
 }
 
 .rating-star {
