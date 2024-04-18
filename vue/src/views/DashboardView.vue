@@ -14,6 +14,7 @@
     </router-link>
   </ul>
   <AddBeer />
+  <TheFooter />
 </template>
 
 
@@ -21,7 +22,7 @@
 
 import BreweryService from '../services/BreweryService';
 import AddBeer from '../components/AddBeer.vue';
-
+import TheFooter from '../components/TheFooter.vue';
 
 export default {
   computed: {
@@ -37,10 +38,9 @@ export default {
 
   components: {
     AddBeer,
-
+    TheFooter
   },
-  
-  }
+}
   
 
 </script>
