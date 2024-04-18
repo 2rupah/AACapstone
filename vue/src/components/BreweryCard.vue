@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .brewery-card {
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 10px;
   width: 100%;
   height: 450px;
@@ -56,28 +56,28 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+  /* transform-style: preserve-3d; */
+  /* transition: transform 0.6s; */
   border-radius: 10px;
 }
 
 .back {
+  
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-}
-
-.front {
-  background-color: #f8f9fa;
-  transform: rotateY(0deg);
-}
-
-.back {
   background-color: #ffffff;
   transform: rotateY(180deg);
   display: none;
+  
 }
+
+.front {
+  background-color: #ffffff;
+  transform: rotateY(0deg);
+}
+
 
 .flipped .front {
   transform: rotateY(-180deg);
@@ -85,20 +85,23 @@ export default {
 }
 
 .flipped .back {
+  
   transform: rotateY(0deg);
   display: block;
   transition-delay: 0s; /* no delay for the back side */
 }
 
 .card-image {
+  padding-top: 10px;
   width: 100%; /* Set the width to 100% to fill the container */
-  height: 70%; /* Adjust the height as needed */
+  height: 300px; /* Adjust the height as needed */
   overflow: hidden;
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  
 }
 .card-image img {
   max-width: 80%; /* Ensure the image doesn't exceed the container width */
@@ -109,7 +112,8 @@ export default {
 .card-details {
   padding: 20px;
   text-align: center; /* Center the content horizontally */
-  font-family: "Balthazar"
+  font-family: "Balthazar";
+  
 }
 
 

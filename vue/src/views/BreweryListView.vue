@@ -49,6 +49,7 @@ export default {
 <style scoped>
 .page-container {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #brewerypage, #brewerypage-bottom {
