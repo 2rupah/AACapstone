@@ -1,18 +1,21 @@
 <template>
-  <ul class="nav nav-tabs">
-    <router-link to="/add" class="nav-item" tag="li">
-      <a class="nav-link">Add a Beer</a>
-    </router-link>
-    <router-link to="/delete" class="nav-item" tag="li">
-      <a class="nav-link">Delete a Beer</a>
-    </router-link>
-    <router-link to="/update" class="nav-item" tag="li">
-      <a class="nav-link active" aria-current="update">Update Your Brewery</a>
-    </router-link>
-    <router-link to="/new" class="nav-item" tag="li">
-      <a class="nav-link">Add New Brewery</a>
-    </router-link>
-  </ul>
+    <div class="page-container">
+     <div class="content">
+      <ul class="nav nav-tabs">
+        <router-link to="/add" class="nav-item" tag="li">
+          <a class="nav-link">Add a Beer</a>
+        </router-link>
+        <router-link to="/delete" class="nav-item" tag="li">
+          <a class="nav-link">Delete a Beer</a>
+        </router-link>
+        <router-link to="/update" class="nav-item" tag="li">
+          <a class="nav-link active" aria-current="update">Update Your Brewery</a>
+        </router-link>
+        <router-link to="/new" class="nav-item" tag="li">
+          <a class="nav-link">Add New Brewery</a>
+        </router-link>
+      </ul>
+
     <div class="container">
         <h1>Update Brewery Information</h1>
 
@@ -54,12 +57,18 @@
             </div>
             <button type="submit" class="btn btn-primary">Update Brewery</button>
         </form>
+        
+    </div>
+    
+    </div>
+    <TheFooter />
     </div>
 </template>
   
 <script>
 
 import BreweryService from '../services/BreweryService';
+import TheFooter from '../components/TheFooter.vue';
 
 export default {
 
@@ -79,11 +88,17 @@ export default {
 
         };
     },
+ 
+
     mounted() {
 
         this.fetchBreweries();
     },
+    components: {
+    TheFooter,
+  },
     computed: {
+
   isPopUpVisible() {
     // Check if the current route is the home screen
     const currentRouteName = this.$route.name;
@@ -134,13 +149,14 @@ export default {
 </script>
   
 <style scoped>
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
-    /* max-width: 600px; */
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  padding: 20px;
 }
 
 .form-group {
@@ -175,5 +191,8 @@ export default {
     cursor: pointer;
 }
 
+.btn-primary:hover {
+    background-color: #0056b3;
+}
 </style>
   

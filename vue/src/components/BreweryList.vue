@@ -2,7 +2,7 @@
   <div id="wholePage">
     <div id="banner">
       <h1>Brewery Results</h1>
-      <p>Select a Brewery to find out more!</p>
+      <p></p>
     </div>
     <div class="brewery-container" v-if="!searchResults.length>0" >
       <div class="brewery-item" v-for="brewery in breweries" :key="brewery.name">

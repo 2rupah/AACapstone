@@ -1,4 +1,6 @@
 <template>
+  <div class="page-container">
+    <div class="content">
       <ul class="nav nav-tabs">
     <router-link to="/add" class="nav-item" tag="li"> 
         <a class="nav-link active" aria-current="update">Add a Beer</a>
@@ -54,12 +56,15 @@
           </div>
         </form>
       </section>
+      </div>
+    </div>
+    <TheFooter/>
     </div>
   </template>
   
   <script>
   import BreweryService from '../services/BreweryService';
-  
+  import TheFooter from '../components/TheFooter.vue';
   
   export default {
     props: ['beerId'],
@@ -84,6 +89,9 @@
   
       this.fetchBreweries();
     },
+    components: {
+    TheFooter,
+  },
   
     methods: {
       addNewBeer() {
@@ -137,7 +145,16 @@
   }
   </script>
   
-  <style>
+  <style scoped>
+  .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
   h1 {
     text-align: center;
     padding-bottom: 5%;
