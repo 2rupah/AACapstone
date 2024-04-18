@@ -4,36 +4,36 @@
     <section id="form">
       <label for="brewerySelect">Select Brewery:</label>
       <select v-model="newBeer.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-        <option value="">Select a brewery</option>
+        <option value="" id="select">Select a brewery</option>
         <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
         </option>
       </select>
 
       <form class="row g-3" v-on:submit.prevent="addNewBeer">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label for="inputBeer" class="form-label">Beer Name</label>
-          <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer">
+          <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer" placeholder="Enter Beer Name">
         </div>
         
-        <div class="col-3">
+        <div class="col-4">
           <label for="inputStyle" class="form-label">Style</label>
-          <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle">
+          <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle" placeholder="Enter Style">
         </div>
         <div class="col-2">
           <label for="inputABV" class="form-label">ABV</label>
-          <input v-model="newBeer.abv" type="number" class="form-control" id="inputABV">
+          <input v-model="newBeer.abv" type="number" class="form-control" id="inputABV" placeholder="Enter ABV">
         </div>
         <div class="col-md-2">
           <label for="inputIBU" class="form-label">IBU</label>
-          <input v-model="newBeer.ibu" type="number" class="form-control" id="inputIBU">
+          <input v-model="newBeer.ibu" type="number" class="form-control" id="inputIBU" placeholder="Enter IBU">
         </div>
         <div class="col-md-6">
           <label for="inputDescription" class="form-label">Description</label>
-          <input v-model="newBeer.description" type="text" class="form-control" id="inputDescription">
+          <input v-model="newBeer.description" type="text" class="form-control" id="inputDescription" placeholder="Enter Description">
         </div>
         <div class="col-md-6">
           <label for="inputImage" class="form-label">Image</label>
-          <input v-model="newBeer.imageUrl" type="text" class="form-control" id="inputImage">
+          <input v-model="newBeer.imageUrl" type="text" class="form-control" id="inputImage" placeholder="Enter Image URL">
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -126,7 +126,8 @@ export default {
 <style>
 h1 {
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 30px;
+  padding-top: 5px;
   font-family: "Cinzel"
 }
 
@@ -148,6 +149,7 @@ h1 {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .form-group {
@@ -161,7 +163,7 @@ form {
 }
 
 form div {
-  padding-bottom: 5%;
+  padding-bottom: 6%;
   padding-left: 2%;
   padding-right: 2%;
   position: center;
@@ -187,8 +189,18 @@ button.btn.btn-primary {
   font-family: "Cinzel"
 }
 
+button.btn.btn-primary:hover {
+    text-decoration: underline !important;
+}
+
 label {
-  font-family: "Balthazar"
+  font-family: "Balthazar";
+  font-weight: bold;
+}
+
+.col-md-4, .col-4, .col-2, .col-md-2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 </style>

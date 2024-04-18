@@ -1,65 +1,77 @@
 <template>
-  <ul class="nav nav-tabs">
-    <router-link to="/add" class="nav-item" tag="li">
-      <a class="nav-link">Add a Beer</a>
-    </router-link>
-    <router-link to="/delete" class="nav-item" tag="li">
-      <a class="nav-link">Delete a Beer</a>
-    </router-link>
-    <router-link to="/update" class="nav-item" tag="li">
-      <a class="nav-link active" aria-current="update">Update Your Brewery</a>
-    </router-link>
-    <router-link to="/new" class="nav-item" tag="li">
-      <a class="nav-link">Add New Brewery</a>
-    </router-link>
-  </ul>
+    <div class="page-container">
+     <div class="content">
+      <ul class="nav nav-tabs">
+        <router-link to="/add" class="nav-item" tag="li">
+          <a class="nav-link">Add a Beer</a>
+        </router-link>
+        <router-link to="/delete" class="nav-item" tag="li">
+          <a class="nav-link">Delete a Beer</a>
+        </router-link>
+        <router-link to="/update" class="nav-item" tag="li">
+          <a class="nav-link active" aria-current="update">Update Your Brewery</a>
+        </router-link>
+        <router-link to="/new" class="nav-item" tag="li">
+          <a class="nav-link">Add New Brewery</a>
+        </router-link>
+      </ul>
+
     <div class="container">
         <h1>Update Brewery Information</h1>
 
+        <section id="form">
         <div class="form-group">
-            
+            <label for="brewerySelect" >Select Brewery:</label>
+
             <select v-model="brewery.breweryId" @change="fetchBreweryInfo" id="brewerySelect" class="form-control">
-                <option value="">Select a brewery:</option>
                 <option v-for="brewery in breweries" :key="brewery.breweryId" :value="brewery.breweryId">{{ brewery.name }}
                 </option>
             </select>
         </div>
 
 
-        <form @submit.prevent="updateBrewery">
+        <form class="row g-3" @submit.prevent="updateBrewery">
 
-            <div class="form-group">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" v-model="brewery.name">
+            <div class="col-md-4">
+                <label for="name" class="form-label">Brewery Name: </label>
+                <input type="text" class="form-control" id="name" v-model="brewery.name" placeholder="Updated Brewery Name">
             </div>
-            <div class="form-group">
-                <label for="location" class="form-label">Location:</label>
-                <input type="text" class="form-control" id="location" v-model="brewery.location">
+            <div class="col-5">
+                <label for="location" class="form-label">Brewery Address: </label>
+                <input type="text" class="form-control" id="location" v-model="brewery.location" placeholder="Updated Brewery Address">
             </div>
-            <div class="form-group">
-                <label for="establishedYear" class="form-label">Established Year:</label>
-                <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear">
+            <div class="col-3">
+                <label for="establishedYear" class="form-label">Year of Establishment: </label>
+                <input type="number" class="form-control" id="establishedYear" v-model="brewery.establishedYear" placeholder="Updated Year of Establishment">
             </div>
-            <div class="form-group">
-                <label for="description" class="form-label">Description:</label>
-                <textarea class="form-control" id="description" v-model="brewery.description"></textarea>
+            <div class="col-12">
+                <label for="description" class="form-label">Brewery Description: </label>
+                <textarea class="form-control" id="description" v-model="brewery.description" placeholder="Updated Brewery Description"></textarea>
             </div>
-            <div class="form-group">
-                <label for="imageUrl" class="form-label">Image URL:</label>
-                <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl">
+            <div class="col-md-6">
+                <label for="imageUrl" class="form-label">Brewery Logo URL:</label>
+                <input type="url" class="form-control" id="imageUrl" v-model="brewery.imageUrl" placeholder="Updated Image URL">
             </div>
-            <div class="form-group">
-                <label for="imageUrl" class="form-label">Image URL:</label>
-                <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl">
+            <div class="col-6">
+                <label for="imageUrl" class="form-label">Additional Brewery Image URLs:</label>
+                <input type="url" class="form-control" id="mapUrl" v-model="brewery.mapUrl" placeholder="Ex. Patio, Taproom, Food, etc.">
             </div>
+            <div class="col-12">
             <button type="submit" class="btn btn-primary">Update Brewery</button>
+        </div>
         </form>
+    </section>
+    </div>
+    
+    </div>
+    <TheFooter />
     </div>
 </template>
   
 <script>
 
 import BreweryService from '../services/BreweryService';
+import TheFooter from '../components/TheFooter.vue';
 
 export default {
 
@@ -79,11 +91,17 @@ export default {
 
         };
     },
+ 
+
     mounted() {
 
         this.fetchBreweries();
     },
+    components: {
+    TheFooter,
+  },
     computed: {
+
   isPopUpVisible() {
     // Check if the current route is the home screen
     const currentRouteName = this.$route.name;
@@ -134,17 +152,16 @@ export default {
 </script>
   
 <style scoped>
-.container {
-    /* max-width: 600px; */
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .form-group {
     margin-bottom: 20px;
+    /* padding-left: 200px;
+  padding-right: 200px; */
 }
 
 #brewerySelect {
@@ -161,6 +178,7 @@ export default {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .btn-primary {
@@ -170,13 +188,21 @@ export default {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #0A1823;
     color: #fff;
     cursor: pointer;
+
+}
+.content {
+  flex-grow: 1 !important;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.col-md-4, .col-5, .col-3, .col-md-2, .col-12, .col-md-6, .col-6  {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+.nav-item {
+  font-family: "Balthazar";
 }
 </style>
   
