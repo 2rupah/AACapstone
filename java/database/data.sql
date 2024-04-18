@@ -77,7 +77,6 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (1, 'HopHead87', 'As a dedicated hop lover, I was eager to try the $60 Nachos Double IPA, and it did not disappoint!', 4.0),
 (1, 'TheHoppyEnding', 'The taste follows suit, with a bold hoppy flavor that is balanced by a smooth malt backbone. It is refreshing and satisfying, perfect for a sunny afternoon.', 4.0),
 (1, 'SourAleSipper67', 'The aroma is almost non-existent, with a faint hint of stale grains. The taste is equally lackluster, with no discernible flavor other than a vague sweetness that quickly fades into nothingness. Save your money and skip this one.', 1.0),
-(1, 'PintSizedLad', 'While I appreciated the boldness of the brew, I found the bitterness to be a bit too aggressive for my taste. The tropical fruit notes were present but somewhat overshadowed by the overwhelming bitterness.', 2.0),
 (2, 'BrewEnthusiast92', 'It pours a murky yellow with an off-putting aroma of spoiled fruit and wet cardboard.', 1.0),
 (2, 'BeerlyBeloved', 'It is dangerously drinkable for its ABV, and I can not help but savor every sip.', 5.0),
 (2, 'AleInWonderland', 'This beer pours a deep mahogany with a creamy tan head. The aroma is a heavenly blend of roasted malts and sweet vanilla, inviting you in for a sip.', 5.0),

@@ -13,12 +13,14 @@
     </div>
 
     <div class="col">
+  
       <div v-for="review in beer.listOfReviews" :key="review.reviewId">
       
       <img src="../assets/beer.png" v-bind:title="review.rating + ' Star Review'" class="rating-star"
         v-for="n in review.rating" v-bind:key="n" />
         <p><strong>{{ review.reviewer }}:</strong></p>
         <p>{{ review.review }}</p>
+      
       </div>
   </div>
 
@@ -111,7 +113,7 @@ export default {
 }
 
 .rating-star {
-  width: 10%;
+  width: 8%;
   padding-bottom: 5px;
 }
 </style>
