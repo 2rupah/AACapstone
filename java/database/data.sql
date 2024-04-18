@@ -344,7 +344,29 @@ INSERT INTO reviews (beer_id, reviewer, review, rating) VALUES
 (81, 'LagerMcLovin97', 'I am in beer heaven! This brew is an absolute masterpiece. The flavor is exquisite, the aroma is mesmerizing, and the mouthfeel is like velvet on the tongue.', 5.0 ),
 (82, 'TheBeerdedOne', 'It is like they brewed it in a cesspool.', 1.0 ),
 (82, 'AleInWonderland', 'This beer is proof that sometimes the universe just wants to see you suffer. Drain pour material does not even begin to describe it.', 1.0 ),
-(82, 'Brewbacca', 'If you are looking for something unremarkable to sip on, this could fit the bill.', 3.0 );
+(82, 'Brewbacca', 'If you are looking for something unremarkable to sip on, this could fit the bill.', 3.0 ),
+
+(83, 'Brewbacca', 'Simply perfection in a glass.', 5.0 ),
+(83, 'TheBeerdedOne', 'I have never been more disappointed in a beer in my life. It is like they bottled disappointment and labeled it as beer. I would rather drink my own tears than take another sip of this garbage.', 1.0 ),
+(84, 'BarleyQuinn', 'If you are looking for something unremarkable to sip on, this could fit the bill.', 3.0 ),
+(84, 'AleInWonderland', 'It is like they scraped the bottom of the barrel and bottled it. Do yourself a favor and avoid this dumpster juice at all costs.', 2.0 ),
+(84, 'Brewbacca', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 1.0 ),
+(85, 'PintSizedLad', 'The flavor is exquisite, the aroma is mesmerizing, and the mouthfeel is like velvet on the tongue. It is the kind of beer that you want to savor and cherish every moment you have with it.', 5.0 ),
+(85, 'AleInWonderland', 'I am in awe of this beer. It is a marvel of brewing, a testament to the skill and dedication of the brewmaster.', 4.0 ),
+(86, 'BarleyQuinn', 'It is the kind of beer that leaves you speechless.', 4.0 ),
+(86, 'Brewbacca', 'The flavor is like a burst of sunshine, the aroma is like a breath of fresh air, and the mouthfeel is like a hug from an old friend. It is the kind of beer that fills your soul with joy.', 5.0 ),
+(86, 'LagerMcLovin97', 'Where has this beer been all my life? It is absolutely phenomenal! The flavor is rich and intense, the aroma is heavenly, and the mouthfeel is velvety smooth. It is like drinking liquid gold. I can not recommend it highly enough.', 5.0),
+(87, 'AleInWonderland', 'This beer is decent, nothing more, nothing less. It is drinkable, but it did not leave a lasting impression. It is missing that special something that would make me want to reach for it again.', 3.0),
+(87, 'TheBeerdedOne', 'Simply perfection in a glass.', 5.0),
+(87, 'BeerlyBeloved', 'It is like drinking a glass of vinegar mixed with old gym socks. Avoid at all costs.', 1.0),
+(88, 'LagerMcLovin97', 'I found this beer to be average overall. It did not blow me away, but it did not disappoint me either.', 3.0),
+(88, 'BarleyQuinn', 'This beer is proof that sometimes the universe just wants to see you suffer. Drain pour material does not even begin to describe it.', 1.0),
+
+(89, 'TheBeerdedOne', 'I have had better tasting medicine. Seriously, I would rather be sick than drink this again.', 1.0 ),
+(89, 'BrewedAwakening', 'This beer was a complete letdown. The flavors were flat, and it tasted like it had been sitting on the shelf for way too long.', 2.0 ),
+(90, 'Brewbacca', 'It is the kind of beer you might enjoy if you are not too picky, but it is not something I would go out of my way to buy again.', 2.0 ),
+(90, 'TheBeerdedOne', 'This beer tasted like disappointment in a can. I would rather drink water from a ditch.', 1.0 ),
+(90, 'AleInWonderland', 'This beer is a masterpiece of brewing. It is flawless in every way.', 5.0 );
 
 
 INSERT INTO brewery_images (brewery_id, image_url) VALUES
