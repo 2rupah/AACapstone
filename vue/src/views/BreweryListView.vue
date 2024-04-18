@@ -1,9 +1,14 @@
 <template>
-  <section id="brewerypage">
-    <!-- Pass searchResults as a prop to BreweryList -->
-    <BreweryList :searchResults="searchResults" />
+  <div class="page-container">
+    <section id="brewerypage">
+      <!-- Pass searchResults as a prop to BreweryList -->
+      <BreweryList :searchResults="searchResults" />
+    </section>
+    <section id="brewerypage-bottom">
+      <!-- Add the same background image here -->
+    </section>
     <TheFooter />
-  </section>
+  </div>
 </template>
   
 <script>
@@ -35,26 +40,30 @@ export default {
 
       // Set background position for parallax effect
       document.getElementById('brewerypage').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+      document.getElementById('brewerypage-bottom').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
     }
   }
 };
 </script>
 
 <style scoped>
-section {
-  padding-left: 0%;
-  justify-content: center;
+.page-container {
+  min-height: 100vh;
+}
+
+#brewerypage, #brewerypage-bottom {
   width: 100vw;
-  /* Add background properties */
   background-color: #fffefe;
   background-image: url('https://i.pinimg.com/originals/b7/ae/b1/b7aeb12c4365b11620cb9b6b2b773018.jpg');
-  /* Set background size and position */
   background-size: cover;
   background-position: center;
-  /* Set height of section */
-  height: 100vh; /* Adjust as needed */
+  height: calc(140vh - 10px); /* Adjust as needed, subtracting the footer height */
   padding: 0;
   position: static;
+  background-attachment: fixed; /* Make the background image fixed */
+}
+#brewerypage-bottom {
+  height: 200vh; /* Adjust the height to repeat the image as needed */
 }
 
 /* Additional sections with different background images */

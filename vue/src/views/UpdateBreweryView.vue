@@ -154,7 +154,9 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
-
+.update-button {
+    text-align: center;
+}
 .container {
   padding: 20px;
 }
@@ -190,6 +192,7 @@ export default {
     background-color: #0A1823;
     color: #fff;
     cursor: pointer;
+
 }
 .content {
   flex-grow: 1 !important;
