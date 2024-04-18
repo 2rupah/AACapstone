@@ -1,7 +1,7 @@
 <template>
   <div class="overlay">
     <p id="tagline">"Beer lovers <br> helping you <br> find your next <br> favorite brewery"</p>
-    <p id="second">Find Breweries <br> Rate Beers <br> Find Friends </p>
+    <p id="second">Find Breweries <br> Rate Beers <br> Create Forgettable <br> Memories </p>
   </div>
 </template>
 <script>
