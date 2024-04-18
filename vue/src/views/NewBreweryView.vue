@@ -45,9 +45,11 @@
     <label for="logo">Brewery Logo Url: </label>
     <input v-model="newBrewery.imageUrl" type="text" id="logo" name="logo" class="new-brew-form" placeholder='Enter Image URL'>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Add Brewery</button>    
+    <div class="col-14">
+    <button type="submit" class="btn btn-primary">Add Brewery</button>  
+  </div>  
     </form>
+  
   </section>
     </div>
     <TheFooter />
@@ -171,7 +173,7 @@ input, textarea {
   font-family: "Balthazar";
 }
 
-.col-8, .col-4, .col-13 {
+.col-8, .col-4, .col-13, .col-14 {
   padding-top: 25px;
   padding-bottom: 5px;
 }
