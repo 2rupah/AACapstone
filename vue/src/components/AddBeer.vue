@@ -12,28 +12,28 @@
       <form class="row g-3" v-on:submit.prevent="addNewBeer">
         <div class="col-md-4">
           <label for="inputBeer" class="form-label">Beer Name</label>
-          <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer">
+          <input v-model="newBeer.name" type="text" class="form-control" id="inputBeer" placeholder="Enter Beer Name">
         </div>
         
         <div class="col-4">
           <label for="inputStyle" class="form-label">Style</label>
-          <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle">
+          <input v-model="newBeer.style" type="text" class="form-control" id="inputStyle" placeholder="Enter Style">
         </div>
         <div class="col-2">
           <label for="inputABV" class="form-label">ABV</label>
-          <input v-model="newBeer.abv" type="number" class="form-control" id="inputABV">
+          <input v-model="newBeer.abv" type="number" class="form-control" id="inputABV" placeholder="Enter ABV">
         </div>
         <div class="col-md-2">
           <label for="inputIBU" class="form-label">IBU</label>
-          <input v-model="newBeer.ibu" type="number" class="form-control" id="inputIBU">
+          <input v-model="newBeer.ibu" type="number" class="form-control" id="inputIBU" placeholder="Enter IBU">
         </div>
         <div class="col-md-6">
           <label for="inputDescription" class="form-label">Description</label>
-          <input v-model="newBeer.description" type="text" class="form-control" id="inputDescription">
+          <input v-model="newBeer.description" type="text" class="form-control" id="inputDescription" placeholder="Enter Description">
         </div>
         <div class="col-md-6">
           <label for="inputImage" class="form-label">Image</label>
-          <input v-model="newBeer.imageUrl" type="text" class="form-control" id="inputImage">
+          <input v-model="newBeer.imageUrl" type="text" class="form-control" id="inputImage" placeholder="Enter Image URL">
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -149,6 +149,7 @@ h1 {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .form-group {

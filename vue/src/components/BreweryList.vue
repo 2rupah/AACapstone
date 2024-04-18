@@ -63,8 +63,13 @@ export default {
 }
 
 h1 {
+  text-align: left;
   font-family: "Cinzel";
   font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-left: 100px;
+  margin-top: 30px;
+
 }
 
 p {

@@ -288,5 +288,35 @@ INSERT INTO brewery_images (brewery_id, image_url) VALUES
 
 (8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313359131-8VZDS8MZODE3WUBB2QKC/DSCF3526.jpg'),
 (8, 'https://images.squarespace-cdn.com/content/v1/51abeb0be4b08f6a770c06bf/1650313354278-V0THO8EZ1OVNRCJKM74P/DSCF2933.JPG'),
-(8, 'https://www.columbusmonthly.com/gcdn/authoring/2016/03/30/NCOA/ghows-OH-ca7b932f-77fb-4c72-88f0-fbef83175097-3a284ac9.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp');
+(8, 'https://www.columbusmonthly.com/gcdn/authoring/2016/03/30/NCOA/ghows-OH-ca7b932f-77fb-4c72-88f0-fbef83175097-3a284ac9.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp'),
+
+(9, 'https://cdn.columbusunderground.com/wp-content/uploads/2023/01/DankHouse1_DanWhalen.jpg'),
+(9, 'https://i.ytimg.com/vi/hkxhBYEj4Tg/maxresdefault.jpg'),
+(9, 'https://cdn.columbusunderground.com/wp-content/uploads/2023/01/DankHouse4_DanWhalen.jpg'),
+
+(10, 'https://littlefishbrewing.com/wp-content/uploads/2022/11/LF-dayton-inside_crop-1024x576.jpg'),
+(10, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6lEXd7oDDulm-hEgwmj8Ff7kRheEkGc1odg5O3avI1Q&s'),
+(10, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcd-vVdTIuaSTMDqwYjNKKDsMTqGsCPhiKfA40quuN8w&s'),
+
+(11, 'https://media.bizj.us/view/img/12641425/20231114085932.jpg'),
+(11, 'https://cdn.columbusunderground.com/wp-content/uploads/2023/11/YellowSprings-9-SusanPost.jpg'),
+(11, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__uOZwdWDw8QwhEr73eUXCIguHlCQCcfOtIgOWJUv1w&s'),
+
+(12, 'https://images.squarespace-cdn.com/content/v1/6387801772a9081a80bc7d24/1683936998270-LU1NQCUFVEACJACVZXPN/Lounge+Photo.jpg'),
+(12, 'https://www.dispatch.com/gcdn/authoring/2019/01/15/NTWG/ghows-OH-dc33e557-4b96-416a-a082-299583a2d8d8-defcdb19.jpeg?crop=1899,1074,x0,y175&width=1899&height=1074&format=pjpg&auto=webp'),
+(12, 'https://images.squarespace-cdn.com/content/v1/6387801772a9081a80bc7d24/1683936998270-6PA2L1784DAUG72ET56I/English+Ale+Pint.jpg'),
+
+(13, 'https://cdn0.weddingwire.com/vendor/594211/3_2/960/jpg/a-range-of-great-tasting-beers_51_2112495-166479995411476.jpeg'),
+(13, 'https://media.bizj.us/view/img/11502917/dsc0543-edit*1200xx7168-4032-0-377.jpg'),
+(13, 'https://ahomesteadbrew.com/373074719_872478871168384_3406554451503842408_n.jpg'),
+
+(14, 'https://ohio.org/static/uploads/0688y000004K5CZAA0.jpg'),
+(14, 'https://cloudfront-us-east-1.images.arcpublishing.com/coxohio/BT5JMRVFPVBHVBJRYR7HKG6OWM.jpg'),
+(14, 'https://cdn.craftbeer.com/wp-content/uploads/Warped-Wing-Taproom_Tara-Michael-1200x700.jpg'),
+
+(15, 'https://media.bizj.us/view/img/7696962/zaftig-brewing-interior-dje*1200xx3093-2324-0-0.jpg'),
+(15, 'https://pbs.twimg.com/media/ERucrn3XsAAbsR8?format=jpg&name=4096x4096'),
+(15, 'https://ksr-ugc.imgix.net/assets/025/996/386/ba44818cf8d90877f26438af81508c6f_original.jpg?ixlib=rb-4.1.0&crop=faces&w=1024&h=576&fit=crop&v=1564649625&auto=format&frame=1&q=92&s=58d37de4ffa7fd271139858e2e7fa1dd');
+
+
 COMMIT TRANSACTION;

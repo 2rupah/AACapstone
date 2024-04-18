@@ -178,6 +178,7 @@ export default {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .btn-primary {
@@ -190,6 +191,7 @@ export default {
     background-color: #0A1823;
     color: #fff;
     cursor: pointer;
+
 }
 .content {
   flex-grow: 1 !important;
@@ -198,6 +200,9 @@ export default {
 .col-md-4, .col-5, .col-3, .col-md-2, .col-12, .col-md-6, .col-6  {
   padding-top: 25px;
   padding-bottom: 5px;
+}
+.nav-item {
+  font-family: "Balthazar";
 }
 </style>
   
