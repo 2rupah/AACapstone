@@ -137,7 +137,6 @@ input, textarea {
     padding: 5px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    
 }
 
 #button {
@@ -167,6 +166,7 @@ input, textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Balthazar'
 }
 
 .nav-item {
