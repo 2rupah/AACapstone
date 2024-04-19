@@ -68,5 +68,9 @@
     #banner {
       margin: 0 !important;
     }
+    #wholePage {
+    background-image: url('../assets/Home.png');
+    height: 90vh;
+  }
   </style>
   
