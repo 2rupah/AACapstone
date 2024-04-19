@@ -2,10 +2,12 @@
   <div class="page-container">
     
     <section id="brewerypage">
-      <button class="other">
-      <router-link :to="{ name: 'map' }" class="back button">Brewery Crawl</router-link></button>
-      <button>
-      <router-link :to="{ name: 'roulette' }" class="back button">Brewery Roulette</router-link></button>
+      <router-link :to="{ name: 'map' }" class="other">
+        <button type="button" class="btn btn-primary">Brewery Crawl</button>
+      </router-link>
+      <router-link :to="{ name: 'roulette' }" class="other">
+        <button type="button" class="btn btn-primary">Brewery Roulette</button>
+      </router-link>
       
       <!-- Pass searchResults as a prop to BreweryList -->
       <BreweryList :searchResults="searchResults" />
@@ -53,17 +55,21 @@ export default {
 </script>
 
 <style scoped>
-button {
-    color: white !important;
+.btn.btn-primary {
+    color: black !important;
     margin: 5px;
     padding: 13px 25px;
-    background-color: #0A1823;
-    border-radius: 6px;
+    background-color: #ffffff;
+    border-radius: 3px solid white;
     text-decoration: none;
     cursor: pointer; 
     font-family: 'Cinzel';
+    font-weight: bold;
     float:right;
-  
+    margin-right: 20px;
+}
+.btn:hover {
+    text-decoration: underline !important;
 }
 .page-container {
   min-height: 100vh;
